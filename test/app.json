@@ -1,0 +1,63 @@
+{
+  "id": "585cda85-c03b-49f3-ad18-ae7a285c624a",
+  "name": "Etiscan BC Scan 3.0 - Tests",
+  "publisher": "etiscan Identifikationssysteme GmbH",
+  "version": "19.3.0.0",
+  "brief": "BC Scan 3.0 - Tests",
+  "description": "BC Scan 3.0 - Tests",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "./src/logo/BCScan.png",
+  "dependencies": [
+    {
+      "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
+      "publisher": "Microsoft",
+      "name": "Library Assert",
+      "version": "19.0.0.0"
+    },
+    {
+      "id": "e7320ebb-08b3-4406-b1ec-b4927d3e280b",
+      "publisher": "Microsoft",
+      "name": "Any",
+      "version": "19.0.0.0"
+    },
+    {
+      "id": "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
+      "publisher": "Microsoft",
+      "name": "Test Runner",
+      "version": "19.0.0.0"
+    }, 
+    {
+      "id": "f79828d5-7a8a-4a64-a115-a8fa345cddf8",
+      "publisher": "etiscan Identifikationssysteme GmbH",
+      "name": "Etiscan NAVConnect",
+      "version": "19.2.38.0"
+    },
+    {
+      "id": "ccdb8d64-7653-444c-8245-86d2301f08e3",
+      "publisher": "etiscan Identifikationssysteme GmbH",
+      "name": "Etiscan NAVConnect - Ship UPS",
+      "version": "19.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "application": "19.0.0.0",
+  "platform": "19.0.0.0",  
+  "runtime": "8.0",
+  "target": "Cloud" ,
+  "resourceExposurePolicy": {
+    "allowDebugging": true, 
+    "allowDownloadingSource": false, 
+    "includeSourceInSymbolFile": true
+  },
+  "idRanges": [
+    {
+      "from": 50190,
+      "to": 50199
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://app.com/help/",  
+  "suppressWarnings": [ "AL0254", "AL0432", "AL0659", "AA0072", "AA0005", "AA0215" ]
+}
