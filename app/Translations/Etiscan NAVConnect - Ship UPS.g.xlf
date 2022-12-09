@@ -2,7 +2,93 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Etiscan NAVConnect - Ship UPS">
     <body>
-      <group id="body" />
+      <group id="body">
+        <trans-unit id="Page 761961459 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packages on Ship</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNPackages on Ship FactBoxUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1652167033 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packages on Ship</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNRegPack. on Ship FactBoxUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3185079179 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2">Allgemein</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3185079179 - Control 3254019093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Account Information</source>
+          <note from="Developer" annotates="general" priority="2">UPS Zugangsdaten</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control UPS Account Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4102833058 - Action 1036946772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4073709604">
+          <source>&amp;UPS</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNShipping AgentsUPS - Action &amp;UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4102833058 - Action 1868621627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4073709604">
+          <source>UPS REST api Setup </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNShipping AgentsUPS - Action UPS REST api Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 1498031211 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Package Cout</source>
+          <note from="Developer" annotates="general" priority="2">Anzahl Pakete</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNPackage CoutUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 4166401435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Shipment No.</source>
+          <note from="Developer" annotates="general" priority="2">Versandauftragsnr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNShipment No.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 1498031211 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Package Cout</source>
+          <note from="Developer" annotates="general" priority="2">Anzahl Pakete</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNPackage CoutUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 4166401435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Shipment No.</source>
+          <note from="Developer" annotates="general" priority="2">Versandauftragsnr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNShipment No.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3959673349 - Field 3357801362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4577671">
+          <source>UPS Shipment Service Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping Agent ServicesUPS - Field ESNShipment Service CodeUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 1320577951 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>UPS Access Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNAccess KeyUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 4049300600 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>UPS Account Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNAccount NumberUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 1134521052 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Default Service</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNDefault ServiceUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 1063577874 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>UPS</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 2211233884 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>UPS User Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNUser NameUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 385353820 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>UPS User Password</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNUser PasswordUPS - Property Caption</note>
+        </trans-unit>
+      </group>
     </body>
   </file>
 </xliff>
