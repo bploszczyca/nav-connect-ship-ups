@@ -21,9 +21,13 @@ codeunit 70869781 "ESNShip UPS Mgt.UPS"
     procedure AddPackageToShipmentNo(Package: Record "ETI-Package-NC"; var NewPackage: Record "ETI-Package-NC")
     begin
         NewPackage.Init();
+        NewPackage.TransferFields(Package);
         NewPackage."No." := '';
         NewPackage."ESNShipment No.UPS" := Package."ESNShipment No.UPS";
         NewPackage.Insert(true);
+        // Clear
+        NewPackage.Validate("Template Document", Package."Template Document"::" ");
+        // Setup new Template Recs
         NewPackage.Validate("Template Document", Package."Template Document");
         NewPackage.Validate("Template No.", Package."Template No.");
         NewPackage.Modify(true);
@@ -41,6 +45,46 @@ codeunit 70869781 "ESNShip UPS Mgt.UPS"
                     rec.Validate("Shipping Agent Service Code", ShippingAgent."ESNDefault ServiceUPS");
                 end;
             end;
+        end;
+    end;
+    #endregion
+
+    #region reg. package
+    [EventSubscriber(ObjectType::Codeunit, codeunit::"ETI-Package Mgt-NC", 'OnAfterRegisterPackage', '', true, false)]
+    local procedure PackageMgt_OnAfterRegisterPackage(var Package: Record "ETI-Package-NC")
+    var
+        Package2: Record "ETI-Package-NC";
+        PackageMgt: Codeunit "ETI-Package Mgt-NC";
+    begin
+        if Package."ESNShipment No.UPS" <> '' then begin
+            Package2.SetRange("ESNShipment No.UPS", Package."ESNShipment No.UPS");
+            if not Package2.IsEmpty then
+                if Package2.Find('-') then
+                    repeat
+                        // Can be proced by other Reg. Call
+                        if Package2.get(Package2."No.") then begin
+                            PackageMgt.RegisterPackage(Package2, true);
+                        end;
+                    until Package2.Next() = 0;
+        end;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, codeunit::"ETI-Package Mgt-NC", 'OnAfterUndoRegisterPackage', '', true, false)]
+    local procedure PackageMgt_OnAfterUndoRegisterPackage(var RegPackage: Record "ETI-Reg. Package-NC")
+    var
+        RegPackage2: Record "ETI-Reg. Package-NC";
+        PackageMgt: Codeunit "ETI-Package Mgt-NC";
+    begin
+        if RegPackage."ESNShipment No.UPS" <> '' then begin
+            RegPackage2.SetRange("ESNShipment No.UPS", RegPackage."ESNShipment No.UPS");
+            if not RegPackage2.IsEmpty then
+                if RegPackage2.Find('-') then
+                    repeat
+                        // Can be proced by other Reg. Call
+                        if RegPackage2.get(RegPackage2."No.") then begin
+                            PackageMgt.UndoPackageRegistration(RegPackage2, true);
+                        end;
+                    until RegPackage2.Next() = 0;
         end;
     end;
     #endregion

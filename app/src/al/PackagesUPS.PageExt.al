@@ -4,7 +4,7 @@ pageextension 70869784 "ESNPackagesUPS" extends "ETI-Packages-NC"
     {
         addafter("No.")
         {
-            field("ESNShipment No.UPS"; rec."ESNShipment No.UPS") { ApplicationArea = All; Visible = false; }
+            field("ESNShipment No.UPS"; rec."ESNShipment No.UPS") { ApplicationArea = All; }
             field("ESNPackage CoutUPS"; rec."ESNPackage CoutUPS") { ApplicationArea = All; Visible = false; }
         }
         addbefore(Links)
