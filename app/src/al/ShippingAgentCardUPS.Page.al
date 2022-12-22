@@ -24,6 +24,8 @@ page 70869780 "ESNShipping Agent CardUPS"
                         CurrPage.Update();
                     end;
                 }
+                field("ESNDefault Ship-from TypeUPS"; rec."ESNDefault Ship-from TypeUPS") { ApplicationArea = All; }
+                field("ESNDef. Ship-from ContactUPS"; rec."ESNDef. Ship-from ContactUPS") { ApplicationArea = All; }
             }
             group("UPS Account Information")
             {

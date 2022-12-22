@@ -59,5 +59,29 @@ tableextension 70869780 "ESNShipping AgentUPS" extends "Shipping Agent"
             DataClassification = CustomerContent;
             TableRelation = "Shipping Agent Services".Code where("Shipping Agent Code" = field(Code));
         }
+        field(70869786; "ESNDefault Ship-from TypeUPS"; Enum "ESNPackageShipFromTypeUPS")
+        {
+            Caption = 'Default Ship-from Type';
+            DataClassification = CustomerContent;
+            trigger OnValidate()
+            begin
+                if "ESNDefault Ship-from TypeUPS" <> xRec."ESNDefault Ship-from TypeUPS" then begin
+                    Validate("ESNDef. Ship-from ContactUPS", '');
+                end;
+            end;
+        }
+        field(70869787; "ESNDef. Ship-from ContactUPS"; Code[20])
+        {
+            Caption = 'Default Ship-from Contact';
+            DataClassification = CustomerContent;
+            TableRelation = if ("ESNDefault Ship-from TypeUPS" = const(Contact)) Contact."No.";
+
+            trigger OnValidate()
+            begin
+                if ("ESNDef. Ship-from ContactUPS" <> '') then begin
+                    TestField("ESNDefault Ship-from TypeUPS", "ESNDefault Ship-from TypeUPS"::Contact);
+                end;
+            end;
+        }
     }
 }
