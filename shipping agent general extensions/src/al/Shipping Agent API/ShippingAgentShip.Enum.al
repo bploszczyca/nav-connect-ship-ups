@@ -1,8 +1,11 @@
-enum 70869783 "ESNShipping AgentShip"
+enum 70869783 "ESNShipping AgentShip" implements "ESNShipping Agent APIShip"
 {
     Extensible = true;
 
-    value(0; " ") { Caption = ' '; }
+    value(0; " ")
+    {
+        Caption = ' ';
+        Implementation = "ESNShipping Agent APIShip" = "ESNShipping Agent APIShip";
+    }
 
-    // value(10; "UPS REST") { Caption = 'UPS REST', Comment = 'UPS REST'; }
 }
