@@ -16,4 +16,15 @@ tableextension 70869783 "ESNReg. PackageShip" extends "ETI-Reg. Package-NC"
             CalcFormula = count("ETI-Package-NC" where("ESNShipment No.Ship" = field("ESNShipment No.Ship")));
         }
     }
+
+    procedure GetShippingAgentAPI(): Interface "ESNShipping Agent APIShip"
+    var
+        ShippingAgent: Record "Shipping Agent";
+    begin
+        if ShippingAgent.get(Rec."Shipping Agent Code") then begin
+            exit(ShippingAgent.GetShippingAgentAPI());
+        end else begin
+            exit(Enum::"ESNShipping AgentShip"::" ");
+        end;
+    end;
 }

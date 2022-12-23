@@ -1,13 +1,16 @@
 codeunit 70869782 "ESNShipping Agent APIShip" implements "ESNShipping Agent APIShip"
 {
+    #region implements "ESNShipping Agent APIShip"
     procedure RegisterShipping(Package: Record "ETI-Package-NC");
     begin
-        DefaultImplementation(Package);
+        // DefaultImplementation(Package);
+        // Message('Test: RegisterShipping');
     end;
 
     procedure CancelRegisteredShipping(RegPackage: Record "ETI-Reg. Package-NC");
     begin
-        DefaultImplementation(RegPackage);
+        // DefaultImplementation(RegPackage);
+        // Message('Test: CancelRegisteredShipping');
     end;
 
     procedure GetShippingLable(RegPackage: Record "ETI-Reg. Package-NC");
@@ -17,7 +20,8 @@ codeunit 70869782 "ESNShipping Agent APIShip" implements "ESNShipping Agent APIS
 
     procedure PrintShippingLable(RegPackage: Record "ETI-Reg. Package-NC");
     begin
-        DefaultImplementation(RegPackage);
+        // DefaultImplementation(RegPackage);
+        // Message('Test: PrintShippingLable');
     end;
 
     procedure GetTrackingStatus(RegPackage: Record "ETI-Reg. Package-NC");
@@ -48,4 +52,23 @@ codeunit 70869782 "ESNShipping Agent APIShip" implements "ESNShipping Agent APIS
         Package.TransferFields(RegPackage);
         DefaultImplementation(Package);
     end;
+    #endregion implements "ESNShipping Agent APIShip"
+
+    #region reg. package
+    [EventSubscriber(ObjectType::Codeunit, codeunit::"ETI-Package Mgt-NC", 'OnBeforRegisterPackage', '', true, false)]
+    local procedure PackageMgt_OnBeforRegisterPackage(var Package: Record "ETI-Package-NC")
+    begin
+        if Package."ESNShipment No.Ship" <> '' then begin
+            Package.GetShippingAgentAPI().RegisterShipping(Package);
+        end;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, codeunit::"ETI-Package Mgt-NC", 'OnAfterUndoRegisterPackage', '', true, false)]
+    local procedure PackageMgt_OnAfterUndoRegisterPackage(var RegPackage: Record "ETI-Reg. Package-NC")
+    begin
+        if RegPackage."ESNShipment No.Ship" <> '' then begin
+            RegPackage.GetShippingAgentAPI().CancelRegisteredShipping(RegPackage);
+        end;
+    end;
+    #endregion
 }

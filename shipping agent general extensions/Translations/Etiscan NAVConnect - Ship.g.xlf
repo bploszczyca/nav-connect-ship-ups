@@ -3,6 +3,11 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Etiscan NAVConnect - Ship">
     <body>
       <group id="body">
+        <trans-unit id="Codeunit 1792076683 - Method 578278027 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not yet implemented.</source>
+          <note from="Developer" annotates="general" priority="2">Noch nicht umgesetzt.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent APIShip - Method DefaultImplementation - NamedType NotYetImplementedLbl</note>
+        </trans-unit>
         <trans-unit id="Page 2447985466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Packages on Ship</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -32,6 +37,21 @@
           <source>Ship-from Address</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardshipShip - Control ESNShipFromAddresseUPSshipShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2393074613 - Action 1673306232 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1019918254">
+          <source>F&amp;unctions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNRegPackagesShip - Action F&amp;unktion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2393074613 - Action 1526781261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1019918254">
+          <source>Tracking Status</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNRegPackagesShip - Action Tracking Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2393074613 - Action 1227077671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1019918254">
+          <source>Print &amp;Shipping Lable</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNRegPackagesShip - Action Print Shipping Lable - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3713282388 - Method 3791190294 - NamedType 4092272397" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 3713282388">
           <source>Packages of a shipping order %1 must have the same address.</source>

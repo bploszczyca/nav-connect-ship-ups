@@ -18,5 +18,4 @@ pageextension 70869781 "ESNShipping AgentsShip" extends "Shipping Agents"
             field("ESNDef. Ship-from ContactShip"; rec."ESNDef. Ship-from ContactShip") { ApplicationArea = Basic, Suite; Visible = false; }
         }
     }
-
 }

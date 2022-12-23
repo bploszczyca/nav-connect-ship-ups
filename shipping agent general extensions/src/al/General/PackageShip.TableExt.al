@@ -365,4 +365,15 @@ tableextension 70869782 "ESNPackageShip" extends "ETI-Package-NC"
         ToPackage."Ship-to County" := FromPackage."Ship-to County";
         ToPackage."Ship-to Country/Region Code" := FromPackage."Ship-to Country/Region Code";
     end;
+
+    procedure GetShippingAgentAPI(): Interface "ESNShipping Agent APIShip"
+    var
+        ShippingAgent: Record "Shipping Agent";
+    begin
+        if ShippingAgent.get(Rec."Shipping Agent Code") then begin
+            exit(ShippingAgent.GetShippingAgentAPI());
+        end else begin
+            exit(Enum::"ESNShipping AgentShip"::" ");
+        end;
+    end;
 }

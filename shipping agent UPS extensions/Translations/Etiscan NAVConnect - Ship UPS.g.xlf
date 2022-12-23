@@ -3,6 +3,11 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Etiscan NAVConnect - Ship UPS">
     <body>
       <group id="body">
+        <trans-unit id="Codeunit 169896487 - Method 578278027 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not yet implemented.</source>
+          <note from="Developer" annotates="general" priority="2">Noch nicht umgesetzt.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent APIUPS - Method DefaultImplementation - NamedType NotYetImplementedLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 351658717 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not yet implemented.</source>
           <note from="Developer" annotates="general" priority="2">Noch nicht umgesetzt.</note>
