@@ -36,7 +36,27 @@ page 70869780 "ESNShipping Agent CardUPS"
                 field("ESNAccess KeyUPS"; rec."ESNAccess KeyUPS") { ApplicationArea = All; }
                 field(ESNUPS; rec.ESNUPS) { ApplicationArea = All; }
             }
+            group("UPS REST API")
+            {
+                Caption = 'UPS REST API', Comment = 'UPS REST API';
+                field("ESNREST API EndpointUPS"; rec."ESNREST API EndpointUPS") { ApplicationArea = All; }
+                field("ESNREST VersionUPS"; rec."ESNREST VersionUPS") { ApplicationArea = All; }
+                field("Shipping REST URL"; rec.GetShippingURL())
+                {
+                    Caption = 'Shipping REST URL', Comment = 'Shipping REST URL';
+                    ApplicationArea = All;
+                }
+                field("Cancel Shipping REST URL"; rec.GetShippingCancelURL())
+                {
+                    Caption = 'Cancel Shipping REST URL', Comment = 'Cancel Shipping REST URL';
+                    ApplicationArea = All;
+                }
+                field("Shipping Label Recovery REST URL"; rec.GetShippingLabelRecoveryURL())
+                {
+                    Caption = 'Shipping Label Recovery REST URL', Comment = 'Shipping Label Recovery REST URL';
+                    ApplicationArea = All;
+                }
+            }
         }
     }
-
 }

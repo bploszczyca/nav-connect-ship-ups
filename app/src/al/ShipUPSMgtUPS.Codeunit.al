@@ -364,7 +364,7 @@ codeunit 70869781 "ESNShip UPS Mgt.UPS"
     end;
 
     [IntegrationEvent(true, false)]
-    local procedure Package_OnAfterValidateEvent_RegPackageTemplateDocumentNo(var xRec: Record "ETI-Package-NC"; var Rec: Record "ETI-Package-NC"; CurrFieldNo: Integer; RegPackage: Record "ETI-Reg. Package-NC";)
+    local procedure Package_OnAfterValidateEvent_RegPackageTemplateDocumentNo(var xRec: Record "ETI-Package-NC"; var Rec: Record "ETI-Package-NC"; CurrFieldNo: Integer; RegPackage: Record "ETI-Reg. Package-NC")
     begin
     end;
 
