@@ -1,8 +1,12 @@
 {
   "folders": [
     {
-      "name": "app",
-      "path": "app"
+      "name": "general",
+      "path": "shipping agent general extensions"
+    },
+	{
+      "name": "UPS",
+      "path": "shipping agent UPS extensions"
     },
     {
       "name": "test",
@@ -15,8 +19,7 @@
     "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
     "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
     "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
-    "CRS.ObjectNamePrefix": "ESN",
-    "CRS.ObjectNameSuffix": "UPS",
+    "CRS.ObjectNamePrefix": "ESN",    
     "CRS.RemovePrefixFromFilename": true,
     "CRS.RenameWithGit": false,
     "al.codeAnalyzers": [

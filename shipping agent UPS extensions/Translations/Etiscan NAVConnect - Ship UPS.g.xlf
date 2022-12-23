@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Etiscan NAVConnect - Ship UPS">
+    <body>
+      <group id="body">
+        <trans-unit id="Codeunit 351658717 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not yet implemented.</source>
+          <note from="Developer" annotates="general" priority="2">Noch nicht umgesetzt.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST vXXUPS - NamedType NotYetImplementedLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3185079179 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2">Allgemein</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3185079179 - Control 3254019093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Account Information</source>
+          <note from="Developer" annotates="general" priority="2">UPS Zugangsdaten</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control UPS Account Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3185079179 - Control 1693963250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS REST API</source>
+          <note from="Developer" annotates="general" priority="2">UPS REST API</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control UPS REST API - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3185079179 - Control 2899728873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cancel Shipping REST URL</source>
+          <note from="Developer" annotates="general" priority="2">Cancel Shipping REST URL</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control Cancel Shipping REST URL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3185079179 - Control 2420724656 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipping Label Recovery REST URL</source>
+          <note from="Developer" annotates="general" priority="2">Shipping Label Recovery REST URL</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control Shipping Label Recovery REST URL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3185079179 - Control 2869177859 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipping REST URL</source>
+          <note from="Developer" annotates="general" priority="2">Shipping REST URL</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control Shipping REST URL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4102833058 - Action 1036946772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4073709604">
+          <source>&amp;UPS</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNShipping AgentsUPS - Action &amp;UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4102833058 - Action 1868621627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4073709604">
+          <source>UPS REST api Setup </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNShipping AgentsUPS - Action UPS REST api Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3959673349 - Field 3357801362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4577671">
+          <source>UPS Shipment Service Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping Agent ServicesUPS - Field ESNShipment Service CodeUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 1320577951 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>UPS Access Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNAccess KeyUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 4049300600 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>UPS Account Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNAccount NumberUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 2004444839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>REST API Endpoint</source>
+          <note from="Developer" annotates="general" priority="2">REST API Endpoint</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNREST API EndpointUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 2004444839 - Method 2126772001 - NamedType 3198757034" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 2979565311">
+          <source>Do you really want to put the interface into productive operation?</source>
+          <note from="Developer" annotates="general" priority="2">Wollen Sie wirklich die Schnittstelle in produktiven Betrieb nehmen?</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNREST API EndpointUPS - Method OnValidate - NamedType ConfirmQuestionLbl</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 3164070552 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>REST Version</source>
+          <note from="Developer" annotates="general" priority="2">REST Version</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNREST VersionUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 2211233884 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>UPS User Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNUser NameUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 385353820 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>UPS User Password</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNUser PasswordUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1794520160 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipping Agent REST Version</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. Agent REST Ver.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1794520160 - EnumValue 2334154285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>default (v1)</source>
+          <note from="Developer" annotates="general" priority="2">Standard (v1)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. Agent REST Ver.UPS - EnumValue default - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1794520160 - EnumValue 2723112169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>v1</source>
+          <note from="Developer" annotates="general" priority="2">v1</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. Agent REST Ver.UPS - EnumValue v1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1794520160 - EnumValue 1143234212 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>v1601</source>
+          <note from="Developer" annotates="general" priority="2">v1601</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. Agent REST Ver.UPS - EnumValue v1601 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1794520160 - EnumValue 4162808274 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>v1607</source>
+          <note from="Developer" annotates="general" priority="2">v1607</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. Agent REST Ver.UPS - EnumValue v1607 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1794520160 - EnumValue 3125580043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>v1701</source>
+          <note from="Developer" annotates="general" priority="2">v1701</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. Agent REST Ver.UPS - EnumValue v1701 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1794520160 - EnumValue 1850186809 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>v1707</source>
+          <note from="Developer" annotates="general" priority="2">v1707</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. Agent REST Ver.UPS - EnumValue v1707 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1794520160 - EnumValue 1850773770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>v1801</source>
+          <note from="Developer" annotates="general" priority="2">v1801</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. Agent REST Ver.UPS - EnumValue v1801 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1794520160 - EnumValue 3126167004 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>v1807</source>
+          <note from="Developer" annotates="general" priority="2">v1807</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. Agent REST Ver.UPS - EnumValue v1807 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 70540226 - EnumValue 1065337893 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production</source>
+          <note from="Developer" annotates="general" priority="2">Produktiv</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShipping Agent REST URLUPS - EnumValue Production - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 70540226 - EnumValue 3246098898 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Testing</source>
+          <note from="Developer" annotates="general" priority="2">Test</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShipping Agent REST URLUPS - EnumValue Testing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 2909517731 - EnumValue 2557024266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2909517731">
+          <source>UPS REST</source>
+          <note from="Developer" annotates="general" priority="2">UPS REST</note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension ESNShipping AgentShip - EnumValue UPS REST - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -38,6 +38,12 @@
     {
       "id": "ccdb8d64-7653-444c-8245-86d2301f08e3",
       "publisher": "etiscan Identifikationssysteme GmbH",
+      "name": "Etiscan NAVConnect - Ship",
+      "version": "19.0.0.0"
+    },    
+    {
+      "id": "cb06ce4a-a5db-448b-95ed-5aefba85ce40",
+      "publisher": "etiscan Identifikationssysteme GmbH",
       "name": "Etiscan NAVConnect - Ship UPS",
       "version": "19.0.0.0"
     }
