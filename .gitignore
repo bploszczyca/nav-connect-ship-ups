@@ -1,3 +1,4 @@
 app/.vscode/rad.json
 app/.vscode/.alcache/*.json
 app/.vscode/.altemplates/*.json
+*.app
