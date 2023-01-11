@@ -3,15 +3,20 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Etiscan NAVConnect - Ship UPS">
     <body>
       <group id="body">
-        <trans-unit id="Codeunit 169896487 - Method 578278027 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Not yet implemented.</source>
-          <note from="Developer" annotates="general" priority="2">Noch nicht umgesetzt.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent APIUPS - Method DefaultImplementation - NamedType NotYetImplementedLbl</note>
+        <trans-unit id="Codeunit 2623966606 - Method 1084055913 - NamedType 2189144797" size-unit="char" translate="yes" xml:space="preserve">
+          <source>?additionaladdressvalidation=city</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST v1UPS - Method GetShippingURLQueryParameters - NamedType ShippingURLQueryParametersLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 351658717 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not yet implemented.</source>
           <note from="Developer" annotates="general" priority="2">Noch nicht umgesetzt.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST vXXUPS - NamedType NotYetImplementedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 351658717 - Method 1084055913 - NamedType 2189144797" size-unit="char" translate="yes" xml:space="preserve">
+          <source>?additionaladdressvalidation=city</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST vXXUPS - Method GetShippingURLQueryParameters - NamedType ShippingURLQueryParametersLbl</note>
         </trans-unit>
         <trans-unit id="Page 3185079179 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
@@ -148,10 +153,10 @@
           <note from="Developer" annotates="general" priority="2">Test</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShipping Agent REST URLUPS - EnumValue Testing - Property Caption</note>
         </trans-unit>
-        <trans-unit id="EnumExtension 2909517731 - EnumValue 2557024266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2909517731">
+        <trans-unit id="EnumExtension 2979565311 - EnumValue 2557024266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2909517731">
           <source>UPS REST</source>
           <note from="Developer" annotates="general" priority="2">UPS REST</note>
-          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension ESNShipping AgentShip - EnumValue UPS REST - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension ESNShipping AgentUPS - EnumValue UPS REST - Property Caption</note>
         </trans-unit>
       </group>
     </body>

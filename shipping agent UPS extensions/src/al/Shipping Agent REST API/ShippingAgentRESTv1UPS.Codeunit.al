@@ -1,5 +1,6 @@
-codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent RESTUPS"
+codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent RESTUPS", "ESNShipping Agent APIShip"
 {
+    #region "ESNShipping Agent RESTUPS" Interface
     procedure GetShippingURL(ShippingAgent: Record "Shipping Agent") ShippingURL: Text;
     var
         ShippingTestingURLLbl: Label 'https://wwwcie.ups.com/ship/%1/shipments%2', Locked = true;
@@ -69,5 +70,43 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
             end;
         end;
     end;
+    #endregion "ESNShipping Agent RESTUPS" Interface
 
+
+    #region "ESNShipping Agent APIShip" Interface
+    procedure GetShippingAgentAPIInterface(ShippingAgent: Record "Shipping Agent") ShippingAgentAPIInterface: Interface "ESNShipping Agent APIShip"
+    begin
+        ShippingAgentAPIInterface := ShippingAgent.GetESNShippingAgentAPIShipUPS().GetShippingAgentAPIInterface(ShippingAgent)
+    end;
+
+    procedure RegisterShipping(Package: Record "ETI-Package-NC");
+    begin
+        Message('RegisterShipping, das ist ja super');
+    end;
+
+    procedure CancelRegisteredShipping(RegPackage: Record "ETI-Reg. Package-NC");
+    begin
+
+    end;
+
+    procedure GetShippingLable(RegPackage: Record "ETI-Reg. Package-NC");
+    begin
+
+    end;
+
+    procedure PrintShippingLable(RegPackage: Record "ETI-Reg. Package-NC");
+    begin
+
+    end;
+
+    procedure GetTrackingStatus(RegPackage: Record "ETI-Reg. Package-NC");
+    begin
+
+    end;
+
+    procedure GetShippingCosts(RegPackage: Record "ETI-Reg. Package-NC");
+    begin
+
+    end;
+    #endregion "ESNShipping Agent APIShip" Interface
 }

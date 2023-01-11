@@ -1,5 +1,7 @@
 interface "ESNShipping Agent APIShip"
 {
+    procedure GetShippingAgentAPIInterface(ShippingAgent: Record "Shipping Agent") ShippingAgentAPIInterface: Interface "ESNShipping Agent APIShip";
+
     procedure RegisterShipping(Package: Record "ETI-Package-NC");
 
     procedure CancelRegisteredShipping(RegPackage: Record "ETI-Reg. Package-NC");

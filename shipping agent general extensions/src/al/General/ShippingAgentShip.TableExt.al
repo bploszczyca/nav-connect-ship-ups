@@ -40,8 +40,15 @@ tableextension 70869780 "ESNShipping AgentShip" extends "Shipping Agent"
         }
     }
 
+    #region "ESNShipping Agent APIShip"
     procedure GetShippingAgentAPI(): Interface "ESNShipping Agent APIShip"
     begin
         exit(rec."ESNShipping Agent APIShip");
     end;
+
+    procedure GetShippingAgentAPIInterface() ShippingAgentAPIInterface: Interface "ESNShipping Agent APIShip"
+    begin
+        GetShippingAgentAPI().GetShippingAgentAPIInterface(Rec);
+    end;
+    #endregion
 }

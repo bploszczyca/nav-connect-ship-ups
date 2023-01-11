@@ -74,17 +74,12 @@ tableextension 70869801 "ESNShipping AgentUPS" extends "Shipping Agent"
         exit("ESNShipping Agent APIShip" = "ESNShipping Agent APIShip"::"UPS REST");
     end;
 
+    #region "ESNShip. Agent REST VersionUPS" Interface Funtions
     procedure GetShipAgentRESTVerInterface() ShipAgentRESTVerInterface: Interface "ESNShip. Agent REST VersionUPS"
     begin
         ShipAgentRESTVerInterface := "ESNREST VersionUPS";
     end;
 
-    procedure GetShipAgentRESTInterface() ShipAgentRESTInterface: Interface "ESNShipping Agent RESTUPS"
-    begin
-        ShipAgentRESTInterface := "ESNREST VersionUPS";
-    end;
-
-    #region "ESNShip. Agent REST VersionUPS" Interface Funtions
     procedure GetVersionString() VersionString: Text
     begin
         VersionString := GetShipAgentRESTVerInterface.GetVersionString(Rec);
@@ -93,6 +88,11 @@ tableextension 70869801 "ESNShipping AgentUPS" extends "Shipping Agent"
 
 
     #region "ESNShipping Agent RESTUPS" Interface Funtions
+    procedure GetShipAgentRESTInterface() ShipAgentRESTInterface: Interface "ESNShipping Agent RESTUPS"
+    begin
+        ShipAgentRESTInterface := "ESNREST VersionUPS";
+    end;
+
     procedure GetShippingURL() ShippingURL: Text
     begin
         ShippingURL := GetShipAgentRESTInterface.GetShippingURL(Rec);
@@ -113,4 +113,13 @@ tableextension 70869801 "ESNShipping AgentUPS" extends "Shipping Agent"
         ShippingLabelRecoveryURL := GetShipAgentRESTInterface.GetShippingLabelRecoveryURL(rec);
     end;
     #endregion
+
+    #region "ESNShipping Agent APIShip" Interface Functions
+    procedure GetESNShippingAgentAPIShipUPS() ESNShippingAgentAPIShipUPS: Interface "ESNShipping Agent APIShip"
+    begin
+        ESNShippingAgentAPIShipUPS := "ESNREST VersionUPS";
+    end;
+    #endregion
+
+
 }

@@ -1,6 +1,11 @@
 codeunit 70869782 "ESNShipping Agent APIShip" implements "ESNShipping Agent APIShip"
 {
     #region implements "ESNShipping Agent APIShip"
+    procedure GetShippingAgentAPIInterface(ShippingAgent: Record "Shipping Agent") ShippingAgentAPIInterface: Interface "ESNShipping Agent APIShip"
+    begin
+
+    end;
+
     procedure RegisterShipping(Package: Record "ETI-Package-NC");
     begin
         // DefaultImplementation(Package);
