@@ -98,6 +98,11 @@ tableextension 70869801 "ESNShipping AgentUPS" extends "Shipping Agent"
         ShippingURL := GetShipAgentRESTInterface.GetShippingURL(Rec);
     end;
 
+    procedure GetShippingURLQueryParameters() ShippingURLQueryParameters: Text;
+    begin
+        ShippingURLQueryParameters := GetShipAgentRESTInterface.GetShippingURLQueryParameters(Rec);
+    end;
+
     procedure GetShippingCancelURL() ShippingCancelURL: Text
     begin
         ShippingCancelURL := GetShipAgentRESTInterface.GetShippingCancelURL(Rec);

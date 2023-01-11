@@ -8,6 +8,15 @@ codeunit 70869803 "ESNShipping Agent REST vXXUPS" implements "ESNShipping Agent 
         Error(NotYetImplementedLbl);
     end;
 
+    procedure GetShippingURLQueryParameters(ShippingAgent: Record "Shipping Agent") ShippingURLQueryParameters: Text;
+    var
+        ShippingURLQueryParametersLbl: Label '?additionaladdressvalidation=city';
+    begin
+        if ShippingAgent.IsShippingAgentUPS then begin
+            ShippingURLQueryParameters := ShippingURLQueryParametersLbl;
+        end;
+    end;
+
     procedure GetShippingCancelURL(ShippingAgent: Record "Shipping Agent") ShippingCancelURL: Text;
     begin
         Error(NotYetImplementedLbl);

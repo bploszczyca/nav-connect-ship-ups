@@ -37,7 +37,7 @@ codeunit 70869805 "ESNShipping Agent APIUPS" implements "ESNShipping Agent APISh
     begin
         Package.TestField("Shipping Agent Code");
         ShippingAgent.get(Package."Shipping Agent Code");
-        ShippingAgent.TestField("ESNShipping Agent APIShip");
+        ShippingAgent.TestField("ESNShipping Agent APIShip", ShippingAgent."ESNShipping Agent APIShip"::"UPS REST");
         Error(NotYetImplementedLbl);
     end;
 

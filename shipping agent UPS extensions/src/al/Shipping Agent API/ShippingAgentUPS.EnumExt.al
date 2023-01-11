@@ -1,4 +1,4 @@
-enumextension 70869800 "ESNShipping AgentShip" extends "ESNShipping AgentShip"
+enumextension 70869800 "ESNShipping AgentUPS" extends "ESNShipping AgentShip"
 {
     value(10; "UPS REST")
     {
