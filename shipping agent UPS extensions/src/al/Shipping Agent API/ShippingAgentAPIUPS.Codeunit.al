@@ -3,7 +3,7 @@ codeunit 70869805 "ESNShipping Agent APIUPS" implements "ESNShipping Agent APISh
 
     procedure GetShippingAgentAPIInterface(ShippingAgent: Record "Shipping Agent") ShippingAgentAPIInterface: Interface "ESNShipping Agent APIShip"
     begin
-
+        ShippingAgentAPIInterface := ShippingAgent."ESNREST VersionUPS";
     end;
 
     procedure RegisterShipping(Package: Record "ETI-Package-NC");

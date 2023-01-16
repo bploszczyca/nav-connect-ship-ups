@@ -76,7 +76,7 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
     #region "ESNShipping Agent APIShip" Interface
     procedure GetShippingAgentAPIInterface(ShippingAgent: Record "Shipping Agent") ShippingAgentAPIInterface: Interface "ESNShipping Agent APIShip"
     begin
-        ShippingAgentAPIInterface := ShippingAgent.GetESNShippingAgentAPIShipUPS().GetShippingAgentAPIInterface(ShippingAgent)
+        ShippingAgentAPIInterface := ShippingAgent.GetESNShippingAgentAPIShipUPS();
     end;
 
     procedure RegisterShipping(Package: Record "ETI-Package-NC");

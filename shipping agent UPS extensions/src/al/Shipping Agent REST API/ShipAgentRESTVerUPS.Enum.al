@@ -3,6 +3,13 @@ enum 70869800 "ESNShip. Agent REST Ver.UPS" implements "ESNShipping Agent RESTUP
     Caption = 'Shipping Agent REST Version';
     Extensible = true;
 
+    UnknownValueImplementation = "ESNShipping Agent RESTUPS" = "ESNShipping Agent REST v1UPS",
+            "ESNShip. Agent REST VersionUPS" = "ESNShip. Agent REST Ver0UPS",
+            "ESNShipping Agent APIShip" = "ESNShipping Agent REST v1UPS";
+
+    DefaultImplementation = "ESNShipping Agent RESTUPS" = "ESNShipping Agent REST v1UPS",
+            "ESNShip. Agent REST VersionUPS" = "ESNShip. Agent REST Ver0UPS",
+            "ESNShipping Agent APIShip" = "ESNShipping Agent REST v1UPS";
 
     value(0; "default")
     {
