@@ -370,10 +370,20 @@ tableextension 70869782 "ESNPackageShip" extends "ETI-Package-NC"
     var
         ShippingAgent: Record "Shipping Agent";
     begin
-        if ShippingAgent.get(Rec."Shipping Agent Code") then begin
+        if GetShippingAgent(ShippingAgent) then begin
             exit(ShippingAgent.GetShippingAgentAPI());
         end else begin
             exit(Enum::"ESNShipping AgentShip"::" ");
         end;
+    end;
+
+    procedure GetShippingAgent(var ShippingAgent: Record "Shipping Agent"): Boolean
+    begin
+        exit(ShippingAgent.get(Rec."Shipping Agent Code"));
+    end;
+
+    procedure GetShippingAgent() ShippingAgent: Record "Shipping Agent"
+    begin
+        ShippingAgent.get(Rec."Shipping Agent Code");
     end;
 }

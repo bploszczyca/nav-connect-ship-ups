@@ -11,7 +11,7 @@ tableextension 70869801 "ESNShipping AgentUPS" extends "Shipping Agent"
                 Validate("ESNShipping Agent APIShip", "ESNShipping Agent APIShip"::"UPS REST");
             end;
         }
-        field(70869802; "ESNUser NameUPS"; text[20])
+        field(70869802; "ESNUser NameUPS"; text[80])
         {
             Caption = 'UPS User Name';
             DataClassification = EndUserIdentifiableInformation;
@@ -20,7 +20,7 @@ tableextension 70869801 "ESNShipping AgentUPS" extends "Shipping Agent"
                 Validate("ESNShipping Agent APIShip", "ESNShipping Agent APIShip"::"UPS REST");
             end;
         }
-        field(70869803; "ESNUser PasswordUPS"; text[20])
+        field(70869803; "ESNUser PasswordUPS"; text[30])
         {
             Caption = 'UPS User Password';
             DataClassification = CustomerContent;
