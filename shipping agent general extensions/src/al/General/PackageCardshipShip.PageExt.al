@@ -8,6 +8,7 @@ pageextension 70869783 "ESNPackage CardshipShip" extends "ETI-Package Card-NC"
             {
                 Caption = 'Shipment';
                 field("ESNShipment No.UPSshipShip"; rec."ESNShipment No.Ship") { ApplicationArea = All; }
+                field("ESNShipment DescriptionShip"; rec."ESNShipment DescriptionShip") { ApplicationArea = All; }
                 field("ESNPackage CoutUPSshipShip"; rec."ESNPackage CoutShip") { ApplicationArea = All; }
                 group(ESNShipFromAddresseUPSshipShip)
                 {

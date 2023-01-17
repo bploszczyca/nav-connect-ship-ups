@@ -15,8 +15,11 @@ tableextension 70869782 "ESNPackageShip" extends "ETI-Package-NC"
             FieldClass = FlowField;
             CalcFormula = count("ETI-Package-NC" where("ESNShipment No.Ship" = field("ESNShipment No.Ship")));
         }
-
-
+        field(70869782; "ESNShipment DescriptionShip"; Text[50])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'ESNShipment Description';
+        }
         field(70869790; "ESNShip-from TypeShip"; Enum "ESNPackageShipFromTypeShip")
         {
             DataClassification = CustomerContent;
@@ -140,6 +143,7 @@ tableextension 70869782 "ESNPackageShip" extends "ETI-Package-NC"
 
     trigger OnAfterModify()
     begin
+        SyncShipmentDescription();
         SyncShipFromAddress();
     end;
 
@@ -248,6 +252,22 @@ tableextension 70869782 "ESNPackageShip" extends "ETI-Package-NC"
                     END;
                 END;
         END;
+    end;
+
+    local procedure SyncShipmentDescription()
+    var
+        Package: Record "ETI-Package-NC";
+    begin
+        Package.SetRange("ESNShipment No.Ship", rec."ESNShipment No.Ship");
+        Package.SetFilter("No.", '<>%1', rec."No.");
+        if not Package.IsEmpty then
+            if Package.Find('-') then
+                repeat
+                    if Package."ESNShipment DescriptionShip" <> rec."ESNShipment DescriptionShip" then begin
+                        Package.Validate("ESNShipment DescriptionShip", rec."ESNShipment DescriptionShip");
+                        Package.Modify();
+                    end;
+                until Package.Next() = 0;
     end;
 
     local procedure SyncShipFromAddress()
