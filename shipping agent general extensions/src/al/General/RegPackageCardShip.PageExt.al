@@ -2,6 +2,21 @@ pageextension 70869785 "ESNReg. Package CardShip" extends "ETI-Reg. Package Card
 {
     layout
     {
+        addafter("Ship-to Country/Region Code")
+        {
+            field("International Shipment"; rec.IsInternationalShipment())
+            {
+                Caption = 'International Shipment';
+                ApplicationArea = Basic, Suite;
+                Importance = Additional;
+            }
+            field("EU Shipment"; rec.IsEUShipment())
+            {
+                Caption = 'EU Shipments';
+                ApplicationArea = Basic, Suite;
+                Importance = Additional;
+            }
+        }
         addbefore(Lieferung)
         {
             group(ESNShipmentUPSShip)

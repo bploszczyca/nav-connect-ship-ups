@@ -33,5 +33,4 @@ enum 70869800 "ESNShip. Agent REST Ver.UPS" implements "ESNShipping Agent RESTUP
     value(1707; "v1707") { Caption = 'v1707', Comment = 'v1707'; Implementation = "ESNShipping Agent RESTUPS" = "ESNShipping Agent REST vXXUPS", "ESNShip. Agent REST VersionUPS" = "ESNShip. Agent REST Ver0UPS", "ESNShipping Agent APIShip" = "ESNShipping Agent REST vXXUPS"; }
     value(1801; "v1801") { Caption = 'v1801', Comment = 'v1801'; Implementation = "ESNShipping Agent RESTUPS" = "ESNShipping Agent REST vXXUPS", "ESNShip. Agent REST VersionUPS" = "ESNShip. Agent REST Ver0UPS", "ESNShipping Agent APIShip" = "ESNShipping Agent REST vXXUPS"; }
     value(1807; "v1807") { Caption = 'v1807', Comment = 'v1807'; Implementation = "ESNShipping Agent RESTUPS" = "ESNShipping Agent REST vXXUPS", "ESNShip. Agent REST VersionUPS" = "ESNShip. Agent REST Ver0UPS", "ESNShipping Agent APIShip" = "ESNShipping Agent REST vXXUPS"; }
-
 }

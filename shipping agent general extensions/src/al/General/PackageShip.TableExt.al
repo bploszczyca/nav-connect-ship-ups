@@ -406,4 +406,18 @@ tableextension 70869782 "ESNPackageShip" extends "ETI-Package-NC"
     begin
         ShippingAgent.get(Rec."Shipping Agent Code");
     end;
+
+    procedure IsInternationalShipment() InternationalShipment: Boolean
+    var
+        ShipmentMgt: Codeunit "ESNShipment Mgt.Ship";
+    begin
+        InternationalShipment := ShipmentMgt.IsInternationalShipment(Rec);
+    end;
+
+    procedure IsEUShipment() EUShipment: Boolean
+    var
+        ShipmentMgt: Codeunit "ESNShipment Mgt.Ship";
+    begin
+        EUShipment := ShipmentMgt.IsEUShipment(Rec);
+    end;
 }

@@ -1,7 +1,22 @@
-pageextension 70869783 "ESNPackage CardshipShip" extends "ETI-Package Card-NC"
+pageextension 70869783 "ESNPackage CardShip" extends "ETI-Package Card-NC"
 {
     layout
     {
+        addafter("Ship-to Country/Region Code")
+        {
+            field("International Shipment"; rec.IsInternationalShipment())
+            {
+                Caption = 'International Shipment';
+                ApplicationArea = Basic, Suite;
+                Importance = Additional;
+            }
+            field("EU Shipment"; rec.IsEUShipment())
+            {
+                Caption = 'EU Shipments';
+                ApplicationArea = Basic, Suite;
+                Importance = Additional;
+            }
+        }
         addafter(Lieferung)
         {
             group(ESNShipmentUPSshipShip)
@@ -105,7 +120,7 @@ pageextension 70869783 "ESNPackage CardshipShip" extends "ETI-Package Card-NC"
                     trigger OnAction()
                     var
                         NewPackage: Record "ETI-Package-NC";
-                        ShipUPSMgt: Codeunit "ESNShip UPS Mgt.Ship";
+                        ShipUPSMgt: Codeunit "ESNShipment Mgt.Ship";
                     begin
                         ShipUPSMgt.AddPackageToShipmentNo(rec, NewPackage);
                         Page.Run(page::"ETI-Package Card-NC", NewPackage);

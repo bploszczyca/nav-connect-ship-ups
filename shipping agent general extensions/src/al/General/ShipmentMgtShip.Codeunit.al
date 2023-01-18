@@ -1,4 +1,4 @@
-codeunit 70869781 "ESNShip UPS Mgt.Ship"
+codeunit 70869781 "ESNShipment Mgt.Ship"
 {
 
     #region Shipping Agent and Shipping Agent Services
@@ -348,6 +348,21 @@ codeunit 70869781 "ESNShip UPS Mgt.Ship"
         end;
     end;
 
+    procedure IsInternationalShipment(Package: Record "ETI-Package-NC") InternationalShipment: Boolean
+    begin
+        InternationalShipment := (Package."Ship-to Country/Region Code" <> '') and (Package."Ship-to Country/Region Code" <> Package."ESNShip-from Coun/Reg CodeShip") and not IsEUShipment(Package);
+    end;
+
+    procedure IsEUShipment(Package: Record "ETI-Package-NC") EUShipment: Boolean
+    var
+        ShipToCountry: Record "Country/Region";
+        ShipFromCountry: Record "Country/Region";
+    begin
+        if ShipToCountry.get(Package."Ship-to Country/Region Code") then;
+        if ShipFromCountry.get(Package."ESNShip-from Coun/Reg CodeShip") then;
+        EUShipment := (ShipToCountry."EU Country/Region Code" <> '') and (ShipFromCountry."EU Country/Region Code" <> '');
+    end;
+
     [IntegrationEvent(true, false)]
     local procedure OnBefore_Package_OnAfterValidateEvent_TemplateDocumentNo(var xRec: Record "ETI-Package-NC"; var Rec: Record "ETI-Package-NC"; CurrFieldNo: Integer; var IsHandled: Boolean)
     begin
@@ -411,6 +426,22 @@ codeunit 70869781 "ESNShip UPS Mgt.Ship"
                         end;
                     until RegPackage2.Next() = 0;
         end;
+    end;
+
+    procedure IsInternationalShipment(RegPackage: Record "ETI-Reg. Package-NC") InternationalShipment: Boolean
+    var
+        Package: Record "ETI-Package-NC";
+    begin
+        Package.TransferFields(RegPackage);
+        exit(IsInternationalShipment(Package));
+    end;
+
+    procedure IsEUShipment(RegPackage: Record "ETI-Reg. Package-NC") DomesticShipment: Boolean
+    var
+        Package: Record "ETI-Package-NC";
+    begin
+        Package.TransferFields(RegPackage);
+        exit(IsEUShipment(Package));
     end;
     #endregion
 

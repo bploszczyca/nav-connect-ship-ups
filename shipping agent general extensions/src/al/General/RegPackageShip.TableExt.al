@@ -27,4 +27,18 @@ tableextension 70869783 "ESNReg. PackageShip" extends "ETI-Reg. Package-NC"
             exit(Enum::"ESNShipping AgentShip"::" ");
         end;
     end;
+
+    procedure IsInternationalShipment() InternationalShipment: Boolean
+    var
+        ShipmentMgt: Codeunit "ESNShipment Mgt.Ship";
+    begin
+        InternationalShipment := ShipmentMgt.IsInternationalShipment(Rec);
+    end;
+
+    procedure IsEUShipment() EUShipment: Boolean
+    var
+        ShipmentMgt: Codeunit "ESNShipment Mgt.Ship";
+    begin
+        EUShipment := ShipmentMgt.IsEUShipment(Rec);
+    end;
 }

@@ -67,6 +67,91 @@ tableextension 70869801 "ESNShipping AgentUPS" extends "Shipping Agent"
                 GetShippingURL();  // 'Not yet implemented.' check
             end;
         }
+        field(70869810; "ESNTransportation PaymentUPS"; Enum "ESNTransAndDuties PaymentUPS")
+        {
+            Caption = 'Transportation Payment';
+            DataClassification = CustomerContent;
+        }
+        field(70869811; "ESNBillShip Payment TypeUPS"; Enum "ESNTrans. Payment TypeUPS")
+        {
+            Caption = 'Transportation Payment Type';
+            DataClassification = CustomerContent;
+        }
+        field(70869820; "ESNTransBillShipCredit CardUPS"; enum "ESNCredit Card TypeUPS")
+        {
+            Caption = 'Credit Card';
+            DataClassification = CustomerContent;
+        }
+        field(70869821; "ESNTransBillShipCard NumberUPS"; Text[50])
+        {
+            Caption = 'Credit Card Number';
+            DataClassification = CustomerContent;
+        }
+        field(70869822; "ESNTransBillShipCard Exp. UPS"; Date)
+        {
+            Caption = 'Credit Card Expiration Date';
+            DataClassification = CustomerContent;
+        }
+        field(70869823; "ESNTransBillShipCard Sec. UPS"; Text[4])
+        {
+            Caption = 'Credit Card Security Code';
+            DataClassification = CustomerContent;
+            ExtendedDatatype = Masked;
+        }
+
+        field(70869830; "ESNTransBillReceiver AccUPS"; Code[20])
+        {
+            Caption = 'Bill Receiver Account Number';
+            DataClassification = OrganizationIdentifiableInformation;
+        }
+        field(70869831; "ESNTransBillThird AccUPS"; Code[20])
+        {
+            Caption = 'Bill Third Party Account Number';
+            DataClassification = OrganizationIdentifiableInformation;
+        }
+        field(70869840; "ESNDuty PaymentUPS"; Enum "ESNTransAndDuties PaymentUPS")
+        {
+            Caption = 'Duties and Taxes Payment';
+            DataClassification = CustomerContent;
+        }
+        field(70869841; "ESNDutyBillShip Pay. TypeUPS"; Enum "ESNTrans. Payment TypeUPS")
+        {
+            Caption = 'Duties and Taxes Payment Type';
+            DataClassification = CustomerContent;
+        }
+        field(70869850; "ESNDutyBillShipCredit CardUPS"; enum "ESNCredit Card TypeUPS")
+        {
+            Caption = 'Credit Card';
+            DataClassification = CustomerContent;
+        }
+        field(70869851; "ESNDutyBillShipCard NumberUPS"; Text[50])
+        {
+            Caption = 'Credit Card Number';
+            DataClassification = CustomerContent;
+        }
+        field(70869852; "ESNDutyBillShipCard Exp. UPS"; Date)
+        {
+            Caption = 'Credit Card Expiration Date';
+            DataClassification = CustomerContent;
+        }
+        field(70869853; "ESNDutyBillShipCard Sec. UPS"; Text[4])
+        {
+            Caption = 'Credit Card Security Code';
+            DataClassification = CustomerContent;
+            ExtendedDatatype = Masked;
+        }
+
+        field(70869860; "ESNDutyBillReceiver AccUPS"; Code[20])
+        {
+            Caption = 'Bill Receiver Account Number';
+            DataClassification = OrganizationIdentifiableInformation;
+        }
+        field(70869861; "ESNDutyBillThird AccUPS"; Code[20])
+        {
+            Caption = 'Bill Third Party Account Number';
+            DataClassification = OrganizationIdentifiableInformation;
+        }
+
     }
 
     procedure IsShippingAgentUPS(): Boolean

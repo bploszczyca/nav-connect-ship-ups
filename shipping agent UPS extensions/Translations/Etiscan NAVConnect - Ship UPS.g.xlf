@@ -23,6 +23,21 @@
           <note from="Developer" annotates="general" priority="2">Allgemein</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control General - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3185079179 - Control 3981835026 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control Payment Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3185079179 - Control 1212339558 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Duties and Taxes</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control Duties and Taxes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3185079179 - Control 808639306 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transportation</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control Transportation - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3185079179 - Control 3254019093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>UPS Account Information</source>
           <note from="Developer" annotates="general" priority="2">UPS Zugangsdaten</note>
@@ -58,6 +73,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNShipping AgentsUPS - Action UPS REST api Setup - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 1266810243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Return Service</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNReturn ServiceUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 1266810243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Return Service</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNReturn ServiceUPS - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3959673349 - Field 3357801362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4577671">
           <source>UPS Shipment Service Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -72,6 +97,51 @@
           <source>UPS Account Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNAccount NumberUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 3884598183 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Transportation Payment Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNBillShip Payment TypeUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 273748388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Duties and Taxes Payment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNDuty PaymentUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 2718311883 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Bill Receiver Account Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNDutyBillReceiver AccUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 299569839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Duties and Taxes Payment Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNDutyBillShip Pay. TypeUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 1224688040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Credit Card Expiration Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNDutyBillShipCard Exp. UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 1132515720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Credit Card Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNDutyBillShipCard NumberUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 2933935720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Credit Card Security Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNDutyBillShipCard Sec. UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 593345702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Credit Card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNDutyBillShipCredit CardUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 1006854573 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Bill Third Party Account Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNDutyBillThird AccUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2979565311 - Field 2004444839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
           <source>REST API Endpoint</source>
@@ -88,6 +158,41 @@
           <note from="Developer" annotates="general" priority="2">REST Version</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNREST VersionUPS - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 2231191745 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Bill Receiver Account Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNTransBillReceiver AccUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 39203670 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Credit Card Expiration Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNTransBillShipCard Exp. UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 476098342 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Credit Card Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNTransBillShipCard NumberUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 1932070630 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Credit Card Security Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNTransBillShipCard Sec. UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 3837761480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Credit Card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNTransBillShipCredit CardUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 2239330719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Bill Third Party Account Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNTransBillThird AccUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 2469957766 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Transportation Payment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNTransportation PaymentUPS - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2979565311 - Field 2211233884 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
           <source>UPS User Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -97,6 +202,166 @@
           <source>UPS User Password</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNUser PasswordUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 3428125896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>American Express</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue American Express - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 3142095428 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bravo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue Bravo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 4081160998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Carte Bleue Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue Carte Bleue Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 3707566171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dankort</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue Dankort - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 726607345 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Diners Club</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue Diners Club - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 1473745461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discover</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue Discover - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 4204975270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hipercard</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue Hipercard - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 2894319413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>JCB</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue JCB - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 2562576652 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MasterCard</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue MasterCard - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 3839113130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Optima</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue Optima - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 2684440015 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Postepay</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue Postepay - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 2672173994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UnionPay/ExpressPay</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue UnionPay/ExpressPay - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 3854048743 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VISA</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue VISA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 3053904839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Visa Electron</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue Visa Electron - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2276791553 - EnumValue 2155770354 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VPAY</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNCredit Card TypeUPS - EnumValue VPAY - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 1577634438 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Electronic Return Label (ERL)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Electronic Return Label (ERL) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 435594924 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Exchange Print Return Label</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Exchange Print Return Label - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 3205408737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Pack &amp; Collect Service 1-Attempt Box 1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Pack &amp; Collect Service 1-Attempt Box 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 2567712120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Pack &amp; Collect Service 1-Attempt Box 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Pack &amp; Collect Service 1-Attempt Box 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 1930015503 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Pack &amp; Collect Service 1-Attempt Box 3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Pack &amp; Collect Service 1-Attempt Box 3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 2098924526 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Pack &amp; Collect Service 1-Attempt Box 4</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Pack &amp; Collect Service 1-Attempt Box 4 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 1461227909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Pack &amp; Collect Service 1-Attempt Box 5</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Pack &amp; Collect Service 1-Attempt Box 5 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 3174057295 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Pack &amp; Collect Service 3-Attempt Box 1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Pack &amp; Collect Service 3-Attempt Box 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 792179850 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Pack &amp; Collect Service 3-Attempt Box 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Pack &amp; Collect Service 3-Attempt Box 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 154483233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Pack &amp; Collect Service 3-Attempt Box 3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Pack &amp; Collect Service 3-Attempt Box 3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 2067573084 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Pack &amp; Collect Service 3-Attempt Box 4</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Pack &amp; Collect Service 3-Attempt Box 4 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 1429876467 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Pack &amp; Collect Service 3-Attempt Box 5</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Pack &amp; Collect Service 3-Attempt Box 5 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 1659296728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Print Return Label (PRL)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Print Return Label (PRL) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 2224189859 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Return Service 1-Attempt (RS1)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Return Service 1-Attempt (RS1) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1266810243 - EnumValue 2871921491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Return Service 3-Attempt (RS3)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNReturn ServiceUPS - EnumValue UPS Return Service 3-Attempt (RS3) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 1794520160 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shipping Agent REST Version</source>
@@ -152,6 +417,31 @@
           <source>Testing</source>
           <note from="Developer" annotates="general" priority="2">Test</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShipping Agent REST URLUPS - EnumValue Testing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2066170972 - EnumValue 547734019 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNTrans. Payment TypeUPS - EnumValue Credit Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2066170972 - EnumValue 1322553624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Account Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNTrans. Payment TypeUPS - EnumValue UPS Account Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2813998361 - EnumValue 1193861806 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill Receiver</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNTransAndDuties PaymentUPS - EnumValue Bill Receiver - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2813998361 - EnumValue 2497188594 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill Shipper</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNTransAndDuties PaymentUPS - EnumValue Bill Shipper - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2813998361 - EnumValue 2940113914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill Third Party</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNTransAndDuties PaymentUPS - EnumValue Bill Third Party - Property Caption</note>
         </trans-unit>
         <trans-unit id="EnumExtension 2979565311 - EnumValue 2557024266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2909517731">
           <source>UPS REST</source>

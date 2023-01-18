@@ -18,25 +18,45 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ESNRegPack. FactBoxShip - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1962812194 - Action 552858644 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+        <trans-unit id="PageExtension 545993712 - Action 552858644 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
           <source>Shipment</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardshipShip - Action ESNShipmentshipShip - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Action ESNShipmentshipShip - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1962812194 - Action 2059192268 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+        <trans-unit id="PageExtension 545993712 - Action 2059192268 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
           <source>Add Package to Shipment</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardshipShip - Action ESNAdd Package to ShipmentshipShip - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Action ESNAdd Package to ShipmentshipShip - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1962812194 - Control 2973575994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+        <trans-unit id="PageExtension 545993712 - Control 100849452 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+          <source>EU Shipments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control EU Shipment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 545993712 - Control 1014351022 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+          <source>International Shipment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control International Shipment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 545993712 - Control 2973575994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
           <source>Shipment</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardshipShip - Control ESNShipmentUPSshipShip - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control ESNShipmentUPSshipShip - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1962812194 - Control 2872948531 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+        <trans-unit id="PageExtension 545993712 - Control 2872948531 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
           <source>Ship-from Address</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardshipShip - Control ESNShipFromAddresseUPSshipShip - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control ESNShipFromAddresseUPSshipShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2399484334 - Control 100849452 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
+          <source>EU Shipments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control EU Shipment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2399484334 - Control 1014351022 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
+          <source>International Shipment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control International Shipment - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2393074613 - Action 1673306232 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1019918254">
           <source>F&amp;unctions</source>
@@ -122,6 +142,11 @@
           <source>Ship-from Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNShip-from TypeShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 50957648 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>ESNShipment Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNShipment DescriptionShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3713282388 - Field 3372326519 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>Shipment No.</source>
