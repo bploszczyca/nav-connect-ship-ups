@@ -54,7 +54,7 @@ page 70869800 "ESNShipping Agent CardUPS"
                     {
                         ShowCaption = false;
                         Visible = ShowTransportationPaymentBillShipper;
-                        field("ESNTrans. Payment TypeUPS"; rec."ESNBillShip Payment TypeUPS")
+                        field("ESNTransBillShip Pay TypeUPS"; rec."ESNTransBillShip Pay TypeUPS")
                         {
                             ApplicationArea = All;
                             trigger OnValidate()
@@ -159,7 +159,7 @@ page 70869800 "ESNShipping Agent CardUPS"
     trigger OnAfterGetCurrRecord()
     begin
         ShowTransportationPaymentBillShipper := rec."ESNTransportation PaymentUPS" = rec."ESNTransportation PaymentUPS"::"Bill Shipper";
-        ShowTransportationPaymentBillShipperCredCard := ShowTransportationPaymentBillShipper and (rec."ESNBillShip Payment TypeUPS" = rec."ESNBillShip Payment TypeUPS"::"Credit Card");
+        ShowTransportationPaymentBillShipperCredCard := ShowTransportationPaymentBillShipper and (rec."ESNTransBillShip Pay TypeUPS" = rec."ESNTransBillShip Pay TypeUPS"::"Credit Card");
         ShowTransportationPaymentBillReceiver := rec."ESNTransportation PaymentUPS" = rec."ESNTransportation PaymentUPS"::"Bill Receiver";
         ShowTransportationPaymentBillThirdParty := rec."ESNTransportation PaymentUPS" = rec."ESNTransportation PaymentUPS"::"Bill Third Party";
 

@@ -224,6 +224,7 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         GetShipmentRequest_Shipment_ShipperContent(Package, ShipmentContent);
         GetShipmentRequest_Shipment_ShipTo(Package, ShipmentContent);
         GetShipmentRequest_Shipment_ShipFrom(Package, ShipmentContent);
+        GetShipmentRequest_Shipment_PaymentInformation(Package, ShipmentContent);
     end;
 
     local procedure GetShipmentRequest_Shipment_ReturnServiceContent(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
@@ -405,6 +406,144 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         ShipFrom.Add('Address', GetShipperAddress(Package));
 
         ShipFromContent.Add('ShipFrom', ShipFrom);
+    end;
+
+    local procedure GetShipmentRequest_Shipment_PaymentInformation(Package: Record "ETI-Package-NC"; ShipFromContent: JsonObject)
+    var
+        ShipmentChargeJsonObject: JsonObject;
+        ShipmentChargeJsonArray: JsonArray;
+
+        ShipmentChargeTransportationInformation: JsonObject;
+        ShipmentChargeDutiesAndTaxesInformation: JsonObject;
+    begin
+        if not Package.IsInternationalShipment() then begin
+            GetShipmentRequest_Shipment_PaymentInformation_ShipmentCharge_Transportation(Package, ShipmentChargeTransportationInformation);
+            ShipmentChargeJsonObject.Add('ShipmentCharge', ShipmentChargeTransportationInformation);
+        end else begin
+            GetShipmentRequest_Shipment_PaymentInformation_ShipmentCharge_Transportation(Package, ShipmentChargeTransportationInformation);
+            ShipmentChargeJsonArray.Add(ShipmentChargeTransportationInformation);
+            GetShipmentRequest_Shipment_PaymentInformation_ShipmentCharge_DutiesAndTaxes(Package, ShipmentChargeDutiesAndTaxesInformation);
+            ShipmentChargeJsonArray.Add(ShipmentChargeDutiesAndTaxesInformation);
+
+            ShipmentChargeJsonObject.Add('ShipmentCharge', ShipmentChargeJsonArray);
+        end;
+        ShipFromContent.Add('PaymentInformation', ShipmentChargeJsonObject);
+    end;
+
+    local procedure GetShipmentRequest_Shipment_PaymentInformation_ShipmentCharge_Transportation(Package: Record "ETI-Package-NC"; ShipmentChargeTransportationInformation: JsonObject)
+    var
+        ShippingAgent: Record "Shipping Agent";
+
+        BillShipper: JsonObject;
+        BillShipperCredCard: JsonObject;
+        BillReceiver: JsonObject;
+        BillThirdParty: JsonObject;
+    begin
+        ShipmentChargeTransportationInformation.Add('Type', '01');
+
+        ShippingAgent := Package.GetShippingAgent();
+        case ShippingAgent."ESNTransportation PaymentUPS" of
+            ShippingAgent."ESNTransportation PaymentUPS"::"Bill Shipper":
+                begin
+                    case ShippingAgent."ESNTransBillShip Pay TypeUPS" of
+                        ShippingAgent."ESNTransBillShip Pay TypeUPS"::"UPS Account Number":
+                            begin
+                                ShippingAgent.TestField("ESNAccount NumberUPS");
+                                BillShipper.Add('AccountNumber', ShippingAgent."ESNAccount NumberUPS");
+                            end;
+                        ShippingAgent."ESNTransBillShip Pay TypeUPS"::"Credit Card":
+                            begin
+                                ShippingAgent.TestField("ESNTransBillShipCredit CardUPS");
+                                ShippingAgent.TestField("ESNTransBillShipCard NumberUPS");
+                                ShippingAgent.TestField("ESNTransBillShipCard Exp. UPS");
+                                ShippingAgent.TestField("ESNTransBillShipCard Sec. UPS");
+                                BillShipperCredCard.Add('Type', GetUPSFormatedCredCardType(ShippingAgent."ESNTransBillShipCredit CardUPS".AsInteger()));
+                                BillShipperCredCard.Add('Number', ShippingAgent."ESNTransBillShipCard NumberUPS");
+                                BillShipperCredCard.Add('ExpirationDate', GetUPSFormatedCredCardExpDate(ShippingAgent."ESNTransBillShipCard Exp. UPS"));
+                                BillShipperCredCard.Add('SecurityCode', ShippingAgent."ESNTransBillShipCard Sec. UPS");
+
+                                BillShipper.Add('CreditCard', BillShipperCredCard);
+                            end;
+                    end;
+                    ShipmentChargeTransportationInformation.Add('BillShipper', BillShipper)
+                end;
+            ShippingAgent."ESNTransportation PaymentUPS"::"Bill Receiver":
+                begin
+                    ShippingAgent.TestField("ESNTransBillReceiver AccUPS");
+                    BillReceiver.Add('AccountNumber', ShippingAgent."ESNTransBillReceiver AccUPS");
+
+                    ShipmentChargeTransportationInformation.Add('BillReceiver', BillReceiver)
+                end;
+            ShippingAgent."ESNTransportation PaymentUPS"::"Bill Third Party":
+                begin
+                    ShippingAgent.TestField("ESNTransBillThird AccUPS");
+                    BillThirdParty.Add('AccountNumber', ShippingAgent."ESNTransBillThird AccUPS");
+
+                    ShipmentChargeTransportationInformation.Add('BillThirdParty', BillThirdParty)
+                end;
+            else begin
+                ShippingAgent.FieldError("ESNTransportation PaymentUPS");
+            end;
+        end;
+    end;
+
+    local procedure GetShipmentRequest_Shipment_PaymentInformation_ShipmentCharge_DutiesAndTaxes(Package: Record "ETI-Package-NC"; ShipmentChargeTransportationInformation: JsonObject)
+    var
+        ShippingAgent: Record "Shipping Agent";
+
+        BillShipper: JsonObject;
+        BillShipperCredCard: JsonObject;
+        BillReceiver: JsonObject;
+        BillThirdParty: JsonObject;
+    begin
+        if Package.IsInternationalShipment() then begin
+            ShipmentChargeTransportationInformation.Add('Type', '02');
+
+            ShippingAgent := Package.GetShippingAgent();
+            case ShippingAgent."ESNDuty PaymentUPS" of
+                ShippingAgent."ESNDuty PaymentUPS"::"Bill Shipper":
+                    begin
+                        case ShippingAgent."ESNDutyBillShip Pay. TypeUPS" of
+                            ShippingAgent."ESNDutyBillShip Pay. TypeUPS"::"UPS Account Number":
+                                begin
+                                    ShippingAgent.TestField("ESNAccount NumberUPS");
+                                    BillShipper.Add('AccountNumber', ShippingAgent."ESNAccount NumberUPS");
+                                end;
+                            ShippingAgent."ESNDutyBillShip Pay. TypeUPS"::"Credit Card":
+                                begin
+                                    ShippingAgent.TestField("ESNDutyBillShipCredit CardUPS");
+                                    ShippingAgent.TestField("ESNDutyBillShipCard NumberUPS");
+                                    ShippingAgent.TestField("ESNDutyBillShipCard Exp. UPS");
+                                    ShippingAgent.TestField("ESNDutyBillShipCard Sec. UPS");
+                                    BillShipperCredCard.Add('Type', GetUPSFormatedCredCardType(ShippingAgent."ESNDutyBillShipCredit CardUPS".AsInteger()));
+                                    BillShipperCredCard.Add('Number', ShippingAgent."ESNDutyBillShipCard NumberUPS");
+                                    BillShipperCredCard.Add('ExpirationDate', GetUPSFormatedCredCardExpDate(ShippingAgent."ESNDutyBillShipCard Exp. UPS"));
+                                    BillShipperCredCard.Add('SecurityCode', ShippingAgent."ESNDutyBillShipCard Sec. UPS");
+
+                                    BillShipper.Add('CreditCard', BillShipperCredCard);
+                                end;
+                        end;
+                        ShipmentChargeTransportationInformation.Add('BillShipper', BillShipper)
+                    end;
+                ShippingAgent."ESNDuty PaymentUPS"::"Bill Receiver":
+                    begin
+                        ShippingAgent.TestField("ESNDutyBillReceiver AccUPS");
+                        BillReceiver.Add('AccountNumber', ShippingAgent."ESNDutyBillReceiver AccUPS");
+
+                        ShipmentChargeTransportationInformation.Add('BillReceiver', BillReceiver)
+                    end;
+                ShippingAgent."ESNDuty PaymentUPS"::"Bill Third Party":
+                    begin
+                        ShippingAgent.TestField("ESNDutyBillThird AccUPS");
+                        BillThirdParty.Add('AccountNumber', ShippingAgent."ESNDutyBillThird AccUPS");
+
+                        ShipmentChargeTransportationInformation.Add('BillThirdParty', BillThirdParty)
+                    end;
+                else begin
+                    ShippingAgent.FieldError("ESNDuty PaymentUPS");
+                end;
+            end;
+        end;
     end;
     #endregion
 
@@ -732,6 +871,20 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
     begin
         // TODO
         UPSFormatedShipperPhoneNo := CopyStr(ShipperPhoneNo, 1, 15);
+    end;
+
+    local procedure GetUPSFormatedCredCardType(CredCardType: Integer) UPSFormatedCredCardType: code[2]
+    begin
+        UPSFormatedCredCardType := Format(CredCardType);
+        if StrLen(UPSFormatedCredCardType) = 1 then begin
+            UPSFormatedCredCardType := '0' + UPSFormatedCredCardType;
+        end;
+        exit(UPSFormatedCredCardType);
+    end;
+
+    local procedure GetUPSFormatedCredCardExpDate(CredCardExpDate: Date) UPSFormatedCredCardExpDate: Code[6]
+    begin
+        UPSFormatedCredCardExpDate := Format(CredCardExpDate, 6, '<Month,2><Year4>');
     end;
     #endregion
 

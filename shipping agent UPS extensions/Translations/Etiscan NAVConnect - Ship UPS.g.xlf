@@ -98,11 +98,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNAccount NumberUPS - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 2979565311 - Field 3884598183 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
-          <source>Transportation Payment Type</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNBillShip Payment TypeUPS - Property Caption</note>
-        </trans-unit>
         <trans-unit id="TableExtension 2979565311 - Field 273748388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
           <source>Duties and Taxes Payment</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -162,6 +157,11 @@
           <source>Bill Receiver Account Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNTransBillReceiver AccUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 2438117567 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Transportation Payment Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNTransBillShip Pay TypeUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2979565311 - Field 39203670 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
           <source>Credit Card Expiration Date</source>

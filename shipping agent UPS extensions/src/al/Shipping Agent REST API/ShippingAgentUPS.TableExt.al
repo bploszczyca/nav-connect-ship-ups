@@ -72,7 +72,7 @@ tableextension 70869801 "ESNShipping AgentUPS" extends "Shipping Agent"
             Caption = 'Transportation Payment';
             DataClassification = CustomerContent;
         }
-        field(70869811; "ESNBillShip Payment TypeUPS"; Enum "ESNTrans. Payment TypeUPS")
+        field(70869811; "ESNTransBillShip Pay TypeUPS"; Enum "ESNTrans. Payment TypeUPS")
         {
             Caption = 'Transportation Payment Type';
             DataClassification = CustomerContent;
