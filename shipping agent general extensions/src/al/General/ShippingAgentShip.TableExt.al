@@ -14,6 +14,11 @@ tableextension 70869780 "ESNShipping AgentShip" extends "Shipping Agent"
             DataClassification = CustomerContent;
             TableRelation = "Shipping Agent Services".Code where("Shipping Agent Code" = field(Code));
         }
+        field(70869783; "ESNMovement Ref. NumberShip"; text[18])
+        {
+            Caption = 'Movement Reference Number (MRN)';
+            DataClassification = CustomerContent;
+        }
         field(70869786; "ESNDefault Ship-from TypeShip"; Enum "ESNPackageShipFromTypeShip")
         {
             Caption = 'Default Ship-from Type';

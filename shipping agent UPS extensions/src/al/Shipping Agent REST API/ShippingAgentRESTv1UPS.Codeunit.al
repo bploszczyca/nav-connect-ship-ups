@@ -209,8 +209,11 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
 
     #region 
     local procedure GetShipmentRequestContent(Package: Record "ETI-Package-NC") ShipmentRequest: JsonObject
+    var
+        ShipmentContent: JsonObject;
     begin
-        ShipmentRequest.Add('ShipmentRequest', GetShipmentRequest_ShipmentContent(Package));
+        ShipmentContent.Add('Shipment', GetShipmentRequest_ShipmentContent(Package));
+        ShipmentRequest.Add('ShipmentRequest', ShipmentContent);
     end;
 
     local procedure GetShipmentRequest_ShipmentContent(Package: Record "ETI-Package-NC") ShipmentContent: JsonObject
@@ -224,7 +227,12 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         GetShipmentRequest_Shipment_ShipperContent(Package, ShipmentContent);
         GetShipmentRequest_Shipment_ShipTo(Package, ShipmentContent);
         GetShipmentRequest_Shipment_ShipFrom(Package, ShipmentContent);
-        GetShipmentRequest_Shipment_PaymentInformation(Package, ShipmentContent);
+        GetShipmentRequest_Shipment_PaymentInformation(Package, ShipmentContent);   // Keine PromotionalDiscountInformation möglich!
+        // Schnistellen kann keine "FreightShipmentInformation"."FreightDensityInfo".("AdjustedHeight", "HandlingUnits")
+        GetShipmentRequest_Shipment_MovementReferenceNumber(Package, ShipmentContent);
+
+        GetShipmentRequest_Shipment_Service(Package, ShipmentContent);
+
     end;
 
     local procedure GetShipmentRequest_Shipment_ReturnServiceContent(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
@@ -544,6 +552,28 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
                 end;
             end;
         end;
+    end;
+
+    local procedure GetShipmentRequest_Shipment_MovementReferenceNumber(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
+    var
+        ShippingAgent: Record "Shipping Agent";
+    begin
+        // Required: No
+        ShippingAgent := Package.GetShippingAgent();
+        if ShippingAgent."ESNMovement Ref. NumberShip" <> '' then begin
+            ShipmentContent.Add('MovementReferenceNumber', ShippingAgent."ESNMovement Ref. NumberShip");
+        end;
+    end;
+
+    local procedure GetShipmentRequest_Shipment_Service(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
+    var
+        ReturnServiceCode: JsonObject;
+    begin
+        // Required: No
+        // if Package."ESNReturn ServiceUPS" <> Package."ESNReturn ServiceUPS"::" " then begin
+        //     ReturnServiceCode.Add('Code', Package."ESNReturn ServiceUPS".AsInteger());
+        //     ShipmentContent.Add('ReturnService', ReturnServiceCode);
+        // end;
     end;
     #endregion
 

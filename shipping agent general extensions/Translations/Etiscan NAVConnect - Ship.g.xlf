@@ -178,6 +178,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentShip - Field ESNDefault Ship-from TypeShip - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2909517731 - Field 3464420863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Movement Reference Number (MRN)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentShip - Field ESNMovement Ref. NumberShip - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2909517731 - Field 1792076683 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
           <source>Shipping Agent API</source>
           <note from="Developer" annotates="general" priority="2"></note>

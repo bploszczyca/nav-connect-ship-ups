@@ -4,6 +4,7 @@ pageextension 70869781 "ESNShipping AgentsShip" extends "Shipping Agents"
     {
         addlast(Control1)
         {
+            field("ESNMovement Ref. NumberShip"; rec."ESNMovement Ref. NumberShip") { ApplicationArea = Basic, Suite; }
             field(ESNUPSShip; rec."ESNShipping Agent APIShip")
             {
                 ApplicationArea = Basic, Suite;
