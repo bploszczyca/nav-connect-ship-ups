@@ -48,6 +48,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control ESNShipFromAddresseUPSshipShip - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 545993712 - Control 342756159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+          <source>Notification</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control Notification - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2399484334 - Control 100849452 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
           <source>EU Shipments</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -67,6 +72,11 @@
           <source>Ship-from Address</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control ESNShipFromAddresseUPSshipShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2399484334 - Control 342756159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
+          <source>Notification</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control Notification - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2393074613 - Action 1673306232 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1019918254">
           <source>F&amp;unctions</source>
@@ -88,6 +98,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Method CheckAddressChagend - NamedType MustHaveSameAddressLbl</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 2067989801 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>ESN70869757Ship</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESN70869757Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 3773688108 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>ESN70869758Ship</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESN70869758Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 1473006483 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>ESN70869759Ship</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESN70869759Ship - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3713282388 - Field 793773182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>Cost  Identifier</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -97,6 +122,26 @@
           <source>Direct Delivery Only (DDO)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNDirect Delivery OnlyShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 927262677 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Email-Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNNotification Email-TextShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 1592089591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>From Email</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNNotification From EmailShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 1905630322 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>From Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNNotification From NameShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 1414670436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Email</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNNotification To EmailShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3713282388 - Field 1216396455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>Package Cout</source>
@@ -183,20 +228,35 @@
           <note from="Developer" annotates="general" priority="2">Versandauftragsnr.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNShipment No.Ship - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3855706714 - Field 905466623 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
-          <source>70869757</source>
+        <trans-unit id="TableExtension 3713282388 - Field 794042138 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Text Noti. Phone No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field 70869757 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNText Noti. Phone No.Ship - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3855706714 - Field 1880981286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
-          <source>70869758</source>
+        <trans-unit id="TableExtension 3713282388 - Field 3325697072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Undeliverable Email</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field 70869758 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNUndeli. Not. EmailShip - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3855706714 - Field 1243284669 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
-          <source>70869759</source>
+        <trans-unit id="TableExtension 3713282388 - Field 2684336015 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Voice Noti. Phone No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field 70869759 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNVoice Noti. Phone No.Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 2067989801 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>ESN70869757Ship</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESN70869757Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 3773688108 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>ESN70869758Ship</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESN70869758Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 1473006483 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>ESN70869759Ship</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESN70869759Ship - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3855706714 - Field 793773182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>Cost  Identifier</source>
@@ -207,6 +267,26 @@
           <source>Direct Delivery Only (DDO)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNDirect Delivery OnlyShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 927262677 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Email-Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNNotification Email-TextShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 1592089591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>From Email</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNNotification From EmailShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 1905630322 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>From Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNNotification From NameShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 1414670436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Email</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNNotification To EmailShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3855706714 - Field 1216396455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>Package Cout</source>
@@ -292,6 +372,21 @@
           <source>Shipment No.</source>
           <note from="Developer" annotates="general" priority="2">Versandauftragsnr.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNShipment No.Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 794042138 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Text Noti. Phone No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNText Noti. Phone No.Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 3325697072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Undeliverable Email</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNUndeli. Not. EmailShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 2684336015 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Voice Noti. Phone No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNVoice Noti. Phone No.Ship - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2909517731 - Field 2762486918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
           <source>Default Ship-from Contact</source>

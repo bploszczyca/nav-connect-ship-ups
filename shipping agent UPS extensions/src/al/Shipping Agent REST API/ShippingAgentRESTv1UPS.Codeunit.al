@@ -656,10 +656,55 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
     var
         ShipmentNotification: JsonObject;
     begin
-
+        GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Email(Package, ShipmentNotification);
+        GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Voice(Package, ShipmentNotification);
+        GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Text(Package, ShipmentNotification);
 
         if ShipmentNotification.Keys.Count > 0 then begin
             ShipmentServiceOptionsContent.Add('Notification', ShipmentNotification)
+        end;
+    end;
+
+    local procedure GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Email(Package: Record "ETI-Package-NC"; ShipmentNotificationContent: JsonObject)
+    var
+        EmailNotification: JsonObject;
+    begin
+        if Package."ESNNotification To EmailShip" <> '' then
+            EmailNotification.Add('EMailAddress', CopyStr(Package."ESNNotification To EmailShip", 1, 50));
+        if Package."ESNUndeli. Not. EmailShip" <> '' then
+            EmailNotification.Add('UndeliverableEMailAddress', CopyStr(Package."ESNUndeli. Not. EmailShip", 1, 50));
+        if Package."ESNNotification From EmailShip" <> '' then
+            EmailNotification.Add('FromEMailAddress', CopyStr(Package."ESNNotification From EmailShip", 1, 50));
+        if Package."ESNNotification From NameShip" <> '' then
+            EmailNotification.Add('FromName', CopyStr(Package."ESNNotification From NameShip", 1, 35));
+        if Package."ESNNotification Email-TextShip" <> '' then
+            EmailNotification.Add('Memo', CopyStr(Package."ESNNotification Email-TextShip", 1, 50));
+        if EmailNotification.Keys.Count > 0 then begin
+            ShipmentNotificationContent.Add('EMail', EmailNotification)
+        end;
+    end;
+
+    local procedure GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Voice(Package: Record "ETI-Package-NC"; ShipmentNotificationContent: JsonObject)
+    var
+        VoiceNotification: JsonObject;
+    begin
+        if Package."ESNVoice Noti. Phone No.Ship" <> '' then
+            VoiceNotification.Add('PhoneNumber', GetUPSFormatedShipperPhoneNo(Package."ESNVoice Noti. Phone No.Ship"));
+
+        if VoiceNotification.Keys.Count > 0 then begin
+            ShipmentNotificationContent.Add('VoiceMessage', VoiceNotification)
+        end;
+    end;
+
+    local procedure GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Text(Package: Record "ETI-Package-NC"; ShipmentNotificationContent: JsonObject)
+    var
+        TextNotification: JsonObject;
+    begin
+        if Package."ESNText Noti. Phone No.Ship" <> '' then
+            TextNotification.Add('PhoneNumber', GetUPSFormatedShipperPhoneNo(Package."ESNText Noti. Phone No.Ship"));
+
+        if TextNotification.Keys.Count > 0 then begin
+            ShipmentNotificationContent.Add('TextMessage', TextNotification)
         end;
     end;
 
