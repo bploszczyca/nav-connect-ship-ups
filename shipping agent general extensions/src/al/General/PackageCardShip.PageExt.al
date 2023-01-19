@@ -1,4 +1,4 @@
-pageextension 70869783 "ESNPackage CardShip" extends "ETI-Package Card-NC"
+pageextension 70869750 "ESNPackage CardShip" extends "ETI-Package Card-NC"
 {
     layout
     {
@@ -17,6 +17,10 @@ pageextension 70869783 "ESNPackage CardShip" extends "ETI-Package Card-NC"
                 Importance = Additional;
             }
         }
+        addlast(Addresse)
+        {
+            field("ESNDirect Delivery OnlyShip"; rec."ESNDirect Delivery OnlyShip") { ApplicationArea = All; Importance = Additional; }
+        }
         addafter(Lieferung)
         {
             group(ESNShipmentUPSshipShip)
@@ -25,6 +29,9 @@ pageextension 70869783 "ESNPackage CardShip" extends "ETI-Package Card-NC"
                 field("ESNShipment No.UPSshipShip"; rec."ESNShipment No.Ship") { ApplicationArea = All; }
                 field("ESNShipment DescriptionShip"; rec."ESNShipment DescriptionShip") { ApplicationArea = All; }
                 field("ESNPackage CoutUPSshipShip"; rec."ESNPackage CoutShip") { ApplicationArea = All; }
+                field("ESNCost  IdentifierShip"; rec."ESNCost  IdentifierShip") { ApplicationArea = All; }
+                field("ESNSaturday Delivery Req.Ship"; rec."ESNSaturday Delivery Req.Ship") { ApplicationArea = All; Importance = Additional; }
+                field("ESNSaturday Pickup Req.Ship"; rec."ESNSaturday Pickup Req.Ship") { ApplicationArea = All; Importance = Additional; }
                 group(ESNShipFromAddresseUPSshipShip)
                 {
                     Caption = 'Ship-from Address';

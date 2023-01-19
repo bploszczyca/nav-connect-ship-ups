@@ -73,10 +73,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNShipping AgentsUPS - Action UPS REST api Setup - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 1405609773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>UPS Notification Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNNotificationUPS - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3825586520 - Field 1266810243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>Return Service</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNReturn ServiceUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 1405609773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>UPS Notification Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNNotificationUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3268471766 - Field 1266810243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>Return Service</source>
@@ -407,6 +417,31 @@
           <source>v1807</source>
           <note from="Developer" annotates="general" priority="2">v1807</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. Agent REST Ver.UPS - EnumValue v1807 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3690113425 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. NotificationUPS - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3690113425 - EnumValue 3622831589 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Receiver Return Notification</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. NotificationUPS - EnumValue 3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3690113425 - EnumValue 1709741738 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email Notification</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. NotificationUPS - EnumValue 6 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3690113425 - EnumValue 1072045121 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exception Notification only</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. NotificationUPS - EnumValue 7 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3690113425 - EnumValue 3791740612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delivery Notification</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShip. NotificationUPS - EnumValue 8 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 70540226 - EnumValue 1065337893 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Production</source>

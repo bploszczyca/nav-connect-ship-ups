@@ -1,4 +1,4 @@
-page 70869782 "ESNRegPack. FactBoxShip"
+page 70869751 "ESNRegPack. FactBoxShip"
 {
     Caption = 'Packages on Ship';
     PageType = ListPart;

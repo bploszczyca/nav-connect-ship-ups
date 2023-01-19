@@ -1,4 +1,4 @@
-enum 70869783 "ESNShipping AgentShip" implements "ESNShipping Agent APIShip"
+enum 70869751 "ESNShipping AgentShip" implements "ESNShipping Agent APIShip"
 {
     Extensible = true;
 
@@ -7,5 +7,4 @@ enum 70869783 "ESNShipping AgentShip" implements "ESNShipping Agent APIShip"
         Caption = ' ';
         Implementation = "ESNShipping Agent APIShip" = "ESNShipping Agent APIShip";
     }
-
 }

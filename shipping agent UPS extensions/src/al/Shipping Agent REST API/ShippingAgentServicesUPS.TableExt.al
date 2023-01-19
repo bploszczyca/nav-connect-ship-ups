@@ -2,7 +2,7 @@ tableextension 70869800 "ESNShipping Agent ServicesUPS" extends "Shipping Agent 
 {
     fields
     {
-        field(70869780; "ESNShipment Service CodeUPS"; Code[2])
+        field(70869800; "ESNShipment Service CodeUPS"; Code[2])
         {
             Caption = 'UPS Shipment Service Code';
             DataClassification = CustomerContent;

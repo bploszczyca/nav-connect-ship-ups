@@ -1,4 +1,4 @@
-enum 70869780 "ESNPackageShipFromTypeShip"
+enum 70869750 "ESNPackageShipFromTypeShip"
 {
     Extensible = true;
 

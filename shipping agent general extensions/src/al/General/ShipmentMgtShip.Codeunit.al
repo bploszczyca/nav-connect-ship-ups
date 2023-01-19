@@ -1,4 +1,4 @@
-codeunit 70869781 "ESNShipment Mgt.Ship"
+codeunit 70869750 "ESNShipment Mgt.Ship"
 {
 
     #region Shipping Agent and Shipping Agent Services

@@ -230,9 +230,17 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         GetShipmentRequest_Shipment_PaymentInformation(Package, ShipmentContent);   // Keine PromotionalDiscountInformation möglich!
         // Schnistellen kann keine "FreightShipmentInformation"."FreightDensityInfo".("AdjustedHeight", "HandlingUnits")
         GetShipmentRequest_Shipment_MovementReferenceNumber(Package, ShipmentContent);
-
         GetShipmentRequest_Shipment_Service(Package, ShipmentContent);
+        GetShipmentRequest_Shipment_NumOfPiecesInShipment(Package, ShipmentContent);
+        GetShipmentRequest_Shipment_MILabelCN22Indicator(Package, ShipmentContent);
+        GetShipmentRequest_Shipment_CostCenter(Package, ShipmentContent);
+        GetShipmentRequest_Shipment_RatingMethodRequestedIndicator(Package, ShipmentContent);
+        GetShipmentRequest_Shipment_TaxInformationIndicator(Package, ShipmentContent);
+        GetShipmentRequest_Shipment_ShipmentServiceOptions(Package, ShipmentContent);
 
+
+
+        GetShipmentRequest_Shipment_Package(Package, ShipmentContent);
     end;
 
     local procedure GetShipmentRequest_Shipment_ReturnServiceContent(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
@@ -582,6 +590,88 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         end;
 
         ShipmentContent.Add('Service', ServiceCode);
+    end;
+
+    local procedure GetShipmentRequest_Shipment_NumOfPiecesInShipment(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
+    var
+        Package2: Record "ETI-Package-NC";
+    begin
+        // Required: Yes*
+        Package.TestField("ESNShipment No.Ship");
+        Package2.SetRange("ESNShipment No.Ship", Package."ESNShipment No.Ship");
+
+        ShipmentContent.Add('NumOfPiecesInShipment', Format(Package2.Count));
+    end;
+
+    local procedure GetShipmentRequest_Shipment_MILabelCN22Indicator(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
+    begin
+        // Required: Cond*
+        if Package.IsInternationalShipment() then begin
+            // ShipmentContent.Add('MILabelCN22Indicator', ''); 
+        end;
+    end;
+
+
+    local procedure GetShipmentRequest_Shipment_CostCenter(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
+    begin
+        // Required: No
+        if Package."ESNCost  IdentifierShip" <> '' then begin
+            ShipmentContent.Add('CostCenter', Package."ESNCost  IdentifierShip");
+        end;
+    end;
+
+    local procedure GetShipmentRequest_Shipment_RatingMethodRequestedIndicator(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
+    begin
+        // Required: No
+        ShipmentContent.Add('RatingMethodRequestedIndicator', '');
+    end;
+
+    local procedure GetShipmentRequest_Shipment_TaxInformationIndicator(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
+    begin
+        // Required: No
+        ShipmentContent.Add('TaxInformationIndicator', '');
+    end;
+
+    local procedure GetShipmentRequest_Shipment_ShipmentServiceOptions(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
+    var
+        ShipmentServiceOptions: JsonObject;
+    begin
+        // Required: No
+        if Package."ESNSaturday Delivery Req.Ship" then
+            ShipmentServiceOptions.Add('SaturdayDeliveryIndicator', '');
+        if Package."ESNSaturday Pickup Req.Ship" then
+            ShipmentServiceOptions.Add('SaturdayPickupIndicator', '');
+
+        // COD (Collect on Delivery) wird nicht unterstützt
+        if Package."ESNDirect Delivery OnlyShip" then
+            ShipmentServiceOptions.Add('DirectDeliveryOnlyIndicator', '');
+
+        GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification(Package, ShipmentServiceOptions);
+
+        ShipmentContent.Add('ShipmentServiceOptions', ShipmentServiceOptions);
+    end;
+
+
+    local procedure GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification(Package: Record "ETI-Package-NC"; ShipmentServiceOptionsContent: JsonObject)
+    var
+        ShipmentNotification: JsonObject;
+    begin
+
+
+        if ShipmentNotification.Keys.Count > 0 then begin
+            ShipmentServiceOptionsContent.Add('Notification', ShipmentNotification)
+        end;
+    end;
+
+
+    local procedure GetShipmentRequest_Shipment_Package(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
+    var
+        PackageJsonArray: JsonArray;
+    begin
+        // Required: Yes
+
+
+        ShipmentContent.Add('Package', PackageJsonArray);
     end;
     #endregion
 

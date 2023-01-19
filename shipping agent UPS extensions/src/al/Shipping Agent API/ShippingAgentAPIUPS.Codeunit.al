@@ -1,4 +1,4 @@
-codeunit 70869805 "ESNShipping Agent APIUPS" implements "ESNShipping Agent APIShip"
+codeunit 70869800 "ESNShipping Agent APIUPS" implements "ESNShipping Agent APIShip"
 {
 
     procedure GetShippingAgentAPIInterface(ShippingAgent: Record "Shipping Agent") ShippingAgentAPIInterface: Interface "ESNShipping Agent APIShip"

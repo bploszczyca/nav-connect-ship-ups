@@ -1,4 +1,4 @@
-pageextension 70869803 "ESNPackage CardUPS" extends "ETI-Package Card-NC"
+pageextension 70869800 "ESNPackage CardUPS" extends "ETI-Package Card-NC"
 {
     layout
     {

@@ -1,26 +1,46 @@
-tableextension 70869782 "ESNPackageShip" extends "ETI-Package-NC"
+tableextension 70869750 "ESNPackageShip" extends "ETI-Package-NC"
 {
     fields
     {
         // Add changes to table fields here
-        field(70869780; "ESNShipment No.Ship"; Code[20])
+        field(70869750; "ESNShipment No.Ship"; Code[20])
         {
             Caption = 'Shipment No.', Comment = 'Versandauftragsnr.';
             DataClassification = CustomerContent;
         }
-        field(70869781; "ESNPackage CoutShip"; Integer)
+        field(70869751; "ESNPackage CoutShip"; Integer)
         {
             Caption = 'Package Cout', Comment = 'Anzahl Pakete';
             Editable = false;
             FieldClass = FlowField;
             CalcFormula = count("ETI-Package-NC" where("ESNShipment No.Ship" = field("ESNShipment No.Ship")));
         }
-        field(70869782; "ESNShipment DescriptionShip"; Text[50])
+        field(70869752; "ESNShipment DescriptionShip"; Text[50])
         {
             DataClassification = CustomerContent;
-            Caption = 'ESNShipment Description';
+            Caption = 'Shipment Description';
         }
-        field(70869790; "ESNShip-from TypeShip"; Enum "ESNPackageShipFromTypeShip")
+        field(70869753; "ESNCost  IdentifierShip"; Code[20])
+        {
+            Caption = 'Cost  Identifier';
+            DataClassification = CustomerContent;
+        }
+        field(70869754; "ESNSaturday Delivery Req.Ship"; Boolean)
+        {
+            Caption = 'Saturday Delivery Requested';
+            DataClassification = CustomerContent;
+        }
+        field(70869755; "ESNSaturday Pickup Req.Ship"; Boolean)
+        {
+            Caption = 'Saturday Pickup Requested';
+            DataClassification = CustomerContent;
+        }
+        field(70869756; "ESNDirect Delivery OnlyShip"; Boolean)
+        {
+            Caption = 'Direct Delivery Only (DDO)';
+            DataClassification = CustomerContent;
+        }
+        field(70869760; "ESNShip-from TypeShip"; Enum "ESNPackageShipFromTypeShip")
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from Type';
@@ -33,7 +53,7 @@ tableextension 70869782 "ESNPackageShip" extends "ETI-Package-NC"
                 END;
             end;
         }
-        field(70869791; "ESNShip-from No.Ship"; Code[20])
+        field(70869761; "ESNShip-from No.Ship"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from No.';
@@ -50,7 +70,7 @@ tableextension 70869782 "ESNPackageShip" extends "ETI-Package-NC"
                 END;
             end;
         }
-        field(70869792; "ESNShip-from CodeShip"; Code[10])
+        field(70869762; "ESNShip-from CodeShip"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from Code';
@@ -67,51 +87,51 @@ tableextension 70869782 "ESNPackageShip" extends "ETI-Package-NC"
                 END;
             end;
         }
-        field(70869793; "ESNShip-from NameShip"; Text[100])
+        field(70869763; "ESNShip-from NameShip"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from Name';
         }
-        field(70869794; "ESNShip-from Name 2Ship"; Text[50])
+        field(70869764; "ESNShip-from Name 2Ship"; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from Name 2';
         }
-        field(70869795; "ESNShip-from AddressShip"; Text[100])
+        field(70869765; "ESNShip-from AddressShip"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from Address';
         }
-        field(70869796; "ESNShip-from Address 2Ship"; Text[50])
+        field(70869766; "ESNShip-from Address 2Ship"; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from Address 2';
         }
-        field(70869797; "ESNShip-from CityShip"; Text[30])
+        field(70869767; "ESNShip-from CityShip"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from City';
             TableRelation = "Post Code".City;
             ValidateTableRelation = false;
         }
-        field(70869798; "ESNShip-from ContactShip"; Text[100])
+        field(70869768; "ESNShip-from ContactShip"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from Contact';
         }
-        field(70869799; "ESNShip-from Post CodeShip"; Code[20])
+        field(70869769; "ESNShip-from Post CodeShip"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from Post Code';
             TableRelation = "Post Code";
             ValidateTableRelation = false;
         }
-        field(7086980; "ESNShip-from CountyShip"; Text[30])
+        field(70869770; "ESNShip-from CountyShip"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from County';
         }
-        field(7086981; "ESNShip-from Coun/Reg CodeShip"; Code[10])
+        field(70869771; "ESNShip-from Coun/Reg CodeShip"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Ship-from Country/Region Code';
