@@ -40,6 +40,9 @@ tableextension 70869750 "ESNPackageShip" extends "ETI-Package-NC"
             Caption = 'Direct Delivery Only (DDO)';
             DataClassification = CustomerContent;
         }
+        field(70869757; ESN70869757Ship; Boolean) { }
+        field(70869758; ESN70869758Ship; Boolean) { }
+        field(70869759; ESN70869759Ship; Boolean) { }
         field(70869760; "ESNShip-from TypeShip"; Enum "ESNPackageShipFromTypeShip")
         {
             DataClassification = CustomerContent;
@@ -137,8 +140,67 @@ tableextension 70869750 "ESNPackageShip" extends "ETI-Package-NC"
             Caption = 'Ship-from Country/Region Code';
             TableRelation = "Country/Region";
         }
-
+        field(70869772; "ESNNotification To EmailShip"; Text[80])
+        {
+            Caption = 'Email';
+            DataClassification = CustomerContent;
+            ExtendedDatatype = EMail;
+            trigger OnValidate()
+            var
+                MailManagement: Codeunit "Mail Management";
+            begin
+                if "ESNNotification To EmailShip" <> '' then
+                    MailManagement.CheckValidEmailAddresses("ESNNotification To EmailShip")
+            end;
+        }
+        field(70869773; "ESNUndeli. Not. EmailShip"; Text[80])
+        {
+            Caption = 'Undeliverable Email';
+            DataClassification = CustomerContent;
+            ExtendedDatatype = EMail;
+            trigger OnValidate()
+            var
+                MailManagement: Codeunit "Mail Management";
+            begin
+                if "ESNUndeli. Not. EmailShip" <> '' then
+                    MailManagement.CheckValidEmailAddresses("ESNUndeli. Not. EmailShip")
+            end;
+        }
+        field(70869774; "ESNNotification From EmailShip"; Text[80])
+        {
+            Caption = 'From Email';
+            DataClassification = CustomerContent;
+            ExtendedDatatype = EMail;
+            trigger OnValidate()
+            var
+                MailManagement: Codeunit "Mail Management";
+            begin
+                if "ESNNotification From EmailShip" <> '' then
+                    MailManagement.CheckValidEmailAddresses("ESNNotification From EmailShip")
+            end;
+        }
+        field(70869775; "ESNNotification From NameShip"; Text[80])
+        {
+            Caption = 'From Name';
+            DataClassification = CustomerContent;
+        }
+        field(70869776; "ESNNotification Email-TextShip"; Text[150])
+        {
+            Caption = 'Email-Text';
+            DataClassification = CustomerContent;
+        }
+        field(70869777; "ESNVoice Noti. Phone No.Ship"; Text[30])
+        {
+            Caption = 'Voice Noti. Phone No.';
+            ExtendedDatatype = PhoneNo;
+        }
+        field(70869778; "ESNText Noti. Phone No.Ship"; Text[30])
+        {
+            Caption = 'Text Noti. Phone No.';
+            ExtendedDatatype = PhoneNo;
+        }
     }
+
     keys
     {
         key(ShipmentNo; "ESNShipment No.Ship") { }
@@ -165,6 +227,7 @@ tableextension 70869750 "ESNPackageShip" extends "ETI-Package-NC"
     begin
         SyncShipmentDescription();
         SyncShipFromAddress();
+        SyncShipNotification();
     end;
 
     local procedure OnValidateShipFromNo()
@@ -303,6 +366,50 @@ tableextension 70869750 "ESNPackageShip" extends "ETI-Package-NC"
                         TransferShipFromAddresFields(rec, Package);
                         Package.Modify;
                     end;
+                until Package.Next() = 0;
+    end;
+
+    local procedure SyncShipNotification()
+    var
+        Package: Record "ETI-Package-NC";
+        ModifyPackage: Boolean;
+    begin
+        Package.SetRange("ESNShipment No.Ship", rec."ESNShipment No.Ship");
+        Package.SetFilter("No.", '<>%1', rec."No.");
+        if not Package.IsEmpty then
+            if Package.Find('-') then
+                repeat
+                    ModifyPackage := false;
+                    if Package."ESNNotification To EmailShip" <> rec."ESNNotification To EmailShip" then begin
+                        Package.Validate("ESNNotification To EmailShip", rec."ESNNotification To EmailShip");
+                        ModifyPackage := true;
+                    end;
+                    if Package."ESNUndeli. Not. EmailShip" <> rec."ESNUndeli. Not. EmailShip" then begin
+                        Package.Validate("ESNUndeli. Not. EmailShip", rec."ESNUndeli. Not. EmailShip");
+                        ModifyPackage := true;
+                    end;
+                    if Package."ESNNotification From EmailShip" <> rec."ESNNotification From EmailShip" then begin
+                        Package.Validate("ESNNotification From EmailShip", rec."ESNNotification From EmailShip");
+                        ModifyPackage := true;
+                    end;
+                    if Package."ESNNotification From NameShip" <> rec."ESNNotification From NameShip" then begin
+                        Package.Validate("ESNNotification From NameShip", rec."ESNNotification From NameShip");
+                        ModifyPackage := true;
+                    end;
+                    if Package."ESNNotification Email-TextShip" <> rec."ESNNotification Email-TextShip" then begin
+                        Package.Validate("ESNNotification Email-TextShip", rec."ESNNotification Email-TextShip");
+                        ModifyPackage := true;
+                    end;
+                    if Package."ESNVoice Noti. Phone No.Ship" <> rec."ESNVoice Noti. Phone No.Ship" then begin
+                        Package.Validate("ESNVoice Noti. Phone No.Ship", rec."ESNVoice Noti. Phone No.Ship");
+                        ModifyPackage := true;
+                    end;
+                    if Package."ESNText Noti. Phone No.Ship" <> rec."ESNText Noti. Phone No.Ship" then begin
+                        Package.Validate("ESNText Noti. Phone No.Ship", rec."ESNText Noti. Phone No.Ship");
+                        ModifyPackage := true;
+                    end;
+                    if ModifyPackage then
+                        Package.Modify();
                 until Package.Next() = 0;
     end;
 

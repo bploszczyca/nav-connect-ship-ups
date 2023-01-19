@@ -21,7 +21,7 @@ pageextension 70869752 "ESNReg. Package CardShip" extends "ETI-Reg. Package Card
         {
             field("ESNDirect Delivery OnlyShip"; rec."ESNDirect Delivery OnlyShip") { ApplicationArea = All; Importance = Additional; }
         }
-        addbefore(Lieferung)
+        addafter(Lieferung)
         {
             group(ESNShipmentUPSShip)
             {
@@ -95,6 +95,20 @@ pageextension 70869752 "ESNReg. Package CardShip" extends "ETI-Reg. Package Card
                         Importance = Additional;
                     }
                 }
+            }
+        }
+        addafter(Zusteller)
+        {
+            group("Notification")
+            {
+                Caption = 'Notification';
+                field("ESNNotification To EmailShip"; rec."ESNNotification To EmailShip") { ApplicationArea = All; }
+                field("ESNNotification Email-TextShip"; rec."ESNNotification Email-TextShip") { ApplicationArea = All; }
+                field("ESNNotification From EmailShip"; rec."ESNNotification From EmailShip") { ApplicationArea = All; Importance = Additional; }
+                field("ESNNotification From NameShip"; rec."ESNNotification From NameShip") { ApplicationArea = All; Importance = Additional; }
+                field("ESNUndeli. Not. EmailShip"; rec."ESNUndeli. Not. EmailShip") { ApplicationArea = All; Importance = Additional; }
+                field("ESNVoice Noti. Phone No.Ship"; rec."ESNVoice Noti. Phone No.Ship") { ApplicationArea = All; Importance = Additional; }
+                field("ESNText Noti. Phone No.Ship"; rec."ESNText Noti. Phone No.Ship") { ApplicationArea = All; Importance = Additional; }
             }
         }
         addbefore(Links)
