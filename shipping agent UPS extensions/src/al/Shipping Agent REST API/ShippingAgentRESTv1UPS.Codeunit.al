@@ -238,9 +238,7 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         GetShipmentRequest_Shipment_TaxInformationIndicator(Package, ShipmentContent);
         GetShipmentRequest_Shipment_ShipmentServiceOptions(Package, ShipmentContent);
 
-
-
-        GetShipmentRequest_Shipment_Package(Package, ShipmentContent);
+        GetShipmentRequest_Shipment_Packages(Package, ShipmentContent);
     end;
 
     local procedure GetShipmentRequest_Shipment_ReturnServiceContent(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
@@ -473,7 +471,7 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
                                 ShippingAgent.TestField("ESNTransBillShipCard NumberUPS");
                                 ShippingAgent.TestField("ESNTransBillShipCard Exp. UPS");
                                 ShippingAgent.TestField("ESNTransBillShipCard Sec. UPS");
-                                BillShipperCredCard.Add('Type', GetUPSFormatedCredCardType(ShippingAgent."ESNTransBillShipCredit CardUPS".AsInteger()));
+                                BillShipperCredCard.Add('Type', GetUPSFormated2CharType(ShippingAgent."ESNTransBillShipCredit CardUPS".AsInteger()));
                                 BillShipperCredCard.Add('Number', ShippingAgent."ESNTransBillShipCard NumberUPS");
                                 BillShipperCredCard.Add('ExpirationDate', GetUPSFormatedCredCardExpDate(ShippingAgent."ESNTransBillShipCard Exp. UPS"));
                                 BillShipperCredCard.Add('SecurityCode', ShippingAgent."ESNTransBillShipCard Sec. UPS");
@@ -531,7 +529,7 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
                                     ShippingAgent.TestField("ESNDutyBillShipCard NumberUPS");
                                     ShippingAgent.TestField("ESNDutyBillShipCard Exp. UPS");
                                     ShippingAgent.TestField("ESNDutyBillShipCard Sec. UPS");
-                                    BillShipperCredCard.Add('Type', GetUPSFormatedCredCardType(ShippingAgent."ESNDutyBillShipCredit CardUPS".AsInteger()));
+                                    BillShipperCredCard.Add('Type', GetUPSFormated2CharType(ShippingAgent."ESNDutyBillShipCredit CardUPS".AsInteger()));
                                     BillShipperCredCard.Add('Number', ShippingAgent."ESNDutyBillShipCard NumberUPS");
                                     BillShipperCredCard.Add('ExpirationDate', GetUPSFormatedCredCardExpDate(ShippingAgent."ESNDutyBillShipCard Exp. UPS"));
                                     BillShipperCredCard.Add('SecurityCode', ShippingAgent."ESNDutyBillShipCard Sec. UPS");
@@ -648,6 +646,7 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
 
         GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification(Package, ShipmentServiceOptions);
         GetShipmentRequest_Shipment_ShipmentServiceOptions_DeliveryConfirmation(Package, ShipmentServiceOptions);
+        // RestrictedArticles werden nicht unterstützt
 
         ShipmentContent.Add('ShipmentServiceOptions', ShipmentServiceOptions);
     end;
@@ -721,15 +720,88 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         end;
     end;
 
-
-    local procedure GetShipmentRequest_Shipment_Package(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
+    local procedure GetShipmentRequest_Shipment_Packages(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
     var
-        PackageJsonArray: JsonArray;
+        Package2: Record "ETI-Package-NC";
+        PackagesJsonArray: JsonArray;
+        PackageJsonObject: JsonObject;
     begin
         // Required: Yes
+        Package.TestField("ESNShipment No.Ship");
+        Package2.SetRange("ESNShipment No.Ship", Package."ESNShipment No.Ship");
+
+        if not Package2.IsEmpty then
+            if Package2.Find('-') then
+                repeat
+                    Clear(PackageJsonObject);
+                    GetShipmentRequest_Shipment_Package(Package2, PackageJsonObject);
+                    PackagesJsonArray.Add(PackageJsonObject);
+                until Package2.Next() = 0;
+
+        if PackagesJsonArray.Count > 0 then
+            ShipmentContent.Add('Package', PackagesJsonArray);
+    end;
+
+    local procedure GetShipmentRequest_Shipment_Package(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
+    var
+        PackagingCode: JsonObject;
+    begin
+        if Package.Description <> '' then begin
+            PackageJsonObject.Add('Description', CopyStr(Package.Description, 1, 35));
+        end;
+        if (Package.Description <> '') or (Package."Description 2" <> '') then begin
+            PackageJsonObject.Add('PalletDescription', CopyStr(Package.Description + ' ' + Package.Description, 1, 150));
+        end;
+
+        if Package."ESNUPS Packaging CodeUPS" = Package."ESNUPS Packaging CodeUPS"::" " then
+            Package."ESNUPS Packaging CodeUPS" := Package."ESNUPS Packaging CodeUPS"::"02";
+        PackagingCode.Add('Code', GetUPSFormated2CharType(format(Package."ESNUPS Packaging CodeUPS", 0, 9)));
+        PackageJsonObject.Add('Packaging', PackagingCode);
+
+        GetShipmentRequest_Shipment_Package_Dimensions(Package, PackageJsonObject)
+        // GetShipmentRequest_Shipment_Package_DimWeight(Package, PackageJsonObject)
+
+    end;
+
+    local procedure GetShipmentRequest_Shipment_Package_Dimensions(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
+    var
+        ShippingAgent: Record "Shipping Agent";
+        Dimensions: JsonObject;
+        UnitOfMeasurement: JsonObject;
+
+        NotLargerThanCm: Label 'Package must not be larger than 274cm.';
+        NotLargerThanIn: Label 'Package must not be larger than 128in.';
+    begin
+        ShippingAgent := Package.GetShippingAgent();
+        UnitOfMeasurement.Add('Code', GetUPSFormated2CharType(ShippingAgent."ESNUPS Dimensions UoMUPS".AsInteger()));
+        Dimensions.Add('UnitOfMeasurement', UnitOfMeasurement);
+
+        SwitchDimensToMakeLengthLongestDimension(Package);
+        case ShippingAgent."ESNUPS Dimensions UoMUPS" of
+            // Valid values are 0 to 108 IN and 0 to 274 CM.
+            ShippingAgent."ESNUPS Dimensions UoMUPS"::"00":
+                begin
+                    //'Metric Units of Measurement' 
+                    if Package.Length > 274 then begin
+                        Error(NotLargerThanCm);
+                    end;
+                end;
+            ShippingAgent."ESNUPS Dimensions UoMUPS"::"01":
+                begin
+                    if Package.Length > 108 then begin
+                        Error(NotLargerThanIn);
+                    end;
+                end;
+            else
+                ShippingAgent.FieldError("ESNUPS Dimensions UoMUPS");
+        end;
+        Dimensions.Add('Length', Format(Round(Package.Length, 1)));
+        Dimensions.Add('Width', Format(Round(Package.Width, 1)));
+        Dimensions.Add('Height', Format(Round(Package.Height, 1)));
 
 
-        ShipmentContent.Add('Package', PackageJsonArray);
+        if Dimensions.Keys.Count > 0 then
+            PackageJsonObject.Add('Dimensions', Dimensions);
     end;
     #endregion
 
@@ -1059,18 +1131,45 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         UPSFormatedShipperPhoneNo := CopyStr(ShipperPhoneNo, 1, 15);
     end;
 
-    local procedure GetUPSFormatedCredCardType(CredCardType: Integer) UPSFormatedCredCardType: code[2]
+    local procedure GetUPSFormated2CharType(GivenValue: Integer) UPSFormated2CharType: code[2]
     begin
-        UPSFormatedCredCardType := Format(CredCardType);
-        if StrLen(UPSFormatedCredCardType) = 1 then begin
-            UPSFormatedCredCardType := '0' + UPSFormatedCredCardType;
+        UPSFormated2CharType := Format(GivenValue);
+        if StrLen(UPSFormated2CharType) = 1 then begin
+            UPSFormated2CharType := '0' + UPSFormated2CharType;
         end;
-        exit(UPSFormatedCredCardType);
+        exit(UPSFormated2CharType);
+    end;
+
+    local procedure GetUPSFormated2CharType(GivenValue: Code[2]) UPSFormated2CharType: code[2]
+    begin
+        UPSFormated2CharType := GivenValue;
+        if StrLen(UPSFormated2CharType) = 1 then begin
+            UPSFormated2CharType := '0' + UPSFormated2CharType;
+        end;
+        exit(UPSFormated2CharType);
     end;
 
     local procedure GetUPSFormatedCredCardExpDate(CredCardExpDate: Date) UPSFormatedCredCardExpDate: Code[6]
     begin
         UPSFormatedCredCardExpDate := Format(CredCardExpDate, 6, '<Month,2><Year4>');
+    end;
+
+    local procedure SwitchDimensToMakeLengthLongestDimension(var Package: Record "ETI-Package-NC")
+    begin
+        if Package.Width > Package.Length then
+            SwitchValues(Package.Width, Package.Length);
+
+        if Package.Height > Package.Length then
+            SwitchValues(Package.Height, Package.Length);
+    end;
+
+    local procedure SwitchValues(Var ValueA: Decimal; var ValueB: Decimal)
+    var
+        ValueC: Decimal;
+    begin
+        ValueC := ValueA;
+        ValueA := ValueB;
+        ValueB := ValueC
     end;
     #endregion
 

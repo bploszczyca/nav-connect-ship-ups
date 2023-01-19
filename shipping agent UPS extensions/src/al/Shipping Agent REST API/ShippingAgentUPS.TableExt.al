@@ -2,6 +2,11 @@ tableextension 70869801 "ESNShipping AgentUPS" extends "Shipping Agent"
 {
     fields
     {
+        field(70869800; "ESNUPS Dimensions UoMUPS"; Enum "ESNUPS Dimensions UoMUPS")
+        {
+            Caption = 'UPS Dimensions UoM';
+            DataClassification = CustomerContent;
+        }
         field(70869801; "ESNAccount NumberUPS"; Code[20])
         {
             Caption = 'UPS Account Number';
