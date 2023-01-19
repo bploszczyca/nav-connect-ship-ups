@@ -567,13 +567,21 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
 
     local procedure GetShipmentRequest_Shipment_Service(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
     var
-        ReturnServiceCode: JsonObject;
+        ShippingAgentService: Record "Shipping Agent Services";
+        ServiceCode: JsonObject;
     begin
-        // Required: No
-        // if Package."ESNReturn ServiceUPS" <> Package."ESNReturn ServiceUPS"::" " then begin
-        //     ReturnServiceCode.Add('Code', Package."ESNReturn ServiceUPS".AsInteger());
-        //     ShipmentContent.Add('ReturnService', ReturnServiceCode);
-        // end;
+        // Required: Yes
+        Package.TestField("Shipping Agent Code");
+        Package.TestField("Shipping Agent Service Code");
+        ShippingAgentService.get(Package."Shipping Agent Code", Package."Shipping Agent Service Code");
+        ShippingAgentService.TestField("ESNShipment Service CodeUPS");
+        ServiceCode.Add('Code', ShippingAgentService."ESNShipment Service CodeUPS");
+
+        if ShippingAgentService.Description <> '' then begin
+            ServiceCode.Add('Description', CopyStr(ShippingAgentService.Description, 1, 35));
+        end;
+
+        ShipmentContent.Add('Service', ServiceCode);
     end;
     #endregion
 
