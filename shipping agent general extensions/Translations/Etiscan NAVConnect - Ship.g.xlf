@@ -48,6 +48,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control ESNShipFromAddresseUPSshipShip - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 545993712 - Control 852128586 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+          <source>Confirmation Required</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control Confirmation Required - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 545993712 - Control 342756159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
           <source>Notification</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -72,6 +77,11 @@
           <source>Ship-from Address</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control ESNShipFromAddresseUPSshipShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2399484334 - Control 852128586 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
+          <source>Confirmation Required</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control Confirmation Required - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2399484334 - Control 342756159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
           <source>Notification</source>
@@ -117,6 +127,11 @@
           <source>Cost  Identifier</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNCost  IdentifierShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 2037288953 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Delivery Confirm. Signature Required</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNDCIS TypeShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3713282388 - Field 3013926273 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>Direct Delivery Only (DDO)</source>
@@ -262,6 +277,11 @@
           <source>Cost  Identifier</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNCost  IdentifierShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 2037288953 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Delivery Confirm. Signature Required</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNDCIS TypeShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3855706714 - Field 3013926273 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>Direct Delivery Only (DDO)</source>
@@ -412,6 +432,21 @@
           <source>Shipping Agent API</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentShip - Field ESNShipping Agent APIShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2037288953 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNDCIS TypeShip - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2037288953 - EnumValue 2347438355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>1 - Delivery Confirmation Signature Required</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNDCIS TypeShip - EnumValue 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2037288953 - EnumValue 4260528206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>2 - Delivery Confirmation Adult Signature Required</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNDCIS TypeShip - EnumValue 2 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 1290712000 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>

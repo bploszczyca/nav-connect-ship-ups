@@ -110,6 +110,11 @@ pageextension 70869752 "ESNReg. Package CardShip" extends "ETI-Reg. Package Card
                 field("ESNVoice Noti. Phone No.Ship"; rec."ESNVoice Noti. Phone No.Ship") { ApplicationArea = All; Importance = Additional; }
                 field("ESNText Noti. Phone No.Ship"; rec."ESNText Noti. Phone No.Ship") { ApplicationArea = All; Importance = Additional; }
             }
+            group("Confirmation Required")
+            {
+                Caption = 'Confirmation Required';
+                field("ESNDCIS TypeShip"; rec."ESNDCIS TypeShip") { ApplicationArea = All; Importance = Additional; }
+            }
         }
         addbefore(Links)
         {

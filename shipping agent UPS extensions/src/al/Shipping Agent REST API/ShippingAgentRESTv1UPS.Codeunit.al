@@ -647,10 +647,10 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
             ShipmentServiceOptions.Add('DirectDeliveryOnlyIndicator', '');
 
         GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification(Package, ShipmentServiceOptions);
+        GetShipmentRequest_Shipment_ShipmentServiceOptions_DeliveryConfirmation(Package, ShipmentServiceOptions);
 
         ShipmentContent.Add('ShipmentServiceOptions', ShipmentServiceOptions);
     end;
-
 
     local procedure GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification(Package: Record "ETI-Package-NC"; ShipmentServiceOptionsContent: JsonObject)
     var
@@ -705,6 +705,19 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
 
         if TextNotification.Keys.Count > 0 then begin
             ShipmentNotificationContent.Add('TextMessage', TextNotification)
+        end;
+    end;
+
+    local procedure GetShipmentRequest_Shipment_ShipmentServiceOptions_DeliveryConfirmation(Package: Record "ETI-Package-NC"; ShipmentServiceOptionsContent: JsonObject)
+    var
+        DeliveryConfirmation: JsonObject;
+    begin
+        if Package."ESNDCIS TypeShip" <> Package."ESNDCIS TypeShip"::" " then begin
+            DeliveryConfirmation.Add('DCISType', Format(Package."ESNDCIS TypeShip", 0, 9));
+        end;
+
+        if DeliveryConfirmation.Keys.Count > 0 then begin
+            ShipmentServiceOptionsContent.Add('DeliveryConfirmation', DeliveryConfirmation)
         end;
     end;
 

@@ -168,12 +168,20 @@ tableextension 70869751 "ESNReg. PackageShip" extends "ETI-Reg. Package-NC"
         {
             Caption = 'Voice Noti. Phone No.';
             ExtendedDatatype = PhoneNo;
+            DataClassification = CustomerContent;
             Editable = false;
         }
         field(70869778; "ESNText Noti. Phone No.Ship"; Text[30])
         {
             Caption = 'Text Noti. Phone No.';
             ExtendedDatatype = PhoneNo;
+            DataClassification = CustomerContent;
+            Editable = false;
+        }
+        field(70869779; "ESNDCIS TypeShip"; Enum "ESNDCIS TypeShip")
+        {
+            Caption = 'Delivery Confirm. Signature Required';
+            DataClassification = CustomerContent;
             Editable = false;
         }
     }
