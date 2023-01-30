@@ -677,13 +677,29 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
     var
         ShipmentNotification: JsonObject;
     begin
-        GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Email(Package, ShipmentNotification);
-        GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Voice(Package, ShipmentNotification);
-        GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Text(Package, ShipmentNotification);
+        if Package."ESNNotification CodeUPS" <> Package."ESNNotification CodeUPS"::" " then begin
 
-        if ShipmentNotification.Keys.Count > 0 then begin
-            ShipmentServiceOptionsContent.Add('Notification', ShipmentNotification)
+            case Package."ESNNotification CodeUPS" of
+                Package."ESNNotification CodeUPS"::"Alternate Delivery Location Notification",
+                Package."ESNNotification CodeUPS"::"Shipper Notification":
+                    begin
+                        ShipmentNotification.Add('NotificationCode', GetUPSFormated3CharType(Package."ESNNotification CodeUPS".AsInteger()));
+                    end;
+                else begin
+                    ShipmentNotification.Add('NotificationCode', Format(Package."ESNNotification CodeUPS".AsInteger()));
+                end;
+            end;
+
+
+            GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Email(Package, ShipmentNotification);
+            GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Voice(Package, ShipmentNotification);
+            GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Text(Package, ShipmentNotification);
+
+            if ShipmentNotification.Keys.Count > 0 then begin
+                ShipmentServiceOptionsContent.Add('Notification', ShipmentNotification)
+            end;
         end;
+
     end;
 
     local procedure GetShipmentRequest_Shipment_ShipmentServiceOptions_Notification_Email(Package: Record "ETI-Package-NC"; ShipmentNotificationContent: JsonObject)

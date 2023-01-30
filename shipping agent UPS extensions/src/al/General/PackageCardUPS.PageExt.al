@@ -11,6 +11,10 @@ pageextension 70869800 "ESNPackage CardUPS" extends "ETI-Package Card-NC"
         {
             field("ESNReturn ServiceUPS"; rec."ESNReturn ServiceUPS") { ApplicationArea = All; Importance = Additional; }
         }
+        addfirst(Notification)
+        {
+            field("ESNNotification CodeUPS"; rec."ESNNotification CodeUPS") { ApplicationArea = All; Importance = Additional; }
+        }
         addlast("Packstück")
         {
             group("UPS Premier")

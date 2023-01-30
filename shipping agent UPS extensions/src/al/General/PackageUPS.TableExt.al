@@ -7,7 +7,7 @@ tableextension 70869802 "ESNPackageUPS" extends "ETI-Package-NC"
             Caption = 'Return Service';
             DataClassification = CustomerContent;
         }
-        field(70869801; ESNNotificationUPS; Enum "ESNShip. NotificationUPS")
+        field(70869801; "ESNNotification CodeUPS"; Enum "ESNNotification CodeUPS")
         {
             Caption = 'UPS Notification Type';
             DataClassification = CustomerContent;
