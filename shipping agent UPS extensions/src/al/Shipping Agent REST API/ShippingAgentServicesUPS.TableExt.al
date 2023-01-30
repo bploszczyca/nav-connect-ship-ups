@@ -7,6 +7,11 @@ tableextension 70869800 "ESNShipping Agent ServicesUPS" extends "Shipping Agent 
             Caption = 'UPS Shipment Service Code';
             DataClassification = CustomerContent;
         }
+        field(70869801; "ESNLabel Image FormatUPS"; Enum "ESNLabel Image FormatUPS")
+        {
+            Caption = 'Label Image Format';
+            DataClassification = CustomerContent;
+        }
     }
 
     trigger OnAfterInsert()

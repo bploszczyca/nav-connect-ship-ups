@@ -210,10 +210,12 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
     #region 
     local procedure GetShipmentRequestContent(Package: Record "ETI-Package-NC") ShipmentRequest: JsonObject
     var
-        ShipmentContent: JsonObject;
+        ShipmentContentContent: JsonObject;
     begin
-        ShipmentContent.Add('Shipment', GetShipmentRequest_ShipmentContent(Package));
-        ShipmentRequest.Add('ShipmentRequest', ShipmentContent);
+        ShipmentContentContent.Add('Shipment', GetShipmentRequest_ShipmentContent(Package));
+        ShipmentContentContent.Add('LabelSpecification', GetShipmentRequest_LabelSpecification(Package));
+
+        ShipmentRequest.Add('ShipmentRequest', ShipmentContentContent);
     end;
 
     local procedure GetShipmentRequest_ShipmentContent(Package: Record "ETI-Package-NC") ShipmentContent: JsonObject
@@ -893,7 +895,31 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         end;
     end;
 
+    local procedure GetShipmentRequest_LabelSpecification(Package: Record "ETI-Package-NC") LabelSpecificationContent: JsonObject
+    var
+        LabelImageFormat: JsonObject;
+        LabelStockSize: JsonObject;
+    begin
+        // Default Lable Format PNG
+        if Package."ESNLabel Image FormatUPS" = Package."ESNLabel Image FormatUPS"::" " then
+            Package."ESNLabel Image FormatUPS" := Package."ESNLabel Image FormatUPS"::PNG;
+
+        LabelImageFormat.Add('Code', Format(Package."ESNLabel Image FormatUPS"));
+        LabelSpecificationContent.Add('LabelImageFormat', LabelImageFormat);
+
+        if Package."ESNLabel Image FormatUPS" = Package."ESNLabel Image FormatUPS"::GIF then begin
+            LabelSpecificationContent.Add('HTTPUserAgent', 'Mozilla/4.5');
+        end;
+
+        if Package."ESNLabel Image FormatUPS" IN [Enum::"ESNLabel Image FormatUPS"::EPL, Enum::"ESNLabel Image FormatUPS"::ZPL, Enum::"ESNLabel Image FormatUPS"::SPL] then begin
+            LabelStockSize.Add('Width', Format(4));
+            LabelStockSize.Add('Height', Format(6));
+            LabelSpecificationContent.Add('LabelStockSize', LabelStockSize);
+        end;
+
+    end;
     // -->
+
     #endregion
 
     #region etc.

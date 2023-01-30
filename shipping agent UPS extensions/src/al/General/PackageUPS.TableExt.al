@@ -53,5 +53,40 @@ tableextension 70869802 "ESNPackageUPS" extends "ETI-Package-NC"
             Caption = 'UPS Simple Rate';
             DataClassification = CustomerContent;
         }
+        field(70869806; "ESNLabel Image FormatUPS"; Enum "ESNLabel Image FormatUPS")
+        {
+            Caption = 'Label Image Format';
+            DataClassification = CustomerContent;
+        }
+        modify("Shipping Agent Code")
+        {
+            trigger OnAfterValidate()
+            var
+                ShippingAgent: Record "Shipping Agent";
+            begin
+                if "Shipping Agent Code" <> xRec."Shipping Agent Code" then begin
+                    if ShippingAgent.get("Shipping Agent Code") then begin
+                        Validate("ESNLabel Image FormatUPS", ShippingAgent."ESNLabel Image FormatUPS");
+                    end else begin
+                        Validate("ESNLabel Image FormatUPS", "ESNLabel Image FormatUPS"::PNG);
+                    end;
+                end;
+            end;
+        }
+        modify("Shipping Agent Service Code")
+        {
+            trigger OnAfterValidate()
+            var
+                ShippingAgentServices: Record "Shipping Agent Services";
+            begin
+                if "Shipping Agent Service Code" <> xRec."Shipping Agent Service Code" then begin
+                    if ShippingAgentServices.get("Shipping Agent Code", "Shipping Agent Service Code") and (ShippingAgentServices."ESNLabel Image FormatUPS" <> ShippingAgentServices."ESNLabel Image FormatUPS"::" ") then begin
+                        Validate("ESNLabel Image FormatUPS", ShippingAgentServices."ESNLabel Image FormatUPS");
+                    end else begin
+                        Validate("ESNLabel Image FormatUPS", "ESNLabel Image FormatUPS"::PNG);
+                    end;
+                end;
+            end;
+        }
     }
 }

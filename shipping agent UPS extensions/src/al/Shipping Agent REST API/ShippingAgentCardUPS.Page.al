@@ -28,6 +28,7 @@ page 70869800 "ESNShipping Agent CardUPS"
                 field("ESNDef. Ship-from ContactUPS"; rec."ESNDef. Ship-from ContactShip") { ApplicationArea = All; }
                 field("ESNUPS Dimensions UoMUPS"; rec."ESNUPS Dimensions UoMUPS") { ApplicationArea = All; }
                 field("ESNUPS Weight DimensionsUPS"; rec."ESNUPS Weight DimensionsUPS") { ApplicationArea = All; }
+                field("ESNLabel Image FormatUPS"; rec."ESNLabel Image FormatUPS") { ApplicationArea = All; }
             }
             group("UPS Account Information")
             {

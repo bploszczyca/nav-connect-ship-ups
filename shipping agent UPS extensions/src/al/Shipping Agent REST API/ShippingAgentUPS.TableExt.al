@@ -47,7 +47,12 @@ tableextension 70869801 "ESNShipping AgentUPS" extends "Shipping Agent"
         field(70869805; "ESNUPS Weight DimensionsUPS"; Enum "ESNUPS Weight Dimensions UPS")
         {
             Caption = 'Weight Dimensions';
-            DataClassification = EndUserIdentifiableInformation;
+            DataClassification = CustomerContent;
+        }
+        field(70869806; "ESNLabel Image FormatUPS"; Enum "ESNLabel Image FormatUPS")
+        {
+            Caption = 'Label Image Format';
+            DataClassification = CustomerContent;
         }
 
         field(70869808; "ESNREST API EndpointUPS"; Enum "ESNShipping Agent REST URLUPS")
