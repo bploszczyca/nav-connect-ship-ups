@@ -18,6 +18,13 @@ pageextension 70869800 "ESNPackage CardUPS" extends "ETI-Package Card-NC"
                 Caption = 'UPS Premier';
                 field("ESNUPS Premier CategoryUPS"; rec."ESNUPS Premier CategoryUPS") { ApplicationArea = All; Importance = Additional; }
                 field("ESNUPS Premier SensorIDUPS"; rec."ESNUPS Premier SensorIDUPS") { ApplicationArea = All; Importance = Additional; }
+                field("ESNUPS Pre. Handl. Instr 1.UPS"; rec."ESNUPS Pre. Handl. Instr 1.UPS") { ApplicationArea = All; Importance = Additional; }
+                field("ESNUPS Pre. Handl. Instr 2.UPS"; rec."ESNUPS Pre. Handl. Instr 2.UPS") { ApplicationArea = All; Importance = Additional; }
+                field("ESNUPS Pre. Handl. Instr 3.UPS"; rec."ESNUPS Pre. Handl. Instr 3.UPS") { ApplicationArea = All; Importance = Additional; }
+                field("ESNUPS Pre. Handl. Instr 4.UPS"; rec."ESNUPS Pre. Handl. Instr 4.UPS") { ApplicationArea = All; Importance = Additional; }
+                field("ESNUPS Pre. Handl. Instr 5.UPS"; rec."ESNUPS Pre. Handl. Instr 5.UPS") { ApplicationArea = All; Importance = Additional; }
+                field("ESNUPS Pre. Handl. Instr 6.UPS"; rec."ESNUPS Pre. Handl. Instr 6.UPS") { ApplicationArea = All; Importance = Additional; }
+                field("ESNUPS Pre. Handl. Instr 7.UPS"; rec."ESNUPS Pre. Handl. Instr 7.UPS") { ApplicationArea = All; Importance = Additional; }
             }
         }
     }

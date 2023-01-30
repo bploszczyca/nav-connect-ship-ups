@@ -103,6 +103,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNItemUPS - Field ESNUPS Simple RateUPS - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 4113669744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Label Image Format</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNLabel Image FormatUPS - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3825586520 - Field 1405609773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>UPS Notification Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -117,6 +122,41 @@
           <source>UPS Packaging Code</source>
           <note from="Developer" annotates="general" priority="2">UPS Verpackuntsart</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Packaging CodeUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 623275607 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Handling Instruction</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Pre. Handl. Instr 1.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 2330073090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Handling Instruction 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Pre. Handl. Instr 2.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 4100958953 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Handling Instruction 3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Pre. Handl. Instr 3.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 2396901716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Handling Instruction 4</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Pre. Handl. Instr 4.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 297136891 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Handling Instruction 5</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Pre. Handl. Instr 5.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 2115577382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Handling Instruction 6</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Pre. Handl. Instr 6.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 3403654925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Handling Instruction 7</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Pre. Handl. Instr 7.UPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3825586520 - Field 4237517088 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>UPS Premier Category</source>
@@ -133,6 +173,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Simple RateUPS - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 4113669744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Label Image Format</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNLabel Image FormatUPS - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3268471766 - Field 1405609773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>UPS Notification Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -148,6 +193,41 @@
           <note from="Developer" annotates="general" priority="2">UPS Verpackuntsart</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Packaging CodeUPS - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 623275607 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Handling Instruction</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Pre. Handl. Instr 1.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 2330073090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Handling Instruction 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Pre. Handl. Instr 2.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 4100958953 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Handling Instruction 3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Pre. Handl. Instr 3.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 2396901716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Handling Instruction 4</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Pre. Handl. Instr 4.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 297136891 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Handling Instruction 5</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Pre. Handl. Instr 5.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 2115577382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Handling Instruction 6</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Pre. Handl. Instr 6.UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 3403654925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Handling Instruction 7</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Pre. Handl. Instr 7.UPS - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3268471766 - Field 4237517088 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>UPS Premier Category</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -162,6 +242,11 @@
           <source>UPS Simple Rate</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Simple RateUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3959673349 - Field 4113669744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4577671">
+          <source>Label Image Format</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping Agent ServicesUPS - Field ESNLabel Image FormatUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3959673349 - Field 3357801362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4577671">
           <source>UPS Shipment Service Code</source>
@@ -217,6 +302,11 @@
           <source>Bill Third Party Account Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNDutyBillThird AccUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 4113669744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Label Image Format</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNLabel Image FormatUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2979565311 - Field 2004444839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
           <source>REST API Endpoint</source>
@@ -687,6 +777,81 @@
           <source>English Units of Measurement</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Dimensions UoMUPS - EnumValue 01 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 1596130690 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contact UPS Premier Control Tower</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Contact UPS Premier Control Tower - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 2141352079 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Controlled Room Temperature (CRT) - Do Not Refrigerate - Maintain Temp Range = 15° - 25° C)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue CRT - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 450385753 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cryo - Liquid-Nitrogen dry-vapor (Temp Range &lt; -150° C) - do not open liquid nitrogen tank</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Cryo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 3069805668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dry Ice Replenish (Temp Range &lt;-80° C)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Dry Ice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 3230741174 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expedite To Receiver - All Modes Up to and Including Extraction to Courier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Expedite To Receiver - All Modes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 144654818 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expedite To Receiver - Ground Courier only (No Air)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Expedite To Receiver - Ground - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 1831864169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expedite To Receiver - UPS Air Network Only (Next Flight)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Expedite To Receiver - UPS Air - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 3338874318 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Frozen (Freezer) (Temp Range &lt;-20° C)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Frozen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 3331712000 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hold for Instruction</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Hold for Instruction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 3525929364 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hold for Will Call</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Hold for Will Call - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 2350189890 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Special Handling Required</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue No Special Handling Required - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 1681110534 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Refrigerate (Temp Range = 2°-8° C)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Refrigerate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 3145432560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Return to Shipper</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Return to Shipper - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3035643120 - EnumValue 1653304712 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Upgrade to Weekend Delivery (if not delivered Friday)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Pre. Handl. Instr.UPS - EnumValue Upgrade to Weekend Delivery - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 4237517088 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>

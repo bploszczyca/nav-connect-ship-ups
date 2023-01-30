@@ -198,11 +198,31 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
 
     #region ResponseHttpMessage
     local procedure CheckResponseMessage(ResponseHttpMessage: HttpResponseMessage; ShowInfo: Boolean)
+    var
+        Errorcode: List of [Text];
+        ErrorcodeTxt: Text;
+        Errordescription: List of [Text];
+        ErrordescriptionTxt: Text;
+
     begin
         if not ResponseHttpMessage.IsBlockedByEnvironment and ResponseHttpMessage.IsSuccessStatusCode and ShowInfo then begin
             Message('StatusCode: %1, %2', ResponseHttpMessage.HttpStatusCode, ResponseHttpMessage.ReasonPhrase);
         end else begin
-            Error('StatusCode: %1, %2', ResponseHttpMessage.HttpStatusCode, ResponseHttpMessage.ReasonPhrase);
+            if ResponseHttpMessage.Headers().Contains('errorcode') then begin
+                if ResponseHttpMessage.Headers().GetValues('errorcode', Errorcode) then begin
+                    Errorcode.get(1, ErrorcodeTxt);
+                end;
+            end;
+            if ResponseHttpMessage.Headers().Contains('errordescription') then begin
+                if ResponseHttpMessage.Headers().GetValues('errordescription', errordescription) then begin
+                    errordescription.get(1, ErrordescriptionTxt);
+                end;
+            end;
+            if ErrorcodeTxt <> '' then begin
+                Error('Errorcode: %1, %2', ErrorcodeTxt, ErrordescriptionTxt);
+            end else begin
+                Error('StatusCode: %1, %2', ResponseHttpMessage.HttpStatusCode, ResponseHttpMessage.ReasonPhrase);
+            end;
         end;
     end;
     #endregion
@@ -839,12 +859,70 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
             UPSPremier.Add('Category', GetUPSFormated2CharType(Package."ESNUPS Premier CategoryUPS".AsInteger()));
             UPSPremier.Add('SensorID', Package."ESNUPS Premier SensorIDUPS");
 
-            //GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions   TODO on Request
+            UPSPremier.Add('HandlingInstructions', GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions(Package));
+
 
             if UPSPremier.Keys.Count > 0 then
                 PackageJsonObject.Add('UPSPremier', UPSPremier);
         end;
     end;
+
+    local procedure GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions(Package: Record "ETI-Package-NC") UPSPremierHandlingInstructions: JsonToken
+    var
+        HandlingInstructions: JsonArray;
+        InstructionsJsonObject: JsonObject;
+        InstructionsJsonToken: JsonToken;
+
+    begin
+        if (Package."ESNUPS Pre. Handl. Instr 1.UPS" = Package."ESNUPS Pre. Handl. Instr 1.UPS"::" ") and
+            (Package."ESNUPS Pre. Handl. Instr 2.UPS" = Package."ESNUPS Pre. Handl. Instr 2.UPS"::" ") and
+            (Package."ESNUPS Pre. Handl. Instr 3.UPS" = Package."ESNUPS Pre. Handl. Instr 3.UPS"::" ") and
+            (Package."ESNUPS Pre. Handl. Instr 4.UPS" = Package."ESNUPS Pre. Handl. Instr 4.UPS"::" ") and
+            (Package."ESNUPS Pre. Handl. Instr 5.UPS" = Package."ESNUPS Pre. Handl. Instr 5.UPS"::" ") and
+            (Package."ESNUPS Pre. Handl. Instr 6.UPS" = Package."ESNUPS Pre. Handl. Instr 6.UPS"::" ") and
+            (Package."ESNUPS Pre. Handl. Instr 7.UPS" = Package."ESNUPS Pre. Handl. Instr 7.UPS"::" ") then begin
+            Package.TestField("ESNUPS Pre. Handl. Instr 1.UPS");
+        end;
+
+        if Package."ESNUPS Pre. Handl. Instr 1.UPS" <> Package."ESNUPS Pre. Handl. Instr 1.UPS"::" " then begin
+            GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions_AddInstructionToArray(Package."ESNUPS Pre. Handl. Instr 1.UPS", HandlingInstructions);
+        end;
+        if Package."ESNUPS Pre. Handl. Instr 2.UPS" <> Package."ESNUPS Pre. Handl. Instr 2.UPS"::" " then begin
+            GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions_AddInstructionToArray(Package."ESNUPS Pre. Handl. Instr 2.UPS", HandlingInstructions);
+        end;
+        if Package."ESNUPS Pre. Handl. Instr 3.UPS" <> Package."ESNUPS Pre. Handl. Instr 3.UPS"::" " then begin
+            GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions_AddInstructionToArray(Package."ESNUPS Pre. Handl. Instr 3.UPS", HandlingInstructions);
+        end;
+        if Package."ESNUPS Pre. Handl. Instr 4.UPS" <> Package."ESNUPS Pre. Handl. Instr 4.UPS"::" " then begin
+            GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions_AddInstructionToArray(Package."ESNUPS Pre. Handl. Instr 4.UPS", HandlingInstructions);
+        end;
+        if Package."ESNUPS Pre. Handl. Instr 5.UPS" <> Package."ESNUPS Pre. Handl. Instr 5.UPS"::" " then begin
+            GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions_AddInstructionToArray(Package."ESNUPS Pre. Handl. Instr 5.UPS", HandlingInstructions);
+        end;
+        if Package."ESNUPS Pre. Handl. Instr 6.UPS" <> Package."ESNUPS Pre. Handl. Instr 6.UPS"::" " then begin
+            GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions_AddInstructionToArray(Package."ESNUPS Pre. Handl. Instr 6.UPS", HandlingInstructions);
+        end;
+        if Package."ESNUPS Pre. Handl. Instr 7.UPS" <> Package."ESNUPS Pre. Handl. Instr 7.UPS"::" " then begin
+            GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions_AddInstructionToArray(Package."ESNUPS Pre. Handl. Instr 7.UPS", HandlingInstructions);
+        end;
+
+        if HandlingInstructions.Count > 1 then begin
+            UPSPremierHandlingInstructions := HandlingInstructions.AsToken();
+        end else begin
+            HandlingInstructions.Get(0, UPSPremierHandlingInstructions);
+        end;
+    end;
+
+    local procedure GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions_AddInstructionToArray(UPSPremier_HandlingInstruction: Enum "ESNUPS Pre. Handl. Instr.UPS"; HandlingInstructions: JsonArray)
+    var
+        Instructions: JsonObject;
+    begin
+        if UPSPremier_HandlingInstruction <> UPSPremier_HandlingInstruction::" " then begin
+            Instructions.Add('Instruction', GetUPSFormated3CharType(UPSPremier_HandlingInstruction.AsInteger()));
+            HandlingInstructions.Add(Instructions);
+        end;
+    end;
+
 
     local procedure GetShipmentRequest_Shipment_Package_PackageServiceOptions(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
     var
@@ -1252,6 +1330,18 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
     begin
         UPSFormated2CharType := Format(GivenValue);
         if StrLen(UPSFormated2CharType) = 1 then begin
+            UPSFormated2CharType := '0' + UPSFormated2CharType;
+        end;
+        exit(UPSFormated2CharType);
+    end;
+
+    local procedure GetUPSFormated3CharType(GivenValue: Integer) UPSFormated2CharType: code[3]
+    begin
+        UPSFormated2CharType := Format(GivenValue);
+        if StrLen(UPSFormated2CharType) = 1 then begin
+            UPSFormated2CharType := '0' + UPSFormated2CharType;
+        end;
+        if StrLen(UPSFormated2CharType) = 2 then begin
             UPSFormated2CharType := '0' + UPSFormated2CharType;
         end;
         exit(UPSFormated2CharType);
