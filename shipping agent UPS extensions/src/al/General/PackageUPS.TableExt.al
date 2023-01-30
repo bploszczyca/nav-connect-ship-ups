@@ -30,10 +30,28 @@ tableextension 70869802 "ESNPackageUPS" extends "ETI-Package-NC"
                     end else begin
                         Validate("ESNUPS Packaging CodeUPS", "ESNUPS Packaging CodeUPS"::"02");
                     end;
+                    Validate("ESNUPS Simple RateUPS", item."ESNUPS Simple RateUPS");
                 end else begin
                     Validate("ESNUPS Packaging CodeUPS", "ESNUPS Packaging CodeUPS"::"02");
+                    Validate("ESNUPS Simple RateUPS", "ESNUPS Simple RateUPS"::" ");
                 end;
             end;
+        }
+
+        field(70869803; "ESNUPS Premier CategoryUPS"; Enum "ESNUPS Premier CategoryUPS")
+        {
+            Caption = 'UPS Premier Category';
+            DataClassification = CustomerContent;
+        }
+        field(70869804; "ESNUPS Premier SensorIDUPS"; Text[50])
+        {
+            Caption = 'UPS Premier SensorID';
+            DataClassification = CustomerContent;
+        }
+        field(70869805; "ESNUPS Simple RateUPS"; Enum "ESNUPS Simple RateUPS")
+        {
+            Caption = 'UPS Simple Rate';
+            DataClassification = CustomerContent;
         }
     }
 }

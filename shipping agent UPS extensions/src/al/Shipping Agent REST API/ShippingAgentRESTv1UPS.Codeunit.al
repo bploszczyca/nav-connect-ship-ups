@@ -758,8 +758,14 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         PackagingCode.Add('Code', GetUPSFormated2CharType(format(Package."ESNUPS Packaging CodeUPS", 0, 9)));
         PackageJsonObject.Add('Packaging', PackagingCode);
 
-        GetShipmentRequest_Shipment_Package_Dimensions(Package, PackageJsonObject)
-        // GetShipmentRequest_Shipment_Package_DimWeight(Package, PackageJsonObject)
+        GetShipmentRequest_Shipment_Package_Dimensions(Package, PackageJsonObject);
+        GetShipmentRequest_Shipment_Package_PackageWeight(Package, PackageJsonObject);
+        GetShipmentRequest_Shipment_Package_UPSPremier(Package, PackageJsonObject);
+        GetShipmentRequest_Shipment_Package_PackageServiceOptions(Package, PackageJsonObject);
+        GetShipmentRequest_Shipment_Package_HazMatPackageInformation(Package, PackageJsonObject);
+
+        GetShipmentRequest_Shipment_Package_SimpleRate(Package, PackageJsonObject);
+
 
     end;
 
@@ -803,6 +809,91 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         if Dimensions.Keys.Count > 0 then
             PackageJsonObject.Add('Dimensions', Dimensions);
     end;
+
+    local procedure GetShipmentRequest_Shipment_Package_PackageWeight(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
+    var
+        ShippingAgent: Record "Shipping Agent";
+        PackageWeight: JsonObject;
+        UnitOfMeasurement: JsonObject;
+    begin
+        ShippingAgent := Package.GetShippingAgent();
+        UnitOfMeasurement.Add('Code', format(ShippingAgent."ESNUPS Weight DimensionsUPS"));
+
+        PackageWeight.Add('UnitOfMeasurement', UnitOfMeasurement);
+
+        // There is one implied decimal place (e.g. 115 = 11.5).
+        PackageWeight.Add('Weight', Format(Round(Package.Weight * 10, 1)));
+
+        if PackageWeight.Keys.Count > 0 then
+            PackageJsonObject.Add('PackageWeight', PackageWeight);
+    end;
+
+    local procedure GetShipmentRequest_Shipment_Package_UPSPremier(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
+    var
+        UPSPremier: JsonObject;
+    begin
+        if Package."ESNUPS Premier CategoryUPS" <> Package."ESNUPS Premier CategoryUPS"::" " then begin
+
+            UPSPremier.Add('Category', GetUPSFormated2CharType(Package."ESNUPS Premier CategoryUPS".AsInteger()));
+            UPSPremier.Add('SensorID', Package."ESNUPS Premier SensorIDUPS");
+
+            //GetShipmentRequest_Shipment_Package_UPSPremier_HandlingInstructions   TODO on Request
+
+            if UPSPremier.Keys.Count > 0 then
+                PackageJsonObject.Add('UPSPremier', UPSPremier);
+        end;
+    end;
+
+    local procedure GetShipmentRequest_Shipment_Package_PackageServiceOptions(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
+    var
+        PackageServiceOptions: JsonObject;
+    begin
+
+        GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat(Package, PackageServiceOptions);
+
+        if PackageServiceOptions.Keys.Count > 0 then
+            PackageJsonObject.Add('PackageServiceOptions', PackageServiceOptions);
+    end;
+
+    local procedure GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
+    var
+        HazMat: JsonObject;
+    begin
+        // Gefahrgut todo !!
+        //GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
+
+        if HazMat.Keys.Count > 0 then
+            PackageJsonObject.Add('HazMat', HazMat);
+    end;
+
+    local procedure GetShipmentRequest_Shipment_Package_HazMatPackageInformation(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
+    var
+        HazMatPackageInformation: JsonObject;
+    begin
+        // Gefahrgut todo !!    
+        //GetShipmentRequest_Shipment_Package_HazMatPackageInformation...(Package, PackageServiceOptions);
+        //HazMatPackageInformation
+
+        if HazMatPackageInformation.Keys.Count > 0 then
+            PackageJsonObject.Add('HazMatPackageInformation', HazMatPackageInformation);
+    end;
+
+
+    local procedure GetShipmentRequest_Shipment_Package_SimpleRate(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
+    var
+        SimpleRate: JsonObject;
+    begin
+        if Package."ESNUPS Simple RateUPS" <> Package."ESNUPS Simple RateUPS"::" " then begin
+
+            SimpleRate.Add('Code', GetUPSSimpleRateCode(Package."ESNUPS Simple RateUPS"));
+            SimpleRate.Add('Description', Format(Package."ESNUPS Simple RateUPS"));
+
+            if SimpleRate.Keys.Count > 0 then
+                PackageJsonObject.Add('SimpleRate', SimpleRate);
+        end;
+    end;
+
+    // -->
     #endregion
 
     #region etc.
@@ -1138,6 +1229,34 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
             UPSFormated2CharType := '0' + UPSFormated2CharType;
         end;
         exit(UPSFormated2CharType);
+    end;
+
+    local procedure GetUPSSimpleRateCode(GivenValue: Enum "ESNUPS Simple RateUPS") UPSSimpleRateCode: code[2]
+    begin
+        case GivenValue of
+            GivenValue::XS:
+                begin
+                    UPSSimpleRateCode := 'XS';
+                end;
+            GivenValue::S:
+                begin
+                    UPSSimpleRateCode := 'S';
+                end;
+            GivenValue::M:
+                begin
+                    UPSSimpleRateCode := 'M';
+                end;
+            GivenValue::L:
+                begin
+                    UPSSimpleRateCode := 'L';
+                end;
+            GivenValue::XL:
+                begin
+                    UPSSimpleRateCode := 'XL';
+                end;
+        end;
+
+        exit(UPSSimpleRateCode);
     end;
 
     local procedure GetUPSFormated2CharType(GivenValue: Code[2]) UPSFormated2CharType: code[2]

@@ -73,6 +73,16 @@
           <note from="Developer" annotates="general" priority="2">Shipping REST URL</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ESNShipping Agent CardUPS - Control Shipping REST URL - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2072571932 - Control 247574510 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+          <source>UPS Premier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardUPS - Control UPS Premier - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3200046178 - Control 247574510 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
+          <source>UPS Premier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardUPS - Control UPS Premier - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 4102833058 - Action 1036946772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4073709604">
           <source>&amp;UPS</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -87,6 +97,11 @@
           <source>UPS Packaging Code</source>
           <note from="Developer" annotates="general" priority="2">UPS Verpackuntsart</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNItemUPS - Field ESNUPS Packaging CodeUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3018348005 - Field 933357184 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>UPS Simple Rate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNItemUPS - Field ESNUPS Simple RateUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3825586520 - Field 1405609773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>UPS Notification Type</source>
@@ -103,6 +118,21 @@
           <note from="Developer" annotates="general" priority="2">UPS Verpackuntsart</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Packaging CodeUPS - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 4237517088 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>UPS Premier Category</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Premier CategoryUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 1325530481 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>UPS Premier SensorID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Premier SensorIDUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 933357184 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>UPS Simple Rate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNUPS Simple RateUPS - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3268471766 - Field 1405609773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>UPS Notification Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -117,6 +147,21 @@
           <source>UPS Packaging Code</source>
           <note from="Developer" annotates="general" priority="2">UPS Verpackuntsart</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Packaging CodeUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 4237517088 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>UPS Premier Category</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Premier CategoryUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 1325530481 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>UPS Premier SensorID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Premier SensorIDUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 933357184 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>UPS Simple Rate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNUPS Simple RateUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3959673349 - Field 3357801362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4577671">
           <source>UPS Shipment Service Code</source>
@@ -229,9 +274,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNTransportation PaymentUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2979565311 - Field 1281012696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
-          <source>UPS Dimensions UoM</source>
+          <source>Dimensions UoM</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNUPS Dimensions UoMUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2979565311 - Field 3999537613 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
+          <source>Weight Dimensions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentUPS - Field ESNUPS Weight DimensionsUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2979565311 - Field 2211233884 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
           <source>UPS User Name</source>
@@ -637,6 +687,26 @@
           <source>English Units of Measurement</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Dimensions UoMUPS - EnumValue 01 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4237517088 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Premier CategoryUPS - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4237517088 - EnumValue 580429820 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Premier Gold</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Premier CategoryUPS - EnumValue Gold - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4237517088 - EnumValue 1335612330 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Premier Platinum</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Premier CategoryUPS - EnumValue Platinum - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4237517088 - EnumValue 2665451865 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UPS Premier Silver</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Premier CategoryUPS - EnumValue Silver - Property Caption</note>
         </trans-unit>
         <trans-unit id="EnumExtension 2979565311 - EnumValue 2557024266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2909517731">
           <source>UPS REST</source>
