@@ -3,6 +3,16 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Etiscan NAVConnect - Ship UPS">
     <body>
       <group id="body">
+        <trans-unit id="Codeunit 2623966606 - Method 450432488 - NamedType 2882541497" size-unit="char" translate="yes" xml:space="preserve">
+          <source>3th and 4th character of %1 must be "%2".</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST v1UPS - Method GetShipmentRequest_Shipment_MovementReferenceNumber - NamedType CharacterMustBeequalLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2623966606 - Method 450432488 - NamedType 1298344127" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 has to be 18 characters long.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST v1UPS - Method GetShipmentRequest_Shipment_MovementReferenceNumber - NamedType HasToBe18CharLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2623966606 - Method 4037238891 - NamedType 2253963473" size-unit="char" translate="yes" xml:space="preserve">
           <source>Package must not be larger than 274cm.</source>
           <note from="Developer" annotates="general" priority="2"></note>

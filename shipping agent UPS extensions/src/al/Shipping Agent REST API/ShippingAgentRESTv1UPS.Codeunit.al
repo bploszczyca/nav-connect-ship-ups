@@ -204,10 +204,28 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         Errordescription: List of [Text];
         ErrordescriptionTxt: Text;
 
+    // HeadersKey: Text;
+    // HeadersKeyJson: JsonObject;
+    // HeadersKeyValues: list of [Text];
+    // HeadersKeyValuesTxt: Text;
+    // ResponseHttpMessageHeaders: Text;
     begin
         if not ResponseHttpMessage.IsBlockedByEnvironment and ResponseHttpMessage.IsSuccessStatusCode and ShowInfo then begin
             Message('StatusCode: %1, %2', ResponseHttpMessage.HttpStatusCode, ResponseHttpMessage.ReasonPhrase);
         end else begin
+            // foreach HeadersKey in ResponseHttpMessage.Headers().Keys() do begin
+            //     if ResponseHttpMessage.Headers().Contains(HeadersKey) then begin
+            //         Clear(Errorcode);
+            //         if ResponseHttpMessage.Headers().GetValues(HeadersKey, Errorcode) then begin
+            //             Errorcode.get(1, ErrorcodeTxt);
+            //             HeadersKeyJson.Add(HeadersKey, ErrorcodeTxt);
+            //         end;
+            //     end;
+            // end;
+            // HeadersKeyJson.WriteTo(ResponseHttpMessageHeaders);
+            // Message('ResponseHttpMessageHeaders: %1', ResponseHttpMessageHeaders);
+            // Clear(Errorcode);
+
             if ResponseHttpMessage.Headers().Contains('errorcode') then begin
                 if ResponseHttpMessage.Headers().GetValues('errorcode', Errorcode) then begin
                     Errorcode.get(1, ErrorcodeTxt);
@@ -585,10 +603,23 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
     local procedure GetShipmentRequest_Shipment_MovementReferenceNumber(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
     var
         ShippingAgent: Record "Shipping Agent";
+        CountryRegion: Record "Country/Region";
+        CharacterMustBeequalLbl: Label '3th and 4th character of %1 must be "%2".';
+        HasToBe18CharLbl: Label '%1 has to be 18 characters long.';
     begin
         // Required: No
         ShippingAgent := Package.GetShippingAgent();
         if ShippingAgent."ESNMovement Ref. NumberShip" <> '' then begin
+            Package.TestField("ESNShip-from Coun/Reg CodeShip");
+            CountryRegion.get(Package."ESNShip-from Coun/Reg CodeShip");
+            CountryRegion.TestField("ISO Code");
+            if CopyStr(ShippingAgent."ESNMovement Ref. NumberShip", 3, 2) <> CountryRegion."ISO Code" then begin
+                Error(CharacterMustBeequalLbl, ShippingAgent.FieldCaption("ESNMovement Ref. NumberShip"), CountryRegion."ISO Code");
+            end;
+            if StrLen(ShippingAgent."ESNMovement Ref. NumberShip") <> 18 then begin
+                Error(HasToBe18CharLbl, ShippingAgent.FieldCaption("ESNMovement Ref. NumberShip"));
+            end;
+
             ShipmentContent.Add('MovementReferenceNumber', ShippingAgent."ESNMovement Ref. NumberShip");
         end;
     end;
@@ -859,6 +890,8 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
 
         PackageWeight.Add('UnitOfMeasurement', UnitOfMeasurement);
 
+        // Required: Yes
+        Package.TestField(Weight);
         // There is one implied decimal place (e.g. 115 = 11.5).
         PackageWeight.Add('Weight', Format(Round(Package.Weight * 10, 1)));
 
@@ -1159,11 +1192,10 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         ShipperAddress.Add('PostalCode', CopyStr(Package."ESNShip-from Post CodeShip", 1, 9));
 
         // Required: Yes
-        if Package."ESNShip-from Coun/Reg CodeShip" <> '' then begin
-            CountryRegion.get(Package."ESNShip-from Coun/Reg CodeShip");
-            CountryRegion.TestField("ISO Code");
-            ShipperAddress.Add('CountryCode', CopyStr(CountryRegion."ISO Code", 1, 2));
-        end;
+        Package.TestField("ESNShip-from Coun/Reg CodeShip");
+        CountryRegion.get(Package."ESNShip-from Coun/Reg CodeShip");
+        CountryRegion.TestField("ISO Code");
+        ShipperAddress.Add('CountryCode', CopyStr(CountryRegion."ISO Code", 1, 2));
     end;
 
     local procedure GetShipToPhoneNo(Package: Record "ETI-Package-NC"; ShipToPhoneNo: JsonObject) AddShipToPhoneNo: Boolean
@@ -1329,11 +1361,10 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
         ShipToAddress.Add('PostalCode', CopyStr(Package."ship-to Post Code", 1, 9));
 
         // Required: Yes
-        if Package."Ship-to Country/Region Code" <> '' then begin
-            CountryRegion.get(Package."Ship-to Country/Region Code");
-            CountryRegion.TestField("ISO Code");
-            ShipToAddress.Add('CountryCode', CopyStr(CountryRegion."ISO Code", 1, 2));
-        end;
+        Package.TestField("Ship-to Country/Region Code");
+        CountryRegion.get(Package."Ship-to Country/Region Code");
+        CountryRegion.TestField("ISO Code");
+        ShipToAddress.Add('CountryCode', CopyStr(CountryRegion."ISO Code", 1, 2));
     end;
 
     local procedure GetUPSFormatedShipperPhoneNo(ShipperPhoneNo: Text) UPSFormatedShipperPhoneNo: Text

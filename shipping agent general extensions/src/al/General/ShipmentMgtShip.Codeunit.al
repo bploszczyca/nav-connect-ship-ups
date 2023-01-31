@@ -360,7 +360,7 @@ codeunit 70869750 "ESNShipment Mgt.Ship"
     begin
         if ShipToCountry.get(Package."Ship-to Country/Region Code") then;
         if ShipFromCountry.get(Package."ESNShip-from Coun/Reg CodeShip") then;
-        EUShipment := (ShipToCountry."EU Country/Region Code" <> '') and (ShipFromCountry."EU Country/Region Code" <> '');
+        EUShipment := (ShipToCountry."EU Country/Region Code" <> '') and (ShipFromCountry."EU Country/Region Code" <> '') and (ShipToCountry.Code <> ShipFromCountry.Code);
     end;
 
     [IntegrationEvent(true, false)]

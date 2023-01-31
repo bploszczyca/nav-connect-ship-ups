@@ -139,6 +139,12 @@ tableextension 70869750 "ESNPackageShip" extends "ETI-Package-NC"
             DataClassification = CustomerContent;
             Caption = 'Ship-from Country/Region Code';
             TableRelation = "Country/Region";
+            trigger OnValidate()
+            begin
+                if (xRec."ESNShip-from Coun/Reg CodeShip" = '') and ("ESNShip-from Coun/Reg CodeShip" <> '') and ("Ship-to No." <> '') and ("Ship-to Country/Region Code" = '') then begin
+                    Validate("Ship-to Country/Region Code", "ESNShip-from Coun/Reg CodeShip");
+                end;
+            end;
         }
         field(70869772; "ESNNotification To EmailShip"; Text[80])
         {
