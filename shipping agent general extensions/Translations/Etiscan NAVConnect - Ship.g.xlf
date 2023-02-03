@@ -3,10 +3,380 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Etiscan NAVConnect - Ship">
     <body>
       <group id="body">
+        <trans-unit id="Table 4087845429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Classification</source>
+          <note from="Developer" annotates="general" priority="2">ADR Klassifizierung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR ClassificationShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4087845429 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR ClassificationShip - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4087845429 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR ClassificationShip - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 166151727 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Instruction</source>
+          <note from="Developer" annotates="general" priority="2">ADR Anweisung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR InstructionShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 166151727 - Field 2032714124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR No.</source>
+          <note from="Developer" annotates="general" priority="2">ARD Nr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR InstructionShip - Field ADR No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 166151727 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR InstructionShip - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 166151727 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR InstructionShip - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 166151727 - Field 2241312734 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Groupe</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR InstructionShip - Field Groupe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2255415362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Translation</source>
+          <note from="Developer" annotates="general" priority="2">ADR Übersetzung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR TranslationShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2255415362 - Field 2032714124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR No.</source>
+          <note from="Developer" annotates="general" priority="2">ARD Nr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR TranslationShip - Field ADR No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2255415362 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR TranslationShip - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2255415362 - Field 47657272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR TranslationShip - Field Description 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2255415362 - Field 2273653569 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Language Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR TranslationShip - Field Language Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ARD UN</source>
+          <note from="Developer" annotates="general" priority="2">ARD UN</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 3454070650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Class</source>
+          <note from="Developer" annotates="general" priority="2">Klasse</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Class - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 2759720525 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Classification Code</source>
+          <note from="Developer" annotates="general" priority="2">Klassifizierungscod</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Classification Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 47657272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Description 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 2455194789 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excepted Quantities</source>
+          <note from="Developer" annotates="general" priority="2">Freigestellte Mengen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Excepted Quantities - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 2302280731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hazard identification No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Hazard identification No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 1589871986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lable</source>
+          <note from="Developer" annotates="general" priority="2">Gefahrzette</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Lable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 2423989363 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Limited Quantities (gr|ml)</source>
+          <note from="Developer" annotates="general" priority="2">Begrenzte Mengen (gr|ml)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Limited Quantities - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UN No.</source>
+          <note from="Developer" annotates="general" priority="2">UN Nr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 1944814514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packing Group</source>
+          <note from="Developer" annotates="general" priority="2">Verpackungsgrupp</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Packing Group - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 1342259717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special Provisions</source>
+          <note from="Developer" annotates="general" priority="2">Sondervorschrifte</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Special Provisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3639504277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item ADR Quantity</source>
+          <note from="Developer" annotates="general" priority="2">Artikel ADR Menge</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3639504277 - Field 2032714124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR No.</source>
+          <note from="Developer" annotates="general" priority="2">ADR Nr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field ADR No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3639504277 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3639504277 - Field 47657272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Description 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3639504277 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3639504277 - Field 3984889505 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity per Base Unit of Measure (gr|ml)</source>
+          <note from="Developer" annotates="general" priority="2">Menge per Basiseinheit (gr|ml)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Quantity per Base UoM (gr|ml) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3639504277 - Field 3450651614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variant Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Variant Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1792076683 - Method 578278027 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not yet implemented.</source>
           <note from="Developer" annotates="general" priority="2">Noch nicht umgesetzt.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent APIShip - Method DefaultImplementation - NamedType NotYetImplementedLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 636179756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Classifications</source>
+          <note from="Developer" annotates="general" priority="2">ADR Klassifizierungen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ClassificationsShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Instructions</source>
+          <note from="Developer" annotates="general" priority="2">ADR Anweisungen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 3288055521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Tank</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control ADRTank - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 3408843838 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Tank Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control ADRTankCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 3425810664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Tank Special Provisions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control ADRTankSpecialProvisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 2907923339 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control Packing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 551988394 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mixed packing provisions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control MixedPpackingProvisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 3611355038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packing Instructions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control Packinginstructions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 349706230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special packing provisions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control SpecialPackingProvisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 3765641036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Portable Tanks</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control PortableTanks - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 1759984717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Portable Tanks Instructions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control PortableTanksInstructions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 849181500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Portable Tank Special Provisions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control PortableTankSpecialProvisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 990719772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control SpecialProvisionsForCarriage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 3380798732 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Bulk</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control SpecialProvisionsForCarriageBulk - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 528869308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Loading and unloading</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control SpecialProvisionsForCarriageLoadingAndUnloading - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 1578057791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Operation</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control SpecialProvisionsForCarriageOperation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 1238863502 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Packages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control SpecialProvisionsForCarriagePackagess - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 714498981 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transport category</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control Transport - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 856245317 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transport category</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control TransportCategory - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 1260581781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transport category (Tunnel Restriction code)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control TransportCategoryTunnel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 2930059429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vehicle For Tank Carriage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control VehicleForTankCarriage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Action 2653012956 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translations</source>
+          <note from="Developer" annotates="general" priority="2">Übersetzungen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Action Translations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590645178 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Instructions</source>
+          <note from="Developer" annotates="general" priority="2">ADR Anweisungen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR InstructionsShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR List</source>
+          <note from="Developer" annotates="general" priority="2">ADR Übersicht</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 3408843838 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Tank Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control ADRTankCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 3425810664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Tank Special Provisions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control ADRTankSpecialProvisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 551988394 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mixed packing provisions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control MixedPpackingProvisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 3611355038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packing Instructions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control Packinginstructions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 1759984717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Portable Tanks Instructions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control PortableTanksInstructions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 849181500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Portable Tank Special Provisions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control PortableTankSpecialProvisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 349706230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special packing provisions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control SpecialPackingProvisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 3380798732 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Bulk</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control SpecialProvisionsForCarriageBulk - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 528869308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Loading and unloading</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control SpecialProvisionsForCarriageLoadingAndUnloading - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 1578057791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Operation</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control SpecialProvisionsForCarriageOperation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 1238863502 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Packages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control SpecialProvisionsForCarriagePackagess - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 856245317 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transport category</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control TransportCategory - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 1260581781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transport category (Tunnel Restriction code)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control TransportCategoryTunnel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 2930059429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vehicle For Tank Carriage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control VehicleForTankCarriage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Action 2653012956 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translations</source>
+          <note from="Developer" annotates="general" priority="2">Übersetzungen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Action Translations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1025053103 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Translations</source>
+          <note from="Developer" annotates="general" priority="2">ADR Übersetzungen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR TranslationsShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1803542663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item ADR Quantities</source>
+          <note from="Developer" annotates="general" priority="2">Artikel ADR Mengen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNItem ADR QuantitiesShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2447985466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Packages on Ship</source>
@@ -17,6 +387,16 @@
           <source>Packages on Ship</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ESNRegPack. FactBoxShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2854531341 - Action 3790315647 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Item ADR Quantities</source>
+          <note from="Developer" annotates="general" priority="2">Artikel ADR Mengen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNItem CardShip - Action ESNItemADRQuantitiesShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1642529559 - Action 3790315647 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Item ADR Quantities</source>
+          <note from="Developer" annotates="general" priority="2">Artikel ADR Mengen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNItem ListShip - Action ESNItemADRQuantitiesShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 545993712 - Action 552858644 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
           <source>Shipment</source>
@@ -432,6 +812,76 @@
           <source>Shipping Agent API</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping AgentShip - Field ESNShipping Agent APIShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 69638718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Tank Code</source>
+          <note from="Developer" annotates="general" priority="2">ADR Tankcodierung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue ADR Tank Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 2960376432 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Tank Special Provisions</source>
+          <note from="Developer" annotates="general" priority="2">ADR Tank Sondervor-schriften</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue ADR Tank Special Provisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 100487506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mixed packing provisions</source>
+          <note from="Developer" annotates="general" priority="2">Verpackung Zusammenpackung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Mixed packing provisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 579575198 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packing instructions</source>
+          <note from="Developer" annotates="general" priority="2">Verpackung Anweisungen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Packing instructions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 3212919748 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Portable tank special provisions</source>
+          <note from="Developer" annotates="general" priority="2">Ortsbewegliche Tank/Schüttgut-Container Anweisungen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Portable tank special provisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 3583175605 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Portable tanks instructions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Portable tanks instructions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 2149775086 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special packing provisions</source>
+          <note from="Developer" annotates="general" priority="2">Verpackung Sondervorschriften</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Special packing provisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 2093961055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Bulk</source>
+          <note from="Developer" annotates="general" priority="2">Sondervorschriften für die Beförderung - lose Schüttung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Special provisions for carriage - Bulk - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 1046919759 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Loading and unloading</source>
+          <note from="Developer" annotates="general" priority="2">Sondervorschriften für die Beförderung - Be- und Entladung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Special provisions for carriage - Loading and unloading - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 2973394388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Operation</source>
+          <note from="Developer" annotates="general" priority="2">Sondervorschriften für die Beförderung - Handhabung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Special provisions for carriage - Operation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 2140374984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special provisions for carriage - Packages</source>
+          <note from="Developer" annotates="general" priority="2">Sondervorschriften für die Beförderung - Versandstücke</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Special provisions for carriage - Packages - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 3152292181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transport category</source>
+          <note from="Developer" annotates="general" priority="2">Beförderungskategorie</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Transport category - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 1087354709 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transport category (Tunnel Restriction code)</source>
+          <note from="Developer" annotates="general" priority="2">Beförderungskategorie (Tunnelbeschränkungscode)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Transport category (Tunnel Restriction code) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 1062996077 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vehicle for tank carriage</source>
+          <note from="Developer" annotates="general" priority="2">Fahrzeug für die Beförderung in Tanks</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Vehicle for tank carriage - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2037288953 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
