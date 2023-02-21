@@ -20,6 +20,7 @@ page 70869755 "ESNADR Instructions CardShip"
                 field("Packing Group"; rec."Packing Group") { ApplicationArea = All; }
                 field(Lable; rec.Lable) { ApplicationArea = All; }
                 field("Special Provisions"; rec."Special Provisions") { ApplicationArea = All; }
+                field("Limited Quantities"; rec."Limited Quantities") { ApplicationArea = All; }
                 field("Excepted Quantities"; rec."Excepted Quantities") { ApplicationArea = All; }
                 field("Hazard identification No."; rec."Hazard identification No.") { ApplicationArea = All; }
             }
@@ -127,6 +128,14 @@ page 70869755 "ESNADR Instructions CardShip"
                     Caption = 'Special provisions for carriage - Operation';
                     SubPageLink = "ADR No." = field("No."), Groupe = const("Special provisions for carriage - Operation");
                 }
+            }
+        }
+        area(FactBoxes)
+        {
+            part(ADRAssiItems; "ESNADR Assi. ItemsShip")
+            {
+                ApplicationArea = all;
+                SubPageLink = "ADR No." = field("No.");
             }
         }
     }

@@ -72,17 +72,22 @@ table 70869750 "ESNADRShip"
         key(PK; "No.") { Clustered = true; }
     }
 
-
     trigger OnDelete()
     var
         ADRUNTranslation: Record "ESNADR TranslationShip";
         ADRInstruction: Record "ESNADR InstructionShip";
+        ItemADRQuantity: Record "ESNItem ADR QuantityShip";
+        ItemsAssignedLbl: Label '%1 %2 must not be deleted, as long items are assigned.', Comment = '%1 %2 darf nicht gelöscht werden, solange Artikel zugerodnet sind.';
     begin
-        ADRUNTranslation.SetRange("ADR No.");
+        ItemADRQuantity.SetRange("ADR No.");
+        if not ItemADRQuantity.IsEmpty then
+            Error(ItemsAssignedLbl, rec.TableCaption, "No.");
+
+        ADRUNTranslation.SetRange("ADR No.", "No.");
         if not ADRUNTranslation.IsEmpty then
             ADRUNTranslation.DeleteAll(true);
 
-        ADRInstruction.SetRange("ADR No.");
+        ADRInstruction.SetRange("ADR No.", "No.");
         if not ADRInstruction.IsEmpty then
             ADRInstruction.DeleteAll(true);
     end;

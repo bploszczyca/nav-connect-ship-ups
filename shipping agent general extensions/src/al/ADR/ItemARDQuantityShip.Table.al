@@ -49,6 +49,21 @@ table 70869754 "ESNItem ADR QuantityShip"
             DataClassification = CustomerContent;
             MinValue = 0;
         }
+
+        field(30; "Item Description"; Text[100])
+        {
+            Caption = 'Description';
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
+        }
+        field(31; "Item Description 2"; Text[50])
+        {
+            Caption = 'Description 2';
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = lookup(Item."Description 2" where("No." = field("Item No.")));
+        }
     }
 
     keys

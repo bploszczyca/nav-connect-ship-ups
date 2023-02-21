@@ -23,6 +23,15 @@ pageextension 70869750 "ESNPackage CardShip" extends "ETI-Package Card-NC"
         }
         addafter(Lieferung)
         {
+            group("Dangerous Goods")
+            {
+                Caption = 'Dangerous Goods';
+                part("Package ADR Content"; "ESNPackage ADR ContentShip")
+                {
+                    ApplicationArea = Basic, Suite;
+                    SubPageLink = "Package No." = field("No."), "Line Type" = const(ADR), "Line No." = const(0);
+                }
+            }
             group(ESNShipmentUPSshipShip)
             {
                 Caption = 'Shipment';

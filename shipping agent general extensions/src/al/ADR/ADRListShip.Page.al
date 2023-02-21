@@ -25,6 +25,7 @@ page 70869752 "ESNADR ListShip"
                 field("Packing Group"; rec."Packing Group") { ApplicationArea = All; }
                 field(Lable; rec.Lable) { ApplicationArea = All; }
                 field("Special Provisions"; rec."Special Provisions") { ApplicationArea = All; }
+                field("Limited Quantities"; rec."Limited Quantities") { ApplicationArea = All; }
                 field("Excepted Quantities"; rec."Excepted Quantities") { ApplicationArea = All; }
                 field("Hazard identification No."; rec."Hazard identification No.") { ApplicationArea = All; }
             }
