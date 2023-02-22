@@ -9,7 +9,7 @@ table 70869756 "ESNReg. Package ADR ContShip"
             DataClassification = CustomerContent;
             Caption = 'Package No.';
             Editable = false;
-            TableRelation = "ETI-Package-NC";
+            TableRelation = "ETI-Reg. Package-NC";
         }
         field(2; "Line Type"; Option)
         {
@@ -114,7 +114,7 @@ table 70869756 "ESNReg. Package ADR ContShip"
             DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = sum("ESNPackage ADR ContentShip"."Quantity (gr|ml)" where("Package No." = field("Package No."), "Line Type" = const(Content), "ADR No." = field("ADR No.")));
+            CalcFormula = sum("ESNReg. Package ADR ContShip"."Quantity (gr|ml)" where("Package No." = field("Package No."), "Line Type" = const(Content), "ADR No." = field("ADR No.")));
         }
         field(51; "Manually Ent. Qty. (gr|ml)"; Decimal)
         {

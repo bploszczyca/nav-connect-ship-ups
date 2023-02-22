@@ -673,6 +673,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage ContentShip - Action Dangerous Good Lines - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2465037929 - Action 504535098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2829944332">
+          <source>Dangerous Good Lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg.  Package ContentShip - Action ESNDangerous Good LinesShip - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2399484334 - Control 100849452 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
           <source>EU Shipments</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -682,6 +687,11 @@
           <source>International Shipment</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control International Shipment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2399484334 - Control 1229971710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
+          <source>Dangerous Goods</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control Dangerous Goods - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2399484334 - Control 1951312360 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
           <source>Shipment</source>

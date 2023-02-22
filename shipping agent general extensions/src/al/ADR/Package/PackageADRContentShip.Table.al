@@ -141,13 +141,6 @@ table 70869755 "ESNPackage ADR ContentShip"
         key(PackageQuantity; "Package No.", "Line Type", "ADR No.") { IncludedFields = "Quantity (gr|ml)"; }
     }
 
-    var
-        ADRPackageMgt: Codeunit "ESNADR Package ManagementShip";
-
-    trigger OnInsert()
-    begin
-        ADRPackageMgt.CreatePackageADRLines(Rec);
-    end;
 
     procedure CalcPackageQuantityGrMl()
     begin

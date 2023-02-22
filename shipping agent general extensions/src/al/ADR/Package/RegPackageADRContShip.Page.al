@@ -3,6 +3,7 @@ page 70869762 "ESNReg. Package ADR ContShip"
     Caption = 'Dangerous Goods';
     PageType = ListPart;
     SourceTable = "ESNReg. Package ADR ContShip";
+    Editable = false;
 
     layout
     {
