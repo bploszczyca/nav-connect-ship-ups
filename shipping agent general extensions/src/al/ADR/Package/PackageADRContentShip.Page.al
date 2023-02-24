@@ -13,8 +13,9 @@ page 70869760 "ESNPackage ADR ContentShip"
                 field("ADR No."; rec."ADR No.") { ApplicationArea = All; }
                 field(Description; rec.Description) { ApplicationArea = All; }
                 field("Description 2"; rec."Description 2") { ApplicationArea = All; Visible = false; }
-                field("Manually Ent. Qty. (gr|ml)"; rec."Manually Ent. Qty. (gr|ml)") { ApplicationArea = All; Visible = false; }
-                field("Package Quantity (gr|ml)"; rec."Package Quantity (gr|ml)") { ApplicationArea = All; }
+                field("ADR Content Quantity (gr|ml)"; rec."ADR Content Quantity (gr|ml)") { ApplicationArea = All; Visible = false; }
+                field("ADR Content Quantity"; rec."ADR Content Quantity") { ApplicationArea = All; }
+                field("ADR Content Unit of Measure"; rec."ADR Content Unit of Measure") { ApplicationArea = All; }
             }
         }
     }

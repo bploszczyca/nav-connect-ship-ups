@@ -63,17 +63,18 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                                 if not ItemADRQuantityShip.IsEmpty then
                                     if ItemADRQuantityShip.Find('-') then
                                         repeat
-                                            // Search for variant-specific ARD data
+                                            // Search for variant-specific ADR data
                                             if Rec."Variant Code" <> '' then begin
                                                 ItemADRQuantityShip.SetRange("ADR No.", ItemADRQuantityShip."ADR No.");
                                                 ItemADRQuantityShip.FindLast();
                                                 ItemADRQuantityShip.SetRange("ADR No.");
                                             end;
-                                            ItemADRQuantityShip.TestField("Quantity per Base UoM (gr|ml)");
+                                            ItemADRQuantityShip.TestField("Quantity per Item Base UoM");
 
                                             InitPackageADRContent(rec, PackageADRContent);
                                             PackageADRContent."ADR No." := ItemADRQuantityShip."ADR No.";
-                                            PackageADRContent."Quantity per Base UoM (gr|ml)" := ItemADRQuantityShip."Quantity per Base UoM (gr|ml)";
+                                            PackageADRContent."Quantity per Item Base UoM" := ItemADRQuantityShip."Quantity per Item Base UoM";
+                                            PackageADRContent.Validate("ADR Unit of Measure", ItemADRQuantityShip."ADR Unit of Measure");
                                             PackageADRContent.Validate("Quantity (Base)", Rec."Pack Quantity (Base)");
                                             if PackageADRContent.Insert(true) then; // possible created by UndoRegisterPackage
                                         until ItemADRQuantityShip.Next() = 0;
@@ -87,9 +88,12 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                     if not PackageADRContent2.IsEmpty then
                         if PackageADRContent2.Find('-') then
                             repeat
+                                PackageADRContent2.CalcPackageQuantityGrMl();
                                 InitPackageADRContent(rec, PackageADRContent);
                                 PackageADRContent."ADR No." := PackageADRContent2."ADR No.";
-                                PackageADRContent."Quantity per Base UoM (gr|ml)" := PackageADRContent2."Package Quantity (gr|ml)";
+                                // PackageADRContent."Quantity per Base UoM (gr|ml)" := PackageADRContent2."Package Quantity (gr|ml)";
+                                PackageADRContent."Quantity per Item Base UoM" := PackageADRContent2."ADR Content Quantity";
+                                PackageADRContent.Validate("ADR Unit of Measure", PackageADRContent2."ADR Content Unit of Measure");
                                 PackageADRContent.Validate("Quantity (Base)", Rec."Pack Quantity (Base)");
                                 if PackageADRContent.Insert(true) then; // possible created by UndoRegisterPackage
                             until PackageADRContent2.Next() = 0;
@@ -103,7 +107,9 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                             repeat
                                 InitPackageADRContent(rec, PackageADRContent);
                                 PackageADRContent."ADR No." := RegPackageADRContent."ADR No.";
-                                PackageADRContent."Quantity per Base UoM (gr|ml)" := RegPackageADRContent."Package Quantity (gr|ml)";
+                                // PackageADRContent."Quantity per Base UoM (gr|ml)" := RegPackageADRContent."Package Quantity (gr|ml)";
+                                PackageADRContent."Quantity per Item Base UoM" := RegPackageADRContent."Quantity per Item Base UoM";
+                                PackageADRContent.Validate("ADR Unit of Measure", RegPackageADRContent."ADR Unit of Measure");
                                 PackageADRContent.Validate("Quantity (Base)", Rec."Pack Quantity (Base)");
                                 if PackageADRContent.Insert(true) then; // possible created by UndoRegisterPackage
                             until RegPackageADRContent.Next() = 0;
@@ -158,6 +164,20 @@ codeunit 70869753 "ESNADR Package ManagementShip"
     #endregion
 
     #region Adding/Removing "Package ADR Lines"
+    procedure GetPackageADRLines(Package: Record "ETI-Package-NC"; var PackageADRLines: Record "ESNPackage ADR ContentShip") PackageADRLinesFound: Boolean
+    begin
+        PackageADRLines.SetRange("Package No.", Package."No.");
+        PackageADRLines.SetRange("Line Type", PackageADRLines."Line Type"::ADR);
+        PackageADRLines.SetRange("Template Type", 0);
+        PackageADRLines.SetRange("Template Subtype", 0);
+        PackageADRLines.SetRange("Template No.", '');
+        PackageADRLines.SetRange("Template Line No.", 0);
+        PackageADRLines.SetRange("Template Sub Line No.", 0);
+        PackageADRLines.SetRange("Line No.", 0);
+        if not PackageADRLines.IsEmpty then
+            PackageADRLinesFound := PackageADRLines.Find('-');
+    end;
+
     procedure GetPackageADRLines("PackageContent": Record "ETI-Package Content-NC"; var PackageADRLines: Record "ESNPackage ADR ContentShip") PackageADRLinesFound: Boolean
     begin
         PackageADRLines.SetRange("Package No.", PackageContent."Package No.");
@@ -189,6 +209,7 @@ codeunit 70869753 "ESNADR Package ManagementShip"
     [EventSubscriber(ObjectType::Table, database::"ESNPackage ADR ContentShip", 'OnAfterInsertEvent', '', true, false)]
     local procedure PackageADRContent_OnAfterInsertEvent(var Rec: Record "ESNPackage ADR ContentShip")
     var
+        ADR: Record ESNADRShip;
         PackageADRLine: Record "ESNPackage ADR ContentShip";
     begin
         case Rec."Line Type" of
@@ -200,6 +221,12 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                         PackageADRLine."Package No." := Rec."Package No.";
                         PackageADRLine."Line Type" := Rec."Line Type"::ADR;
                         PackageADRLine."ADR No." := Rec."ADR No.";
+                        if ADR.get(Rec."ADR No.") then
+                            if ADR."Limited Quantities" = 0 then begin
+                                PackageADRLine.Validate("ADR Content Unit of Measure", Rec."ADR Unit of Measure");
+                            end else begin
+                                PackageADRLine.Validate("ADR Content Unit of Measure", ADR."Limited Quantity Unit");
+                            end;
                         PackageADRLine.CalcPackageQuantityGrMl();
                         PackageADRLine.Insert(true);
                     end else begin
@@ -222,7 +249,8 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                     if GetPackageADRLines(Rec, PackageADRLines) then
                         repeat
                             PackageADRLines.CalcPackageQuantityGrMl();
-                            if PackageADRLines."Package Quantity (gr|ml)" <= 0 then
+                            PackageADRLines.Modify(true);
+                            if PackageADRLines."ADR Content Quantity" <= 0 then
                                 PackageADRLines.Delete(true);
                         until PackageADRLines.Next() = 0;
                 end;
@@ -237,7 +265,7 @@ codeunit 70869753 "ESNADR Package ManagementShip"
         PackageADRLines: Record "ESNPackage ADR ContentShip";
         RegPackageADRLines: Record "ESNReg. Package ADR ContShip";
     begin
-        // Transfer ARD Lines to Reg. Package
+        // Transfer ADR Lines to Reg. Package
         PackageADRLines.SetRange("Package No.", Package."No.");
         PackageADRLines.SetRange("Line Type", PackageADRLines."Line Type"::ADR);
         if not PackageADRLines.IsEmpty then
@@ -254,7 +282,7 @@ codeunit 70869753 "ESNADR Package ManagementShip"
         PackageADRLines: Record "ESNPackage ADR ContentShip";
         RegPackageADRLines: Record "ESNReg. Package ADR ContShip";
     begin
-        // Transfer Content ARD Lines to Reg. Package
+        // Transfer Content ADR Lines to Reg. Package
         if GetPackageContentADRLines(PackageContent, PackageADRLines) then
             repeat
                 RegPackageADRLines.TransferFields(PackageADRLines, true);
@@ -268,7 +296,7 @@ codeunit 70869753 "ESNADR Package ManagementShip"
         PackageADRLines: Record "ESNPackage ADR ContentShip";
         RegPackageADRLines: Record "ESNReg. Package ADR ContShip";
     begin
-        // Transfer ARD Lines to Reg. Package
+        // Transfer ADR Lines to Reg. Package
         RegPackageADRLines.SetRange("Package No.", regPackage."No.");
         RegPackageADRLines.SetRange("Line Type", RegPackageADRLines."Line Type"::ADR);
         if not RegPackageADRLines.IsEmpty then
@@ -285,7 +313,7 @@ codeunit 70869753 "ESNADR Package ManagementShip"
         PackageADRLines: Record "ESNPackage ADR ContentShip";
         RegPackageADRLines: Record "ESNReg. Package ADR ContShip";
     begin
-        // Transfer Content ARD Lines to Reg. Package
+        // Transfer Content ADR Lines to Reg. Package
         if GetPackageContentADRLines(RegPackageContent, RegPackageADRLines) then
             repeat
                 PackageADRLines.TransferFields(RegPackageADRLines, true);

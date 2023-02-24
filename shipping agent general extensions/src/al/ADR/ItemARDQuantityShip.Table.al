@@ -43,11 +43,16 @@ table 70869754 "ESNItem ADR QuantityShip"
             FieldClass = FlowField;
             CalcFormula = lookup("ESNADRShip"."Description 2" where("No." = field("ADR No.")));
         }
-        field(20; "Quantity per Base UoM (gr|ml)"; Decimal)
+        field(20; "Quantity per Item Base UoM"; Decimal)
         {
-            Caption = 'Quantity per Base Unit of Measure (gr|ml)', Comment = 'Menge per Basiseinheit (gr|ml)';
+            Caption = 'Quantity per Item Base UoM', Comment = 'Menge per Artikel Basiseinheit';
             DataClassification = CustomerContent;
             MinValue = 0;
+        }
+        field(21; "ADR Unit of Measure"; Enum "ESNADR Quantities UoMShip")
+        {
+            Caption = 'ADR Unit of Measure', Comment = 'ADR Einheit';
+            DataClassification = CustomerContent;
         }
 
         field(30; "Item Description"; Text[100])

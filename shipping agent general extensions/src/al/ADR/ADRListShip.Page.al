@@ -23,15 +23,31 @@ page 70869752 "ESNADR ListShip"
                 field(Class; rec.Class) { ApplicationArea = All; }
                 field("Classification Code"; rec."Classification Code") { ApplicationArea = All; }
                 field("Packing Group"; rec."Packing Group") { ApplicationArea = All; }
-                field(Lable; rec.Lable) { ApplicationArea = All; }
-                field("Special Provisions"; rec."Special Provisions") { ApplicationArea = All; }
                 field("Limited Quantities"; rec."Limited Quantities") { ApplicationArea = All; }
+                field("Limited Quantity Unit"; rec."Limited Quantity Unit") { ApplicationArea = All; }
                 field("Excepted Quantities"; rec."Excepted Quantities") { ApplicationArea = All; }
                 field("Hazard identification No."; rec."Hazard identification No.") { ApplicationArea = All; }
             }
         }
         area(FactBoxes)
         {
+            part(ADRAssiItems; "ESNADR Assi. ItemsShip")
+            {
+                ApplicationArea = all;
+                SubPageLink = "ADR No." = field("No.");
+            }
+            part(Lable; "ESNADR LableInst. SubPageShip")
+            {
+                ApplicationArea = all;
+                Caption = 'Lable', Comment = 'Gefahrzette';
+                SubPageLink = "ADR No." = field("No."), Groupe = const("Lable"), Code = const('-');
+            }
+            part(SpecialProvisions; "ESNADR Instruct. SubPageShip")
+            {
+                ApplicationArea = all;
+                Caption = 'Special Provisions', Comment = 'Sondervorschrifte';
+                SubPageLink = "ADR No." = field("No."), Groupe = const("Special Provisions");
+            }
             part(Packinginstructions; "ESNADR Instruct. SubPageShip")
             {
                 ApplicationArea = all;

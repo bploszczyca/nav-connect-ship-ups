@@ -7,7 +7,7 @@ table 70869751 "ESNADR TranslationShip"
     {
         field(1; "ADR No."; Code[10])
         {
-            Caption = 'ADR No.', Comment = 'ARD Nr.';
+            Caption = 'ADR No.', Comment = 'ADR Nr.';
             DataClassification = CustomerContent;
             NotBlank = true;
             TableRelation = "ESNADRShip"."No.";

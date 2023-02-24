@@ -15,6 +15,8 @@ page 70869759 "ESNADR Assi. ItemsShip"
                 field("Variant Code"; rec."Variant Code") { ApplicationArea = All; Visible = false; }
                 field("Item Description"; rec."Item Description") { ApplicationArea = All; }
                 field("Item Description 2"; rec."Item Description 2") { ApplicationArea = All; Visible = false; }
+                field("Quantity per Item Base UoM"; rec."Quantity per Item Base UoM") { ApplicationArea = All; }
+                field("ADR Unit of Measure"; rec."ADR Unit of Measure") { ApplicationArea = All; }
             }
         }
     }

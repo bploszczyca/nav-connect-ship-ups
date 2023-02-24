@@ -1,6 +1,6 @@
 table 70869750 "ESNADRShip"
 {
-    Caption = 'ARD UN', Comment = 'ARD UN';
+    Caption = 'ADR UN', Comment = 'ADR UN';
     DataClassification = CustomerContent;
     LookupPageId = "ESNADR ListShip";
 
@@ -37,24 +37,18 @@ table 70869750 "ESNADRShip"
             Caption = 'Packing Group', Comment = 'Verpackungsgrupp';
             DataClassification = CustomerContent;
         }
-        field(31; Lable; Enum "ESNADR LableShip")
+        field(45; "Limited Quantity Unit"; Enum "ESNADR Quantities UoMShip")
         {
-            Caption = 'Lable', Comment = 'Gefahrzette';
+            Caption = 'Limited Quantities UoM', Comment = 'Einheit (Begrenzte Mengen)';
             DataClassification = CustomerContent;
-        }
-        field(32; "Special Provisions"; Integer)
-        {
-            Caption = 'Special Provisions', Comment = 'Sondervorschrifte';
-            DataClassification = CustomerContent;
-            MinValue = 0;
-            BlankZero = true;
         }
         field(40; "Limited Quantities"; Decimal)
         {
-            Caption = 'Limited Quantities (gr|ml)', Comment = 'Begrenzte Mengen (gr|ml)';
+            Caption = 'Limited Quantities', Comment = 'Begrenzte Mengen';
             DataClassification = CustomerContent;
             MinValue = 0;
         }
+
         field(41; "Excepted Quantities"; Enum "ESNADR Excepted QuantitiesShip")
         {
             Caption = 'Excepted Quantities', Comment = 'Freigestellte Mengen';

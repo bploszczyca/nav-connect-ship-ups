@@ -8,7 +8,7 @@ table 70869753 "ESNADR InstructionShip"
     {
         field(1; "ADR No."; Code[10])
         {
-            Caption = 'ADR No.', Comment = 'ARD Nr.';
+            Caption = 'ADR No.', Comment = 'ADR Nr.';
             DataClassification = CustomerContent;
             TableRelation = "ESNADRShip"."No.";
         }
@@ -25,6 +25,11 @@ table 70869753 "ESNADR InstructionShip"
             TableRelation = if ("ADR No." = filter('<>''''')) "ESNADR InstructionShip".Code where(Groupe = field(Groupe));
             ValidateTableRelation = false;
         }
+        field(4; Lable; Enum "ESNADR LableShip")
+        {
+            Caption = 'Lable', Comment = 'Gefahrzette';
+            DataClassification = CustomerContent;
+        }
         field(10; Description; Text[100])
         {
             Caption = 'Description';
@@ -34,7 +39,7 @@ table 70869753 "ESNADR InstructionShip"
 
     keys
     {
-        key(PK; "ADR No.", Groupe, Code) { Clustered = true; }
+        key(PK; "ADR No.", Groupe, Code, Lable) { Clustered = true; }
     }
     fieldgroups
     {

@@ -25,7 +25,7 @@
         </trans-unit>
         <trans-unit id="Table 166151727 - Field 2032714124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ADR No.</source>
-          <note from="Developer" annotates="general" priority="2">ARD Nr.</note>
+          <note from="Developer" annotates="general" priority="2">ADR Nr.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR InstructionShip - Field ADR No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 166151727 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -43,6 +43,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR InstructionShip - Field Groupe - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 166151727 - Field 1589871986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lable</source>
+          <note from="Developer" annotates="general" priority="2">Gefahrzette</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR InstructionShip - Field Lable - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2255415362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ADR Translation</source>
           <note from="Developer" annotates="general" priority="2">ADR Übersetzung</note>
@@ -50,7 +55,7 @@
         </trans-unit>
         <trans-unit id="Table 2255415362 - Field 2032714124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ADR No.</source>
-          <note from="Developer" annotates="general" priority="2">ARD Nr.</note>
+          <note from="Developer" annotates="general" priority="2">ADR Nr.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR TranslationShip - Field ADR No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2255415362 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -69,8 +74,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNADR TranslationShip - Field Language Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1161693127 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>ARD UN</source>
-          <note from="Developer" annotates="general" priority="2">ARD UN</note>
+          <source>ADR UN</source>
+          <note from="Developer" annotates="general" priority="2">ADR UN</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1161693127 - Method 3152277940 - NamedType 3410959720" size-unit="char" translate="yes" xml:space="preserve">
@@ -108,15 +113,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Hazard identification No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1161693127 - Field 1589871986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Lable</source>
-          <note from="Developer" annotates="general" priority="2">Gefahrzette</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Lable - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 1161693127 - Field 2423989363 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Limited Quantities (gr|ml)</source>
-          <note from="Developer" annotates="general" priority="2">Begrenzte Mengen (gr|ml)</note>
+          <source>Limited Quantities</source>
+          <note from="Developer" annotates="general" priority="2">Begrenzte Mengen</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Limited Quantities - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 3313449339 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Limited Quantities UoM</source>
+          <note from="Developer" annotates="general" priority="2">Einheit (Begrenzte Mengen)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Limited Quantity Unit - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1161693127 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>UN No.</source>
@@ -128,11 +133,6 @@
           <note from="Developer" annotates="general" priority="2">Verpackungsgrupp</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Packing Group - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1161693127 - Field 1342259717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Special Provisions</source>
-          <note from="Developer" annotates="general" priority="2">Sondervorschrifte</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Special Provisions - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 3639504277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Item ADR Quantity</source>
           <note from="Developer" annotates="general" priority="2">Artikel ADR Menge</note>
@@ -142,6 +142,11 @@
           <source>ADR No.</source>
           <note from="Developer" annotates="general" priority="2">ADR Nr.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field ADR No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3639504277 - Field 723523396 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2">ADR Einheit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field ADR Unit of Measure - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3639504277 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -168,25 +173,60 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Item No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3639504277 - Field 3984889505 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity per Base Unit of Measure (gr|ml)</source>
-          <note from="Developer" annotates="general" priority="2">Menge per Basiseinheit (gr|ml)</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Quantity per Base UoM (gr|ml) - Property Caption</note>
+        <trans-unit id="Table 3639504277 - Field 3073529941 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity per Item Base UoM</source>
+          <note from="Developer" annotates="general" priority="2">Menge per Artikel Basiseinheit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Quantity per Item Base UoM - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3639504277 - Field 3450651614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Variant Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Variant Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 558952175 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Content Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field ADR Content Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 3307207480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Content Quantity (gr|ml)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field ADR Content Quantity (gr|ml) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 1296813183 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Quantity per UoM</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field ADR Content Quantity per UoM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 1796689771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Content ADR Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2">ADR Einheit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field ADR Content Unit of Measure - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3185163570 - Field 2032714124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ADR No.</source>
           <note from="Developer" annotates="general" priority="2">ADR Nr.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field ADR No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3185163570 - Field 4094257645 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Content Quantity (gr|ml)</source>
+        <trans-unit id="Table 3185163570 - Field 2601879616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Quantity</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Content Quantity (gr|ml) - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field ADR Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 1387711959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field ADR Quantity (gr|ml) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 1435035360 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Quantity per UoM</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field ADR Quantity per UoM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 723523396 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2">ADR Einheit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field ADR Unit of Measure - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3185163570 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -213,35 +253,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Line Type - Property OptionCaption</note>
         </trans-unit>
-        <trans-unit id="Table 3185163570 - Field 2454849951 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manually entered Quantity (gr|ml)</source>
-          <note from="Developer" annotates="general" priority="2">Manuell erfasste Menge (gr|ml)</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Manually Ent. Qty. (gr|ml) - Property Caption</note>
+        <trans-unit id="Table 3185163570 - Field 1596313543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manually entered Quantity</source>
+          <note from="Developer" annotates="general" priority="2">Manuell erfasste Menge</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Manually entered Quantity - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3185163570 - Field 4240543679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Package No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Package No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3185163570 - Field 3937629436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Package Quantity (gr|ml)</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Package Quantity (gr|ml) - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 3185163570 - Field 3179217921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity (Base)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Quantity (Base) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3185163570 - Field 1625707262 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity (gr|ml)</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Quantity (gr|ml) - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 3185163570 - Field 3984889505 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity per Base Unit of Measure (gr|ml)</source>
-          <note from="Developer" annotates="general" priority="2">Menge per Basiseinheit (gr|ml)</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Quantity per Base UoM (gr|ml) - Property Caption</note>
+        <trans-unit id="Table 3185163570 - Field 3073529941 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity per Item Base UoM</source>
+          <note from="Developer" annotates="general" priority="2">Menge per Artikel Basiseinheit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Quantity per Item Base UoM - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3185163570 - Field 221370355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Template Line No.</source>
@@ -268,15 +298,50 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Template Type - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 643081513 - Field 558952175 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Content Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field ADR Content Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 3307207480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Content Quantity (gr|ml)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field ADR Content Quantity (gr|ml) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 1296813183 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Quantity per UoM</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field ADR Content Quantity per UoM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 1796689771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Content ADR Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2">ADR Einheit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field ADR Content Unit of Measure - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 643081513 - Field 2032714124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ADR No.</source>
           <note from="Developer" annotates="general" priority="2">ADR Nr.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field ADR No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 643081513 - Field 4094257645 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Content Quantity (gr|ml)</source>
+        <trans-unit id="Table 643081513 - Field 2601879616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Quantity</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Content Quantity (gr|ml) - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field ADR Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 1387711959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field ADR Quantity (gr|ml) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 1435035360 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Quantity per UoM</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field ADR Quantity per UoM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 723523396 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2">ADR Einheit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field ADR Unit of Measure - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 643081513 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -303,35 +368,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Line Type - Property OptionCaption</note>
         </trans-unit>
-        <trans-unit id="Table 643081513 - Field 2454849951 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manually entered Quantity (gr|ml)</source>
-          <note from="Developer" annotates="general" priority="2">Manuell erfasste Menge (gr|ml)</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Manually Ent. Qty. (gr|ml) - Property Caption</note>
+        <trans-unit id="Table 643081513 - Field 1596313543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manually entered Quantity</source>
+          <note from="Developer" annotates="general" priority="2">Manuell erfasste Menge</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Manually entered Quantity - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 643081513 - Field 4240543679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Package No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Package No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 643081513 - Field 3937629436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Package Quantity (gr|ml)</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Package Quantity (gr|ml) - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 643081513 - Field 3179217921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity (Base)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Quantity (Base) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 643081513 - Field 1625707262 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity (gr|ml)</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Quantity (gr|ml) - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 643081513 - Field 3984889505 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity per Base Unit of Measure (gr|ml)</source>
-          <note from="Developer" annotates="general" priority="2">Menge per Basiseinheit (gr|ml)</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Quantity per Base UoM (gr|ml) - Property Caption</note>
+        <trans-unit id="Table 643081513 - Field 3073529941 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity per Item Base UoM</source>
+          <note from="Developer" annotates="general" priority="2">Menge per Artikel Basiseinheit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Quantity per Item Base UoM - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 643081513 - Field 221370355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Template Line No.</source>
@@ -402,6 +457,21 @@
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 4062967072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General Provisions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control GeneralProvisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 1589871986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lable</source>
+          <note from="Developer" annotates="general" priority="2">Gefahrzette</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control Lable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3613399182 - Control 2724753925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special Provisions</source>
+          <note from="Developer" annotates="general" priority="2">Sondervorschrifte</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR Instructions CardShip - Control SpecialProvisions - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3613399182 - Control 2907923339 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Packing</source>
@@ -508,6 +578,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control ADRTankSpecialProvisions - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 1589871986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lable</source>
+          <note from="Developer" annotates="general" priority="2">Gefahrzette</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control Lable - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2574947649 - Control 551988394 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Mixed packing provisions</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -532,6 +607,11 @@
           <source>Special packing provisions</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control SpecialPackingProvisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2574947649 - Control 2724753925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special Provisions</source>
+          <note from="Developer" annotates="general" priority="2">Sondervorschrifte</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNADR ListShip - Control SpecialProvisions - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2574947649 - Control 3380798732 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Special provisions for carriage - Bulk</source>
@@ -1068,6 +1148,11 @@
           <note from="Developer" annotates="general" priority="2">ADR Tank Sondervor-schriften</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue ADR Tank Special Provisions - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 1589871986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lable</source>
+          <note from="Developer" annotates="general" priority="2">Gefahrzette</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Lable - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 4250463582 - EnumValue 100487506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Mixed packing provisions</source>
           <note from="Developer" annotates="general" priority="2">Verpackung Zusammenpackung</note>
@@ -1092,6 +1177,11 @@
           <source>Special packing provisions</source>
           <note from="Developer" annotates="general" priority="2">Verpackung Sondervorschriften</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Special packing provisions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4250463582 - EnumValue 1342259717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special Provisions</source>
+          <note from="Developer" annotates="general" priority="2">Sondervorschrifte</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Special Provisions - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 4250463582 - EnumValue 2093961055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Special provisions for carriage - Bulk</source>
@@ -1127,6 +1217,56 @@
           <source>Vehicle for tank carriage</source>
           <note from="Developer" annotates="general" priority="2">Fahrzeug für die Beförderung in Tanks</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Instruction GroupShip - EnumValue Vehicle for tank carriage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 265031905 - EnumValue 1595923313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gram (g)</source>
+          <note from="Developer" annotates="general" priority="2">Gramm (g)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Quantities UoMShip - EnumValue g - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 265031905 - EnumValue 1727136382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gallon (gal)</source>
+          <note from="Developer" annotates="general" priority="2">Gallone (gal)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Quantities UoMShip - EnumValue gal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 265031905 - EnumValue 423663968 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kilogram (kg)</source>
+          <note from="Developer" annotates="general" priority="2">Kilogramm (kg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Quantities UoMShip - EnumValue kg - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 265031905 - EnumValue 2833377072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liter (L)</source>
+          <note from="Developer" annotates="general" priority="2">Liter (L)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Quantities UoMShip - EnumValue L - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 265031905 - EnumValue 2457122538 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pound (lb)</source>
+          <note from="Developer" annotates="general" priority="2">Pfund (lb)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Quantities UoMShip - EnumValue lb - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 265031905 - EnumValue 2142650790 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Milligram (mg)</source>
+          <note from="Developer" annotates="general" priority="2">Milligramm (mg)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Quantities UoMShip - EnumValue mg - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 265031905 - EnumValue 3717922595 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Milliliter (ml)</source>
+          <note from="Developer" annotates="general" priority="2">Milliliter (ml)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Quantities UoMShip - EnumValue ml - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 265031905 - EnumValue 989473983 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ounce (oz)</source>
+          <note from="Developer" annotates="general" priority="2">Unze (oz)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Quantities UoMShip - EnumValue oz - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 265031905 - EnumValue 2431631600 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pint (pt)</source>
+          <note from="Developer" annotates="general" priority="2">Pint (pt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Quantities UoMShip - EnumValue pt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 265031905 - EnumValue 3223644063 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quart (qt)</source>
+          <note from="Developer" annotates="general" priority="2">Quarte (qt)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNADR Quantities UoMShip - EnumValue qt - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2037288953 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
