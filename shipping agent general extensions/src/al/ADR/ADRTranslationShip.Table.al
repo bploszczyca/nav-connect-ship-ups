@@ -16,7 +16,6 @@ table 70869751 "ESNADR TranslationShip"
         {
             Caption = 'Language Code';
             DataClassification = CustomerContent;
-            NotBlank = true;
             TableRelation = Language;
         }
         field(10; Description; Text[100])

@@ -117,4 +117,26 @@ table 70869750 "ESNADRShip"
             ADRInstruction.DeleteAll(true);
     end;
 
+    procedure GetTranslatedDescription(LanguageCode: Code[10]) TranslatedDescription: Text
+    var
+        NADRTranslation: Record "ESNADR TranslationShip";
+    begin
+        NADRTranslation.SetRange("ADR No.", "No.");
+        NADRTranslation.SetFilter("Language Code", '%1|%2', '', LanguageCode);
+        if not NADRTranslation.IsEmpty then begin
+            if NADRTranslation.FindLast() then
+                TranslatedDescription := CombineDescriptions(NADRTranslation.Description, NADRTranslation."Description 2");
+        end else begin
+            TranslatedDescription := CombineDescriptions(Description, "Description 2");
+        end;
+    end;
+
+    local procedure CombineDescriptions(Description: Text; Description2: Text) ResultDescription: Text
+    begin
+        if Description2 <> '' then begin
+            ResultDescription := Description + ', ' + Description2;
+        end else begin
+            ResultDescription := Description;
+        end;
+    end;
 }

@@ -1009,13 +1009,18 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
 
     local procedure GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat_Entry(Package: Record "ETI-Package-NC"; PackageADRLines: Record "ESNPackage ADR ContentShip") HazMat: JsonObject
     var
+        ADR: Record ESNADRShip;
+        ADRInstruction: Record "ESNADR InstructionShip";
         ShippingAgent: Record "Shipping Agent";
-    begin// Gefahrgut todo !!
-        // API Version Check.
+        ShippingAgentFnc: Codeunit "ESNShipping Agent FncUPS";
+        HazardLabelRequired: Text;
+    begin
+        // Gefahrgut todo !!
+        // API Version Check.        
         ShippingAgent := Package.GetShippingAgent();
         case PackageADRLines."Regulated Level" of
             PackageADRLines."Regulated Level"::LR,
-            PackageADRLines."Regulated Level"::EQ:
+               PackageADRLines."Regulated Level"::EQ:
                 begin
                     if ShippingAgent."ESNREST VersionUPS".AsInteger() < ShippingAgent."ESNREST VersionUPS"::v1701.AsInteger() then
                         ShippingAgent.TestField("ESNREST VersionUPS", ShippingAgent."ESNREST VersionUPS"::v1701);
@@ -1030,6 +1035,39 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
         PackageADRLines.TestField("Total ADR Package Quantity");
         PackageADRLines.TestField("Regulated Level");
         HazMat.Add('CommodityRegulatedLevelCode', ShippingAgentFnc.GetEnumValueName(PackageADRLines."Regulated Level"));
+        if ADR.get(PackageADRLines."ADR No.") then begin
+
+            // PackagingTypeQuantity Todo
+            // SubRiskClass ToDo
+            case PackageADRLines."Regulated Level" of
+                PackageADRLines."Regulated Level"::lq,
+                PackageADRLines."Regulated Level"::fr:
+                    begin
+
+                    end;
+            end;
+            // aDRPackingGroupLetter
+            HazMat.Add('aDRPackingGroupLetter', ShippingAgentFnc.GetEnumValueName(ADR."Packing Group"));
+            // TechnicalName
+            HazMat.Add('TechnicalName', CopyStr(ADR.GetTranslatedDescription(Package."Language Code"), 1, 200));
+            // HazardLabelRequired
+            if not (PackageADRLines."Regulated Level" in [PackageADRLines."Regulated Level"::lq, PackageADRLines."Regulated Level"::EQ]) then begin
+                ADRInstruction.SetRange("ADR No.", ADR."No.");
+                ADRInstruction.SetRange(Groupe, ADRInstruction.Groupe::Lable);
+                if not ADRInstruction.IsEmpty then
+                    if ADRInstruction.Find('-') then
+                        repeat
+                            if HazardLabelRequired = '' then begin
+                                HazardLabelRequired := Format(ADRInstruction.Lable)
+                            end else begin
+                                HazardLabelRequired += ' ' + Format(ADRInstruction.Lable);
+                            end;
+                        until ADRInstruction.Next() = 0;
+                if HazardLabelRequired <> '' then begin
+                    HazMat.Add('HazardLabelRequired', CopyStr(HazardLabelRequired, 1, 50));
+                end;
+            end;
+        end;
     end;
 
     local procedure GetShipmentRequest_Shipment_Package_HazMatPackageInformation(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)

@@ -1,4 +1,4 @@
-codeunit 70869803 "ESNShipping Agent REST vXXUPS" implements "ESNShipping Agent RESTUPS", "ESNShipping Agent APIShip"
+codeunit 70869803 "ESNShip. Agent REST v0XXXUPS" implements "ESNShipping Agent RESTUPS", "ESNShipping Agent APIShip"
 {
     var
         NotYetImplementedLbl: Label 'Not yet implemented.', Comment = 'Noch nicht umgesetzt.';

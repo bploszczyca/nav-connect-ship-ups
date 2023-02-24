@@ -23,6 +23,14 @@ codeunit 70869804 "ESNShipping Agent FncUPS"
         exit(EnumValueName);
     end;
 
+    procedure GetEnumValueName(e: enum "ESNADR Packing GroupShip") EnumValueName: Text;
+    begin
+        if e.AsInteger() > e::" ".AsInteger() then begin
+            e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        end;
+        exit(EnumValueName);
+    end;
+
     procedure GetEnumValueName(e: enum "ESNLabel Image FormatUPS") EnumValueName: Text;
     begin
         e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
