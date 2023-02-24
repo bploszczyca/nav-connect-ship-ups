@@ -91,7 +91,6 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                                 PackageADRContent2.CalcPackageQuantityGrMl();
                                 InitPackageADRContent(rec, PackageADRContent);
                                 PackageADRContent."ADR No." := PackageADRContent2."ADR No.";
-                                // PackageADRContent."Quantity per Base UoM (gr|ml)" := PackageADRContent2."Package Quantity (gr|ml)";
                                 PackageADRContent."Quantity per Item Base UoM" := PackageADRContent2."ADR Content Quantity";
                                 PackageADRContent.Validate("ADR Unit of Measure", PackageADRContent2."ADR Content Unit of Measure");
                                 PackageADRContent.Validate("Quantity (Base)", Rec."Pack Quantity (Base)");
@@ -107,9 +106,8 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                             repeat
                                 InitPackageADRContent(rec, PackageADRContent);
                                 PackageADRContent."ADR No." := RegPackageADRContent."ADR No.";
-                                // PackageADRContent."Quantity per Base UoM (gr|ml)" := RegPackageADRContent."Package Quantity (gr|ml)";
-                                PackageADRContent."Quantity per Item Base UoM" := RegPackageADRContent."Quantity per Item Base UoM";
-                                PackageADRContent.Validate("ADR Unit of Measure", RegPackageADRContent."ADR Unit of Measure");
+                                PackageADRContent."Quantity per Item Base UoM" := RegPackageADRContent."ADR Content Quantity";
+                                PackageADRContent.Validate("ADR Unit of Measure", RegPackageADRContent."ADR Content Unit of Measure");
                                 PackageADRContent.Validate("Quantity (Base)", Rec."Pack Quantity (Base)");
                                 if PackageADRContent.Insert(true) then; // possible created by UndoRegisterPackage
                             until RegPackageADRContent.Next() = 0;

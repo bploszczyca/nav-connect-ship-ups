@@ -146,7 +146,7 @@ table 70869756 "ESNReg. Package ADR ContShip"
             DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = sum("ESNPackage ADR ContentShip"."ADR Quantity (gr|ml)" where("Package No." = field("Package No."), "Line Type" = const(Content), "ADR No." = field("ADR No.")));
+            CalcFormula = sum("ESNReg. Package ADR ContShip"."ADR Quantity (gr|ml)" where("Package No." = field("Package No."), "Line Type" = const(Content), "ADR No." = field("ADR No.")));
         }
         field(51; "ADR Content Unit of Measure"; Enum "ESNADR Quantities UoMShip")
         {

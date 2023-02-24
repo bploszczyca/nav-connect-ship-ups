@@ -15,6 +15,7 @@ page 70869762 "ESNReg. Package ADR ContShip"
                 field(Description; rec.Description) { ApplicationArea = All; }
                 field("Description 2"; rec."Description 2") { ApplicationArea = All; Visible = false; }
                 field("ADR Content Quantity (gr|ml)"; rec."ADR Content Quantity (gr|ml)") { ApplicationArea = All; Visible = false; }
+                field("Manually entered Quantity"; rec."Manually entered Quantity") { ApplicationArea = All; Visible = false; }
                 field("ADR Content Quantity"; rec."ADR Content Quantity") { ApplicationArea = All; }
                 field("ADR Content Unit of Measure"; rec."ADR Content Unit of Measure") { ApplicationArea = All; }
             }
