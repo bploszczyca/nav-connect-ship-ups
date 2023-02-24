@@ -37,24 +37,52 @@ table 70869750 "ESNADRShip"
             Caption = 'Packing Group', Comment = 'Verpackungsgrupp';
             DataClassification = CustomerContent;
         }
-        field(45; "Limited Quantity Unit"; Enum "ESNADR Quantities UoMShip")
+        field(41; "Limited Quantity Unit"; Enum "ESNADR Quantities UoMShip")
         {
             Caption = 'Limited Quantities UoM', Comment = 'Einheit (Begrenzte Mengen)';
             DataClassification = CustomerContent;
+            trigger OnValidate()
+            begin
+                Validate("Limited Quantities per UoM", ADRMgt.GetADRQtyPer_mlgr("Limited Quantity Unit"));
+            end;
         }
         field(40; "Limited Quantities"; Decimal)
         {
             Caption = 'Limited Quantities', Comment = 'Begrenzte Mengen';
             DataClassification = CustomerContent;
             MinValue = 0;
+            trigger OnValidate()
+            begin
+                "Limited Quantities (gr|ml)" := "Limited Quantities" * "Limited Quantities per UoM";
+            end;
+        }
+        field(42; "Limited Quantities per UoM"; Decimal)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'ADR Quantity per UoM';
+            DecimalPlaces = 0 : 5;
+            Editable = false;
+            InitValue = 1;
+            trigger OnValidate()
+            begin
+                TestField("Limited Quantities per UoM");
+                Validate("Limited Quantities");
+            end;
+        }
+        field(45; "Limited Quantities (gr|ml)"; Decimal)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Limited Quantities (gr|ml)';
+            DecimalPlaces = 0 : 5;
+            Editable = false;
         }
 
-        field(41; "Excepted Quantities"; Enum "ESNADR Excepted QuantitiesShip")
+        field(50; "Excepted Quantities"; Enum "ESNADR Excepted QuantitiesShip")
         {
             Caption = 'Excepted Quantities', Comment = 'Freigestellte Mengen';
             DataClassification = CustomerContent;
         }
-        field(50; "Hazard identification No."; Code[20])
+        field(60; "Hazard identification No."; Code[20])
         {
             Caption = 'Hazard identification No.';
             DataClassification = CustomerContent;
@@ -65,6 +93,9 @@ table 70869750 "ESNADRShip"
     {
         key(PK; "No.") { Clustered = true; }
     }
+
+    var
+        ADRMgt: Codeunit "ESNADR ManagementShip";
 
     trigger OnDelete()
     var

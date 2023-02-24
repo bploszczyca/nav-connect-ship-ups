@@ -72,7 +72,7 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                                             ItemADRQuantityShip.TestField("Quantity per Item Base UoM");
 
                                             InitPackageADRContent(rec, PackageADRContent);
-                                            PackageADRContent."ADR No." := ItemADRQuantityShip."ADR No.";
+                                            PackageADRContent.Validate("ADR No.", ItemADRQuantityShip."ADR No.");
                                             PackageADRContent."Quantity per Item Base UoM" := ItemADRQuantityShip."Quantity per Item Base UoM";
                                             PackageADRContent.Validate("ADR Unit of Measure", ItemADRQuantityShip."ADR Unit of Measure");
                                             PackageADRContent.Validate("Quantity (Base)", Rec."Pack Quantity (Base)");
@@ -88,10 +88,10 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                     if not PackageADRContent2.IsEmpty then
                         if PackageADRContent2.Find('-') then
                             repeat
-                                PackageADRContent2.CalcPackageQuantityGrMl();
+                                PackageADRContent2.Validate("Manually entered Quantity");
                                 InitPackageADRContent(rec, PackageADRContent);
-                                PackageADRContent."ADR No." := PackageADRContent2."ADR No.";
-                                PackageADRContent."Quantity per Item Base UoM" := PackageADRContent2."ADR Content Quantity";
+                                PackageADRContent.Validate("ADR No.", PackageADRContent2."ADR No.");
+                                PackageADRContent."Quantity per Item Base UoM" := PackageADRContent2."Total ADR Package Quantity";
                                 PackageADRContent.Validate("ADR Unit of Measure", PackageADRContent2."ADR Content Unit of Measure");
                                 PackageADRContent.Validate("Quantity (Base)", Rec."Pack Quantity (Base)");
                                 if PackageADRContent.Insert(true) then; // possible created by UndoRegisterPackage
@@ -105,8 +105,8 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                         if RegPackageADRContent.Find('-') then
                             repeat
                                 InitPackageADRContent(rec, PackageADRContent);
-                                PackageADRContent."ADR No." := RegPackageADRContent."ADR No.";
-                                PackageADRContent."Quantity per Item Base UoM" := RegPackageADRContent."ADR Content Quantity";
+                                PackageADRContent.Validate("ADR No.", RegPackageADRContent."ADR No.");
+                                PackageADRContent."Quantity per Item Base UoM" := RegPackageADRContent."Total ADR Package Quantity";
                                 PackageADRContent.Validate("ADR Unit of Measure", RegPackageADRContent."ADR Content Unit of Measure");
                                 PackageADRContent.Validate("Quantity (Base)", Rec."Pack Quantity (Base)");
                                 if PackageADRContent.Insert(true) then; // possible created by UndoRegisterPackage
@@ -218,17 +218,17 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                     if not GetPackageADRLines(Rec, PackageADRLine) then begin
                         PackageADRLine."Package No." := Rec."Package No.";
                         PackageADRLine."Line Type" := Rec."Line Type"::ADR;
-                        PackageADRLine."ADR No." := Rec."ADR No.";
+                        PackageADRLine.Validate("ADR No.", Rec."ADR No.");
                         if ADR.get(Rec."ADR No.") then
                             if ADR."Limited Quantities" = 0 then begin
                                 PackageADRLine.Validate("ADR Content Unit of Measure", Rec."ADR Unit of Measure");
                             end else begin
                                 PackageADRLine.Validate("ADR Content Unit of Measure", ADR."Limited Quantity Unit");
                             end;
-                        PackageADRLine.CalcPackageQuantityGrMl();
+                        PackageADRLine.Validate("Manually entered Quantity");
                         PackageADRLine.Insert(true);
                     end else begin
-                        PackageADRLine.CalcPackageQuantityGrMl();
+                        PackageADRLine.Validate("Manually entered Quantity");
                         PackageADRLine.Modify(true);
                     end;
                 end;
@@ -246,9 +246,9 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                     PackageADRLines.SetRange("ADR No.", rec."ADR No.");
                     if GetPackageADRLines(Rec, PackageADRLines) then
                         repeat
-                            PackageADRLines.CalcPackageQuantityGrMl();
+                            PackageADRLines.Validate("Manually entered Quantity");
                             PackageADRLines.Modify(true);
-                            if PackageADRLines."ADR Content Quantity" <= 0 then
+                            if PackageADRLines."Total ADR Package Quantity" <= 0 then
                                 PackageADRLines.Delete(true);
                         until PackageADRLines.Next() = 0;
                 end;
@@ -317,6 +317,69 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                 PackageADRLines.TransferFields(RegPackageADRLines, true);
                 if PackageADRLines.Insert(true) then;
             until RegPackageADRLines.Next() = 0;
+    end;
+    #endregion
+
+    #region Regulated Level
+    procedure CalcRegulatedLevel(var PackageADRContent: Record "ESNPackage ADR ContentShip")
+    var
+        ADR: Record "ESNADRShip";
+        ADRMgt: Codeunit "ESNADR ManagementShip";
+        IsHandled: Boolean;
+    begin
+        OnBeforCalcRegulatedLevel(PackageADRContent, IsHandled);
+        if IsHandled then exit;
+
+        if ADR.get(PackageADRContent."ADR No.") then begin
+            PackageADRContent.CalcFields("Max. ADR Qty. (gr|ml)");
+            case ADR."Excepted Quantities" of
+                ADR."Excepted Quantities"::E0:
+                    begin
+                        if ADR."Limited Quantities (gr|ml)" > 0 then begin
+                            case true of
+                                (PackageADRContent."Total ADR Package Quantity" = 0):
+                                    begin
+                                        PackageADRContent.Validate("Regulated Level", PackageADRContent."Regulated Level"::" ");
+                                    end;
+                                (ADR."Limited Quantities (gr|ml)" >= (PackageADRContent."Total ADR Package Qty (gr|ml)")):
+                                    begin
+                                        PackageADRContent.Validate("Regulated Level", PackageADRContent."Regulated Level"::LQ);
+                                    end;
+                                else begin
+                                    PackageADRContent.Validate("Regulated Level", PackageADRContent."Regulated Level"::FR);
+                                end;
+                            end;
+                        end else begin
+                            PackageADRContent.Validate("Regulated Level", PackageADRContent."Regulated Level"::FR);
+                        end;
+                    end;
+                else begin
+                    begin
+                        // LQ preferred 
+                        if (ADR."Limited Quantities (gr|ml)" > 0) and (ADR."Limited Quantities (gr|ml)" >= (PackageADRContent."Total ADR Package Qty (gr|ml)")) then begin
+                            PackageADRContent.Validate("Regulated Level", PackageADRContent."Regulated Level"::LQ);
+                        end else begin
+                            if (PackageADRContent."Max. ADR Qty. (gr|ml)" <= ADRMgt.GetMaxNetQtyPerInnerPackaging(adr)) and (PackageADRContent."Total ADR Package Qty (gr|ml)" <= ADRMgt.GetMaxNetQtyPerOuterPackaging(adr)) then begin
+                                PackageADRContent.Validate("Regulated Level", PackageADRContent."Regulated Level"::EQ);
+                            end else begin
+                                PackageADRContent.Validate("Regulated Level", PackageADRContent."Regulated Level"::FR);
+                            end;
+                        end;
+                    end;
+                end;
+            end;
+        end;
+        OnAfterCalcRegulatedLevel(PackageADRContent);
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnBeforCalcRegulatedLevel(var PackageADRContent: Record "ESNPackage ADR ContentShip"; var IsHandled: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnAfterCalcRegulatedLevel(var PackageADRContent: Record "ESNPackage ADR ContentShip")
+    begin
     end;
     #endregion
 }

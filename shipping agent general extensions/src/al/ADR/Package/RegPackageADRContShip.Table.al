@@ -1,5 +1,6 @@
 table 70869756 "ESNReg. Package ADR ContShip"
 {
+    Caption = 'Reg. Package Dangerous Goods';
     DataClassification = ToBeClassified;
 
     fields
@@ -180,14 +181,37 @@ table 70869756 "ESNReg. Package ADR ContShip"
                 CalcFields("ADR Content Quantity (gr|ml)");
                 if "ADR Content Quantity per UoM" = 0 then
                     "ADR Content Quantity per UoM" := 1;
-                Validate("ADR Content Quantity", "ADR Content Quantity (gr|ml)" / "ADR Content Quantity per UoM" + "Manually entered Quantity");
+                Validate("Total ADR Package Quantity", "ADR Content Quantity (gr|ml)" / "ADR Content Quantity per UoM" + "Manually entered Quantity");
             end;
         }
-        field(60; "ADR Content Quantity"; Decimal)
+        field(60; "Total ADR Package Quantity"; Decimal)
         {
-            Caption = 'ADR Content Quantity';
+            Caption = 'Total ADR Package Quantity';
             DecimalPlaces = 0 : 5;
             Editable = false;
+            trigger OnValidate()
+            begin
+                "Total ADR Package Qty (gr|ml)" := "Total ADR Package Quantity" * "ADR Content Quantity per UoM";
+            end;
+        }
+        field(61; "Total ADR Package Qty (gr|ml)"; Decimal)
+        {
+            Caption = 'Total ADR Content Quantity';
+            DecimalPlaces = 0 : 5;
+            Editable = false;
+        }
+        field(70; "Max. ADR Qty. (gr|ml)"; Decimal)
+        {
+            Caption = 'Max. ADR Qty (gr|ml) inner Packaging';
+            DecimalPlaces = 0 : 5;
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = max("ESNReg. Package ADR ContShip"."ADR Quantity (gr|ml)" where("Package No." = field("Package No."), "Line Type" = const(Content), "ADR No." = field("ADR No.")));
+        }
+        field(80; "Regulated Level"; Enum "ESNRegulated LevelShip")
+        {
+            Caption = 'Regulated Level';
+            DataClassification = CustomerContent;
         }
     }
 
@@ -200,15 +224,4 @@ table 70869756 "ESNReg. Package ADR ContShip"
     var
         ADRPackageMgt: Codeunit "ESNADR Package ManagementShip";
 
-    procedure CalcPackageQuantityGrMl()
-    begin
-        Validate("Manually entered Quantity");
-        OnAfterCalcPackageQuantityGrMl(Rec)
-    end;
-
-
-    [IntegrationEvent(true, false)]
-    local procedure OnAfterCalcPackageQuantityGrMl(var RegPackageADRContent: Record "ESNReg. Package ADR ContShip")
-    begin
-    end;
 }

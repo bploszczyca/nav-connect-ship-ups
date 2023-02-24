@@ -3,30 +3,35 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Etiscan NAVConnect - Ship UPS">
     <body>
       <group id="body">
-        <trans-unit id="Codeunit 2623966606 - Method 450432488 - NamedType 2882541497" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 906359629 - Method 450432488 - NamedType 2882541497" size-unit="char" translate="yes" xml:space="preserve">
           <source>3th and 4th character of %1 must be "%2".</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST v1UPS - Method GetShipmentRequest_Shipment_MovementReferenceNumber - NamedType CharacterMustBeequalLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v1807UPS - Method GetShipmentRequest_Shipment_MovementReferenceNumber - NamedType CharacterMustBeequalLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2623966606 - Method 450432488 - NamedType 1298344127" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 906359629 - Method 450432488 - NamedType 1298344127" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 has to be 18 characters long.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST v1UPS - Method GetShipmentRequest_Shipment_MovementReferenceNumber - NamedType HasToBe18CharLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v1807UPS - Method GetShipmentRequest_Shipment_MovementReferenceNumber - NamedType HasToBe18CharLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2623966606 - Method 4037238891 - NamedType 2253963473" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 906359629 - Method 4037238891 - NamedType 2253963473" size-unit="char" translate="yes" xml:space="preserve">
           <source>Package must not be larger than 274cm.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST v1UPS - Method GetShipmentRequest_Shipment_Package_Dimensions - NamedType NotLargerThanCm</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v1807UPS - Method GetShipmentRequest_Shipment_Package_Dimensions - NamedType NotLargerThanCm</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2623966606 - Method 4037238891 - NamedType 965824770" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 906359629 - Method 4037238891 - NamedType 965824770" size-unit="char" translate="yes" xml:space="preserve">
           <source>Package must not be larger than 128in.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST v1UPS - Method GetShipmentRequest_Shipment_Package_Dimensions - NamedType NotLargerThanIn</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v1807UPS - Method GetShipmentRequest_Shipment_Package_Dimensions - NamedType NotLargerThanIn</note>
         </trans-unit>
-        <trans-unit id="Codeunit 2623966606 - Method 1084055913 - NamedType 2189144797" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 906359629 - Method 2045443219 - NamedType 1402603651" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maximum of three dangerous goods materials allowed per package.</source>
+          <note from="Developer" annotates="general" priority="2">Maximal drei Gefahrgutstoffe pro Paket erlaubt.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v1807UPS - Method GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat - NamedType NotMoreThe2DangerousGoodsPositionsLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 906359629 - Method 1084055913 - NamedType 2189144797" size-unit="char" translate="yes" xml:space="preserve">
           <source>?additionaladdressvalidation=city</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST v1UPS - Method GetShippingURLQueryParameters - NamedType ShippingURLQueryParametersLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v1807UPS - Method GetShippingURLQueryParameters - NamedType ShippingURLQueryParametersLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 351658717 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not yet implemented.</source>
@@ -102,6 +107,11 @@
           <source>UPS REST api Setup </source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNShipping AgentsUPS - Action UPS REST api Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1342703179 - Field 4106230852 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1161693127">
+          <source>Lightly Regulated</source>
+          <note from="Developer" annotates="general" priority="2">Leicht reguliert</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNADRUPS - Field ESNLightly RegulatedUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3018348005 - Field 2592291598 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
           <source>UPS Packaging Code</source>
@@ -922,6 +932,11 @@
           <source>UPS Premier Silver</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNUPS Premier CategoryUPS - EnumValue Silver - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 927343935 - EnumValue 1840453018 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 313455715">
+          <source>Lightly Regulated (LR)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension ESNRegulated LevelUPS - EnumValue LR - Property Caption</note>
         </trans-unit>
         <trans-unit id="EnumExtension 2979565311 - EnumValue 2557024266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2909517731">
           <source>UPS REST</source>

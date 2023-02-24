@@ -21,6 +21,82 @@ codeunit 70869752 "ESNADR ManagementShip"
             ItemADRQuantityShip.DeleteAll(true);
     end;
 
+    procedure GetMaxNetQtyPerInnerPackaging(ADR: Record "ESNADRShip") MaxNetQtyPerInnerPackaging: Decimal
+    begin
+        case ADR."Excepted Quantities" of
+            ADR."Excepted Quantities"::E1:
+                begin
+                    MaxNetQtyPerInnerPackaging := 30;
+                end;
+            ADR."Excepted Quantities"::E2:
+                begin
+                    MaxNetQtyPerInnerPackaging := 30;
+                end;
+            ADR."Excepted Quantities"::E3:
+                begin
+                    MaxNetQtyPerInnerPackaging := 30;
+                end;
+            ADR."Excepted Quantities"::E4:
+                begin
+                    MaxNetQtyPerInnerPackaging := 1;
+                end;
+            ADR."Excepted Quantities"::E0:
+                begin
+                    MaxNetQtyPerInnerPackaging := 1;
+                end;
+            else begin
+                begin
+                    MaxNetQtyPerInnerPackaging := 0;
+                end;
+            end;
+        end;
+        OnAfterGetMaxNetQtyPerInnerPackaging(ADR, MaxNetQtyPerInnerPackaging);
+        exit(MaxNetQtyPerInnerPackaging);
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnAfterGetMaxNetQtyPerInnerPackaging(ADR: Record "ESNADRShip"; var MaxNetQtyPerInnerPackaging: Decimal)
+    begin
+    end;
+
+    procedure GetMaxNetQtyPerOuterPackaging(ADR: Record "ESNADRShip") MaxNetQtyPerOuterPackaging: Decimal
+    begin
+        case ADR."Excepted Quantities" of
+            ADR."Excepted Quantities"::E1:
+                begin
+                    MaxNetQtyPerOuterPackaging := 1000;
+                end;
+            ADR."Excepted Quantities"::E2:
+                begin
+                    MaxNetQtyPerOuterPackaging := 500;
+                end;
+            ADR."Excepted Quantities"::E3:
+                begin
+                    MaxNetQtyPerOuterPackaging := 300;
+                end;
+            ADR."Excepted Quantities"::E4:
+                begin
+                    MaxNetQtyPerOuterPackaging := 500;
+                end;
+            ADR."Excepted Quantities"::E0:
+                begin
+                    MaxNetQtyPerOuterPackaging := 300;
+                end;
+            else begin
+                begin
+                    MaxNetQtyPerOuterPackaging := 0;
+                end;
+            end;
+        end;
+        OnAfterGetMaxNetQtyPerOuterPackaging(ADR, MaxNetQtyPerOuterPackaging);
+        exit(MaxNetQtyPerOuterPackaging);
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnAfterGetMaxNetQtyPerOuterPackaging(ADR: Record "ESNADRShip"; var MaxNetQtyPerOuterPackaging: Decimal)
+    begin
+    end;
+
     procedure GetADRQtyPer_mlgr(ADRUoM: Enum "ESNADR Quantities UoMShip") ADRQtyPer_mlgr: Decimal
     begin
         case ADRUoM of
@@ -86,4 +162,6 @@ codeunit 70869752 "ESNADR ManagementShip"
     local procedure OnUnknownADRQuantitiesUoM(ADRUoM: Enum "ESNADR Quantities UoMShip"; ADRQtyPer_mlgr: Decimal);
     begin
     end;
+
+
 }

@@ -118,6 +118,16 @@
           <note from="Developer" annotates="general" priority="2">Begrenzte Mengen</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Limited Quantities - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 3080882812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Limited Quantities (gr|ml)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Limited Quantities (gr|ml) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1161693127 - Field 4067152131 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR Quantity per UoM</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNADRShip - Field Limited Quantities per UoM - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1161693127 - Field 3313449339 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Limited Quantities UoM</source>
           <note from="Developer" annotates="general" priority="2">Einheit (Begrenzte Mengen)</note>
@@ -183,10 +193,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Variant Code - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3185163570 - Field 558952175 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>ADR Content Quantity</source>
+        <trans-unit id="Table 3185163570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Package Dangerous Goods</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field ADR Content Quantity - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3185163570 - Field 3307207480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ADR Content Quantity (gr|ml)</source>
@@ -258,6 +268,11 @@
           <note from="Developer" annotates="general" priority="2">Manuell erfasste Menge</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Manually entered Quantity - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 670795042 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max. ADR Qty (gr|ml) inner Packaging</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Max. ADR Qty. (gr|ml) - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3185163570 - Field 4240543679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Package No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -272,6 +287,11 @@
           <source>Quantity per Item Base UoM</source>
           <note from="Developer" annotates="general" priority="2">Menge per Artikel Basiseinheit</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Quantity per Item Base UoM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 3083002509 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Regulated Level</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Regulated Level - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3185163570 - Field 221370355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Template Line No.</source>
@@ -298,10 +318,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Template Type - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 643081513 - Field 558952175 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>ADR Content Quantity</source>
+        <trans-unit id="Table 3185163570 - Field 4001152582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total ADR Content Quantity</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field ADR Content Quantity - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Total ADR Package Qty (gr|ml) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 2577700000 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total ADR Package Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Total ADR Package Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reg. Package Dangerous Goods</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 643081513 - Field 3307207480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ADR Content Quantity (gr|ml)</source>
@@ -373,6 +403,11 @@
           <note from="Developer" annotates="general" priority="2">Manuell erfasste Menge</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Manually entered Quantity - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 643081513 - Field 670795042 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max. ADR Qty (gr|ml) inner Packaging</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Max. ADR Qty. (gr|ml) - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 643081513 - Field 4240543679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Package No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -387,6 +422,11 @@
           <source>Quantity per Item Base UoM</source>
           <note from="Developer" annotates="general" priority="2">Menge per Artikel Basiseinheit</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Quantity per Item Base UoM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 3083002509 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Regulated Level</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Regulated Level - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 643081513 - Field 221370355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Template Line No.</source>
@@ -412,6 +452,16 @@
           <source>Template Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Template Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 4001152582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total ADR Content Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Total ADR Package Qty (gr|ml) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 2577700000 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total ADR Package Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Total ADR Package Quantity - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 1792076683 - Method 578278027 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not yet implemented.</source>
@@ -1307,6 +1357,31 @@
           <source>Responsibility Center</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackageShipFromTypeShip - EnumValue Responsibility Center - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 313455715 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Regulated Level</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNRegulated LevelShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 313455715 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNRegulated LevelShip - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 313455715 - EnumValue 913420472 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excepted Quantity (EQ)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNRegulated LevelShip - EnumValue EQ - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 313455715 - EnumValue 4104106384 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fully Regulated (FR)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNRegulated LevelShip - EnumValue FR - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 313455715 - EnumValue 4222330463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Limited Quantity (LQ)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNRegulated LevelShip - EnumValue LQ - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2909517731 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>

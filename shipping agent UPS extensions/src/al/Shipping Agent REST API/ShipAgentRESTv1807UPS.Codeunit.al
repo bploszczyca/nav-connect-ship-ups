@@ -1,5 +1,8 @@
-codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent RESTUPS", "ESNShipping Agent APIShip"
+codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent RESTUPS", "ESNShipping Agent APIShip"
 {
+    var
+        ShippingAgentFnc: Codeunit "ESNShipping Agent FncUPS";
+
     #region "ESNShipping Agent RESTUPS" Interface
     procedure GetShippingURL(ShippingAgent: Record "Shipping Agent") ShippingURL: Text;
     var
@@ -986,14 +989,47 @@ codeunit 70869802 "ESNShipping Agent REST v1UPS" implements "ESNShipping Agent R
 
     local procedure GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
     var
-        HazMat: JsonObject;
+
+        PackageADRLines: Record "ESNPackage ADR ContentShip";
+        ADRPackageMgt: Codeunit "ESNADR Package ManagementShip";
+        HazMatJsonArray: JsonArray;
+        NotMoreThe2DangerousGoodsPositionsLbl: Label 'Maximum of three dangerous goods materials allowed per package.', Comment = 'Maximal drei Gefahrgutstoffe pro Paket erlaubt.';
     begin
+        if ADRPackageMgt.GetPackageADRLines(Package, PackageADRLines) then begin
+            if PackageADRLines.Count > 3 then
+                Error(NotMoreThe2DangerousGoodsPositionsLbl);
+            repeat
+                HazMatJsonArray.Add(GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat_Entry(Package, PackageADRLines));
+            until PackageADRLines.Next() = 0;
 
-        // Gefahrgut todo !!
-        //GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
+            if HazMatJsonArray.Count > 0 then
+                PackageJsonObject.Add('HazMat', HazMatJsonArray);
+        end;
+    end;
 
-        if HazMat.Keys.Count > 0 then
-            PackageJsonObject.Add('HazMat', HazMat);
+    local procedure GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat_Entry(Package: Record "ETI-Package-NC"; PackageADRLines: Record "ESNPackage ADR ContentShip") HazMat: JsonObject
+    var
+        ShippingAgent: Record "Shipping Agent";
+    begin// Gefahrgut todo !!
+        // API Version Check.
+        ShippingAgent := Package.GetShippingAgent();
+        case PackageADRLines."Regulated Level" of
+            PackageADRLines."Regulated Level"::LR,
+            PackageADRLines."Regulated Level"::EQ:
+                begin
+                    if ShippingAgent."ESNREST VersionUPS".AsInteger() < ShippingAgent."ESNREST VersionUPS"::v1701.AsInteger() then
+                        ShippingAgent.TestField("ESNREST VersionUPS", ShippingAgent."ESNREST VersionUPS"::v1701);
+                end;
+            PackageADRLines."Regulated Level"::FR,
+            PackageADRLines."Regulated Level"::LQ:
+                begin
+                    if ShippingAgent."ESNREST VersionUPS".AsInteger() < ShippingAgent."ESNREST VersionUPS"::v1807.AsInteger() then
+                        ShippingAgent.TestField("ESNREST VersionUPS", ShippingAgent."ESNREST VersionUPS"::v1807);
+                end;
+        end;
+        PackageADRLines.TestField("Total ADR Package Quantity");
+        PackageADRLines.TestField("Regulated Level");
+        HazMat.Add('CommodityRegulatedLevelCode', ShippingAgentFnc.GetEnumValueName(PackageADRLines."Regulated Level"));
     end;
 
     local procedure GetShipmentRequest_Shipment_Package_HazMatPackageInformation(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)

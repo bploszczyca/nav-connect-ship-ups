@@ -1,0 +1,110 @@
+codeunit 70869804 "ESNShipping Agent FncUPS"
+{
+
+    #region Regulated Level
+    // "ESNADR Package ManagementShip"
+    [EventSubscriber(ObjectType::Codeunit, codeunit::"ESNADR Package ManagementShip", 'OnAfterCalcRegulatedLevel', '', true, false)]
+    local procedure OnAfterCalcRegulatedLevel(var PackageADRContent: Record "ESNPackage ADR ContentShip")
+    var
+        ADR: Record "ESNADRShip";
+    begin
+        if ADR.Get(PackageADRContent."ADR No.") and ADR."ESNLightly RegulatedUPS" then begin
+            if PackageADRContent."Regulated Level" = PackageADRContent."Regulated Level"::FR then begin
+                PackageADRContent.Validate("Regulated Level", PackageADRContent."Regulated Level"::LR);
+            end;
+        end;
+    end;
+    #endregion
+
+    #region Enum Values
+    procedure GetEnumValueName(e: enum "ESNRegulated LevelShip") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNLabel Image FormatUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNNotification CodeUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNPackaging TypeUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNReturn ServiceUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNShip. NotificationUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNUPS Dimensions UoMUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNUPS Pre. Handl. Instr.UPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNUPS Premier CategoryUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNUPS Simple RateUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNUPS Weight Dimensions UPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNCredit Card TypeUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNShipping Agent REST URLUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNTransAndDuties PaymentUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNTrans. Payment TypeUPS") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+    #endregion
+}
