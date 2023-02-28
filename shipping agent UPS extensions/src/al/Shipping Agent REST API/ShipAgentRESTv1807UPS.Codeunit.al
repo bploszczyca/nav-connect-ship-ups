@@ -827,7 +827,8 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
 
         if Package."ESNUPS Packaging CodeUPS" = Package."ESNUPS Packaging CodeUPS"::" " then
             Package."ESNUPS Packaging CodeUPS" := Package."ESNUPS Packaging CodeUPS"::"02";
-        PackagingCode.Add('Code', GetUPSFormated2CharType(format(Package."ESNUPS Packaging CodeUPS", 0, 9)));
+
+        PackagingCode.Add('Code', CopyStr(ShippingAgentFnc.GetEnumValueName(Package."ESNUPS Packaging CodeUPS"), 1, 2));
         PackageJsonObject.Add('Packaging', PackagingCode);
 
         GetShipmentRequest_Shipment_Package_Dimensions(Package, PackageJsonObject);
@@ -1013,7 +1014,7 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
         ADRInstruction: Record "ESNADR InstructionShip";
         ShippingAgent: Record "Shipping Agent";
         ShippingAgentFnc: Codeunit "ESNShipping Agent FncUPS";
-        HazardLabelRequired: Text;
+        HazardLabelRequired, PackagingInstructionCode : Text;
     begin
         // Gefahrgut todo !!
         // API Version Check.        
@@ -1036,8 +1037,6 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
         PackageADRLines.TestField("Regulated Level");
         HazMat.Add('CommodityRegulatedLevelCode', ShippingAgentFnc.GetEnumValueName(PackageADRLines."Regulated Level"));
         if ADR.get(PackageADRLines."ADR No.") then begin
-
-            // PackagingTypeQuantity Todo
             // SubRiskClass ToDo
             case PackageADRLines."Regulated Level" of
                 PackageADRLines."Regulated Level"::lq,
@@ -1047,7 +1046,7 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
                     end;
             end;
             // aDRPackingGroupLetter
-            HazMat.Add('aDRPackingGroupLetter', ShippingAgentFnc.GetEnumValueName(ADR."Packing Group"));
+            HazMat.Add('aDRPackingGroupLetter', CopyStr(ShippingAgentFnc.GetEnumValueName(ADR."Packing Group"), 1, 5));
             // TechnicalName
             HazMat.Add('TechnicalName', CopyStr(ADR.GetTranslatedDescription(Package."Language Code"), 1, 200));
             // HazardLabelRequired
@@ -1067,6 +1066,129 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
                     HazMat.Add('HazardLabelRequired', CopyStr(HazardLabelRequired, 1, 50));
                 end;
             end;
+            // ClassDivisionNumber
+            case PackageADRLines."Regulated Level" of
+                PackageADRLines."Regulated Level"::EQ,
+                PackageADRLines."Regulated Level"::fr,
+                PackageADRLines."Regulated Level"::lq:
+                    begin
+                        HazMat.Add('ClassDivisionNumber', CopyStr(ShippingAgentFnc.GetEnumValueName(adr.Class), 1, 7));
+                    end;
+            end;
+            //Quantity, UOM
+            case PackageADRLines."Regulated Level" of
+                PackageADRLines."Regulated Level"::EQ,
+                PackageADRLines."Regulated Level"::fr,
+                PackageADRLines."Regulated Level"::lq:
+                    begin
+                        HazMat.Add('Quantity', CopyStr(Format(round(PackageADRLines."Total ADR Package Quantity", 0.1), 0, 9), 1, 5));
+                        HazMat.Add('UOM', CopyStr(ShippingAgentFnc.GetEnumValueName(PackageADRLines."ADR Content Unit of Measure"), 1, 110));
+                    end;
+            end;
+            // PackagingType, PackagingTypeQuantity Todo
+            case PackageADRLines."Regulated Level" of
+                PackageADRLines."Regulated Level"::fr,
+                PackageADRLines."Regulated Level"::lq:
+                    begin
+                        // HazMat.Add('PackagingType', CopyStr('', 1, 255));
+                        // HazMat.Add('PackagingTypeQuantity', CopyStr('', 1, 255));                        
+                    end;
+            end;
+            // IDNumber
+            case PackageADRLines."Regulated Level" of
+                PackageADRLines."Regulated Level"::fr,
+                PackageADRLines."Regulated Level"::lr,
+                PackageADRLines."Regulated Level"::lq:
+                    begin
+                        HazMat.Add('IDNumber', CopyStr(ADR."No.", 1, 6));
+                        HazMat.Add('ProperShippingName', CopyStr(ADR.GetTranslatedDescription(Package."Language Code"), 1, 150));
+                    end;
+            end;
+            // AdditionalDescription
+            case PackageADRLines."Regulated Level" of
+                PackageADRLines."Regulated Level"::fr,
+                PackageADRLines."Regulated Level"::lq:
+                    begin
+                        ADR.TestField("ESNAdditional DescriptionUPS");
+                        HazMat.Add('AdditionalDescription', CopyStr(ADR."ESNAdditional DescriptionUPS", 1, 150));
+                    end;
+            end;
+            //PackagingGroupType
+            case PackageADRLines."Regulated Level" of
+                PackageADRLines."Regulated Level"::fr,
+                PackageADRLines."Regulated Level"::lq:
+                    begin
+                        HazMat.Add('PackagingGroupType', CopyStr(ShippingAgentFnc.GetEnumValueName(ADR."Packing Group"), 1, 5));
+                    end;
+            end;
+            //PackagingInstructionCode
+            case PackageADRLines."Regulated Level" of
+                PackageADRLines."Regulated Level"::fr,
+                PackageADRLines."Regulated Level"::lq:
+                    begin
+                        ADRInstruction.Reset();
+                        ADRInstruction.SetRange("ADR No.", ADR."No.");
+                        ADRInstruction.SetRange(Groupe, ADRInstruction.Groupe::"Packing instructions");
+                        ADRInstruction.SetFilter("ESNCode (UPS)UPS", '<>%1', '');
+                        if not ADRInstruction.IsEmpty then begin
+                            if ADRInstruction.FindFirst() then begin
+                                PackagingInstructionCode := ADRInstruction."ESNCode (UPS)UPS";
+                            end;
+                        end else begin
+                            ADRInstruction.SetRange("ESNCode (UPS)UPS");
+                            if not ADRInstruction.IsEmpty then begin
+                                if ADRInstruction.FindFirst() then begin
+                                    PackagingInstructionCode := CopyStr(ADRInstruction.Code, 1, 4);
+                                end;
+                            end;
+                        end;
+                        if PackagingInstructionCode <> '' then begin
+                            HazMat.Add('PackagingInstructionCode', CopyStr(PackagingInstructionCode, 1, 4));
+                        end;
+                    end;
+            end;
+            //EmergencyPhone
+            Package.TestField("ESNADR Emerg. Phone No.Ship");
+            HazMat.Add('EmergencyPhone', CopyStr(Package."ESNADR Emerg. Phone No.Ship", 1, 25));
+            // ReportableQuantity
+            // Recommended if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation. 
+            // If reportable quantity is met, 'RQ' should be entered
+            // Keine Anhung was hier gemeint ist
+
+            // RegulationSet
+            Package.TestField("ESNRegulation SetShip");
+            HazMat.Add('RegulationSet', CopyStr(ShippingAgentFnc.GetEnumValueName(Package."ESNRegulation SetShip"), 1, 5));
+
+            //TransportationMode
+            Package.TestField("ESNTransportation ModeShip");
+            HazMat.Add('TransportationMode', CopyStr(ShippingAgentFnc.GetEnumValueName(Package."ESNTransportation ModeShip"), 1, 30));
+
+            // TransportCategory
+            ADRInstruction.Reset();
+            ADRInstruction.SetRange("ADR No.", ADR."No.");
+            ADRInstruction.SetRange(Groupe, ADRInstruction.Groupe::"Transport category");
+            if not ADRInstruction.IsEmpty then
+                if ADRInstruction.FindFirst() then begin
+                    HazMat.Add('TransportCategory', CopyStr(ADRInstruction.Code, 1, 4));
+                end;
+
+            // TunnelRestrictionCode:
+            ADRInstruction.Reset();
+            ADRInstruction.SetRange("ADR No.", ADR."No.");
+            ADRInstruction.SetRange(Groupe, ADRInstruction.Groupe::"Transport category (Tunnel Restriction code)");
+            if not ADRInstruction.IsEmpty then
+                if ADRInstruction.FindFirst() then begin
+                    HazMat.Add('TunnelRestrictionCode', CopyStr(ADRInstruction.Code, 1, 4));
+                end;
+
+            // ChemicalRecordIdentifier
+            // if ADR."Hazard identification No." <> '' then
+            HazMat.Add('ChemicalRecordIdentifier', CopyStr(ADR."Hazard identification No.", 1, 3));
+
+            // LocalTechnicalName
+            HazMat.Add('LocalTechnicalName', CopyStr(ADR.Description, 1, 200));
+            HazMat.Add('LocalProperShippingName', CopyStr(ADR.CombineDescriptions(ADR.Description, ADR."Description 2"), 1, 200));
+
         end;
     end;
 

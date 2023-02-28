@@ -3,6 +3,16 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Etiscan NAVConnect - Ship UPS">
     <body>
       <group id="body">
+        <trans-unit id="Codeunit 3631407423 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not yet implemented.</source>
+          <note from="Developer" annotates="general" priority="2">Noch nicht umgesetzt.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v0XXXUPS - NamedType NotYetImplementedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3631407423 - Method 1084055913 - NamedType 2189144797" size-unit="char" translate="yes" xml:space="preserve">
+          <source>?additionaladdressvalidation=city</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v0XXXUPS - Method GetShippingURLQueryParameters - NamedType ShippingURLQueryParametersLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 906359629 - Method 450432488 - NamedType 2882541497" size-unit="char" translate="yes" xml:space="preserve">
           <source>3th and 4th character of %1 must be "%2".</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -32,16 +42,6 @@
           <source>?additionaladdressvalidation=city</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v1807UPS - Method GetShippingURLQueryParameters - NamedType ShippingURLQueryParametersLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 351658717 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Not yet implemented.</source>
-          <note from="Developer" annotates="general" priority="2">Noch nicht umgesetzt.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST vXXUPS - NamedType NotYetImplementedLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 351658717 - Method 1084055913 - NamedType 2189144797" size-unit="char" translate="yes" xml:space="preserve">
-          <source>?additionaladdressvalidation=city</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShipping Agent REST vXXUPS - Method GetShippingURLQueryParameters - NamedType ShippingURLQueryParametersLbl</note>
         </trans-unit>
         <trans-unit id="Page 3185079179 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
@@ -107,6 +107,16 @@
           <source>UPS REST api Setup </source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNShipping AgentsUPS - Action UPS REST api Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 352110035 - Field 1027521536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 166151727">
+          <source>Code (UPS)</source>
+          <note from="Developer" annotates="general" priority="2">Code (UPS)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNADR InstructionUPS - Field ESNCode (UPS)UPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1342703179 - Field 3498944867 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1161693127">
+          <source>Additional Description (UPS)</source>
+          <note from="Developer" annotates="general" priority="2">Zusätzlichen Beschreibung (UPS)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNADRUPS - Field ESNAdditional DescriptionUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1342703179 - Field 4106230852 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1161693127">
           <source>Lightly Regulated</source>

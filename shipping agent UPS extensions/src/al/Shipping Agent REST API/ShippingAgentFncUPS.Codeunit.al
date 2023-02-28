@@ -1,7 +1,7 @@
 codeunit 70869804 "ESNShipping Agent FncUPS"
 {
 
-    #region Regulated Level
+    #region Regulated Level    
     // "ESNADR Package ManagementShip"
     [EventSubscriber(ObjectType::Codeunit, codeunit::"ESNADR Package ManagementShip", 'OnAfterCalcRegulatedLevel', '', true, false)]
     local procedure OnAfterCalcRegulatedLevel(var PackageADRContent: Record "ESNPackage ADR ContentShip")
@@ -16,8 +16,22 @@ codeunit 70869804 "ESNShipping Agent FncUPS"
     end;
     #endregion
 
+    #region
+    [EventSubscriber(ObjectType::Table, database::"ESNADR InstructionShip", 'OnBeforInsertGeneralADRInstructionRecord', '', true, false)]
+    local procedure OnBeforInsertGeneralADRInstructionRecord(ADRInstructionRecord: Record "ESNADR InstructionShip"; var GeneralADRInstructionRecord: Record "ESNADR InstructionShip")
+    begin
+        GeneralADRInstructionRecord."ESNCode (UPS)UPS" := ADRInstructionRecord."ESNCode (UPS)UPS";
+    end;
+    #endregion
+
     #region Enum Values
     procedure GetEnumValueName(e: enum "ESNRegulated LevelShip") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNADR Quantities UoMShip") EnumValueName: Text;
     begin
         e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
         exit(EnumValueName);
@@ -28,6 +42,24 @@ codeunit 70869804 "ESNShipping Agent FncUPS"
         if e.AsInteger() > e::" ".AsInteger() then begin
             e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
         end;
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNADR ClassShip") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNRegulation SetShip") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
+        exit(EnumValueName);
+    end;
+
+    procedure GetEnumValueName(e: enum "ESNTransportation ModeShip") EnumValueName: Text;
+    begin
+        e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
         exit(EnumValueName);
     end;
 
