@@ -212,6 +212,38 @@ tableextension 70869750 "ESNPackageShip" extends "ETI-Package-NC"
             Caption = 'Delivery Confirm. Signature Required';
             DataClassification = CustomerContent;
         }
+        field(70869780; "ESNADR Emerg. Phone No.Ship"; Text[30])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Shipper ADR Emergency Phone No.', Comment = 'Versender Gefahrgut Notfall Tel. Nr.';
+            ExtendedDatatype = PhoneNo;
+        }
+        field(70869781; "ESNRegulation SetShip"; Enum "ESNRegulation SetShip")
+        {
+            Caption = 'Regulation Set';
+            InitValue = ADR;
+            DataClassification = CustomerContent;
+        }
+        field(70869782; "ESNTransportation ModeShip"; Enum "ESNTransportation ModeShip")
+        {
+            Caption = 'Transportation Mode', Comment = 'Beförderungsverfahren';
+            DataClassification = CustomerContent;
+            trigger OnValidate()
+            begin
+                if "ESNTransportation ModeShip" <> xRec."ESNTransportation ModeShip" then begin
+                    case "ESNTransportation ModeShip" of
+                        "ESNTransportation ModeShip"::PAX,
+                        "ESNTransportation ModeShip"::CAO:
+                            begin
+                                Validate("ESNRegulation SetShip", "ESNRegulation SetShip"::IATA);
+                            end;
+                        else begin
+                            Validate("ESNRegulation SetShip", "ESNRegulation SetShip"::ADR);
+                        end;
+                    end;
+                end;
+            end;
+        }
     }
 
     keys
@@ -272,6 +304,7 @@ tableextension 70869750 "ESNPackageShip" extends "ETI-Package-NC"
                         validate("ESNShip-from Post CodeShip", Contact."Post Code");
                         validate("ESNShip-from CountyShip", Contact.County);
                         validate("ESNShip-from Coun/Reg CodeShip", Contact."Country/Region Code");
+                        validate("ESNADR Emerg. Phone No.Ship", Contact."ESNADR Emerg. Phone No.Ship");
                     END;
                 END;
             "ESNShip-from TypeShip"::"Company Information":
@@ -286,6 +319,7 @@ tableextension 70869750 "ESNPackageShip" extends "ETI-Package-NC"
                         validate("ESNShip-from Post CodeShip", CompanyInformation."Post Code");
                         validate("ESNShip-from CountyShip", CompanyInformation.County);
                         validate("ESNShip-from Coun/Reg CodeShip", CompanyInformation."Country/Region Code");
+                        validate("ESNADR Emerg. Phone No.Ship", CompanyInformation."ESNADR Emerg. Phone No.Ship");
                     END;
                 END;
             "ESNShip-from TypeShip"::"Responsibility Center":
@@ -300,6 +334,7 @@ tableextension 70869750 "ESNPackageShip" extends "ETI-Package-NC"
                         validate("ESNShip-from Post CodeShip", ResponsibilityCenter."Post Code");
                         validate("ESNShip-from CountyShip", ResponsibilityCenter.County);
                         validate("ESNShip-from Coun/Reg CodeShip", ResponsibilityCenter."Country/Region Code");
+                        validate("ESNADR Emerg. Phone No.Ship", ResponsibilityCenter."ESNADR Emerg. Phone No.Ship");
                     END;
                 END;
             "ESNShip-from TypeShip"::Location:
@@ -314,6 +349,7 @@ tableextension 70869750 "ESNPackageShip" extends "ETI-Package-NC"
                         validate("ESNShip-from Post CodeShip", Location."Post Code");
                         validate("ESNShip-from CountyShip", Location.County);
                         validate("ESNShip-from Coun/Reg CodeShip", Location."Country/Region Code");
+                        validate("ESNADR Emerg. Phone No.Ship", Location."ESNADR Emerg. Phone No.Ship");
                     END;
                 END;
         END;

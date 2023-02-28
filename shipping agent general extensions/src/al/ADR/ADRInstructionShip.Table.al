@@ -57,8 +57,14 @@ table 70869753 "ESNADR InstructionShip"
                 ADRInstruction.Groupe := Groupe;
                 ADRInstruction.Code := Code;
                 ADRInstruction.Description := Description;
+                OnBeforInsertGeneralADRInstructionRecord(rec, ADRInstruction);
                 if ADRInstruction.Insert(true) then;
             end;
         end;
+    end;
+
+    [IntegrationEvent(true, false)]
+    local procedure OnBeforInsertGeneralADRInstructionRecord(ADRInstructionRecord: Record "ESNADR InstructionShip"; var GeneralADRInstructionRecord: Record "ESNADR InstructionShip")
+    begin
     end;
 }

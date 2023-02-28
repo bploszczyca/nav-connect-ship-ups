@@ -131,7 +131,7 @@ table 70869750 "ESNADRShip"
         end;
     end;
 
-    local procedure CombineDescriptions(Description: Text; Description2: Text) ResultDescription: Text
+    procedure CombineDescriptions(Description: Text; Description2: Text) ResultDescription: Text
     begin
         if Description2 <> '' then begin
             ResultDescription := Description + ', ' + Description2;

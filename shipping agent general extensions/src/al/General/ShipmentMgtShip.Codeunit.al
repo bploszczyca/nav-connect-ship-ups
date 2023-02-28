@@ -48,6 +48,18 @@ codeunit 70869750 "ESNShipment Mgt.Ship"
         end;
     end;
 
+    [EventSubscriber(ObjectType::Table, database::"ETI-Package-NC", 'OnAfterValidateEvent', 'Shipping Agent Service Code', true, false)]
+    local procedure Package_OnAfterValidateEvent_ShippingAgentServiceCode(var xRec: Record "ETI-Package-NC"; var Rec: Record "ETI-Package-NC")
+    var
+        ShippingAgentServices: Record "Shipping Agent Services";
+    begin
+        if (rec."Shipping Agent Service Code" <> xrec."Shipping Agent Service Code") and (rec."Shipping Agent Service Code" <> '') then begin
+            if ShippingAgentServices.get(rec."Shipping Agent Code", rec."Shipping Agent Service Code") then begin
+                rec.Validate("ESNTransportation ModeShip", ShippingAgentServices."ESNTransportation ModeShip");
+            end;
+        end;
+    end;
+
     [EventSubscriber(ObjectType::Table, database::"ETI-Package-NC", 'OnBeforeModifyEvent', '', true, false)]
     local procedure Package_OnBeforeModifyEvent(var xRec: Record "ETI-Package-NC"; var Rec: Record "ETI-Package-NC")
     var

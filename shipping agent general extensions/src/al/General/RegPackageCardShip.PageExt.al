@@ -23,7 +23,7 @@ pageextension 70869752 "ESNReg. Package CardShip" extends "ETI-Reg. Package Card
         }
         addafter(Lieferung)
         {
-            group("Dangerous Goods")
+            group("DangerousGoodsPart")
             {
                 Caption = 'Dangerous Goods';
                 part("Reg. Package ADR Content"; "ESNReg. Package ADR ContShip")
@@ -104,7 +104,17 @@ pageextension 70869752 "ESNReg. Package CardShip" extends "ETI-Reg. Package Card
                         Importance = Additional;
                     }
                 }
+                group("Dangerous Goods Add. Info.")
+                {
+                    Caption = 'Dangerous Goods';
+                    field("ESNADR Emerg. Phone No.Ship"; rec."ESNADR Emerg. Phone No.Ship") { ApplicationArea = All; Importance = Additional; }
+                    field("ESNRegulation SetShip"; rec."ESNRegulation SetShip") { ApplicationArea = All; Importance = Additional; }
+                }
             }
+        }
+        addlast(Zusteller)
+        {
+            field("ESNTransportation ModeShip"; rec."ESNTransportation ModeShip") { ApplicationArea = All; Importance = Additional; }
         }
         addafter(Zusteller)
         {

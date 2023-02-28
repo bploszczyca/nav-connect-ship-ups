@@ -184,6 +184,22 @@ tableextension 70869751 "ESNReg. PackageShip" extends "ETI-Reg. Package-NC"
             DataClassification = CustomerContent;
             Editable = false;
         }
+        field(70869780; "ESNADR Emerg. Phone No.Ship"; Text[30])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Shipper ADR Emergency Phone No.', Comment = 'Versender Gefahrgut Notfall Tel. Nr.';
+            ExtendedDatatype = PhoneNo;
+        }
+        field(70869781; "ESNRegulation SetShip"; Enum "ESNRegulation SetShip")
+        {
+            Caption = 'Regulation Set';
+            DataClassification = CustomerContent;
+        }
+        field(70869782; "ESNTransportation ModeShip"; Enum "ESNTransportation ModeShip")
+        {
+            Caption = 'Transportation Mode', Comment = 'Beförderungsverfahren';
+            DataClassification = CustomerContent;
+        }
     }
 
     procedure GetShippingAgentAPI(): Interface "ESNShipping Agent APIShip"

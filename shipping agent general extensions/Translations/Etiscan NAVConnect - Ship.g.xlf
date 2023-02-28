@@ -773,15 +773,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control International Shipment - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 545993712 - Control 1229971710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+        <trans-unit id="PageExtension 545993712 - Control 2369040695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
           <source>Dangerous Goods</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control Dangerous Goods - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control DangerousGoodsPart - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 545993712 - Control 2973575994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
           <source>Shipment</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control ESNShipmentUPSshipShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 545993712 - Control 1050838575 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+          <source>Dangerous Goods</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control Dangerous Goods Add. Info. - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 545993712 - Control 2872948531 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
           <source>Ship-from Address</source>
@@ -818,15 +823,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control International Shipment - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2399484334 - Control 1229971710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
+        <trans-unit id="PageExtension 2399484334 - Control 2369040695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
           <source>Dangerous Goods</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control Dangerous Goods - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control DangerousGoodsPart - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2399484334 - Control 1951312360 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
           <source>Shipment</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control ESNShipmentUPSShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2399484334 - Control 1050838575 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
+          <source>Dangerous Goods</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control Dangerous Goods Add. Info. - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2399484334 - Control 2872948531 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
           <source>Ship-from Address</source>
@@ -858,6 +868,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNRegPackagesShip - Action Print Shipping Lable - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1460210339 - Field 368730612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
+          <source>Shipper ADR Emergency Phone No.</source>
+          <note from="Developer" annotates="general" priority="2">Versender Gefahrgut Notfall Tel. Nr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNCompany InformationShip - Field ESNADR Emerg. Phone No.Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2322695574 - Field 368730612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3993128796">
+          <source>Shipper ADR Emergency Phone No.</source>
+          <note from="Developer" annotates="general" priority="2">Versender Gefahrgut Notfall Tel. Nr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNContactShip - Field ESNADR Emerg. Phone No.Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 421595513 - Field 368730612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Shipper ADR Emergency Phone No.</source>
+          <note from="Developer" annotates="general" priority="2">Versender Gefahrgut Notfall Tel. Nr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNLocationShip - Field ESNADR Emerg. Phone No.Ship - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3713282388 - Method 3791190294 - NamedType 4092272397" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 3713282388">
           <source>Packages of a shipping order %1 must have the same address.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -877,6 +902,11 @@
           <source>ESN70869759Ship</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESN70869759Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 368730612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Shipper ADR Emergency Phone No.</source>
+          <note from="Developer" annotates="general" priority="2">Versender Gefahrgut Notfall Tel. Nr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNADR Emerg. Phone No.Ship - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3713282388 - Field 793773182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>Cost  Identifier</source>
@@ -917,6 +947,11 @@
           <source>Package Cout</source>
           <note from="Developer" annotates="general" priority="2">Anzahl Pakete</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNPackage CoutShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 2832533440 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Regulation Set</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNRegulation SetShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3713282388 - Field 1741939173 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>Saturday Delivery Requested</source>
@@ -1003,6 +1038,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNText Noti. Phone No.Ship - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3713282388 - Field 2222083641 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Transportation Mode</source>
+          <note from="Developer" annotates="general" priority="2">Beförderungsverfahren</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageShip - Field ESNTransportation ModeShip - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3713282388 - Field 3325697072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>Undeliverable Email</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1027,6 +1067,11 @@
           <source>ESN70869759Ship</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESN70869759Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 368730612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Shipper ADR Emergency Phone No.</source>
+          <note from="Developer" annotates="general" priority="2">Versender Gefahrgut Notfall Tel. Nr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNADR Emerg. Phone No.Ship - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3855706714 - Field 793773182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>Cost  Identifier</source>
@@ -1067,6 +1112,11 @@
           <source>Package Cout</source>
           <note from="Developer" annotates="general" priority="2">Anzahl Pakete</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNPackage CoutShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 2832533440 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Regulation Set</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNRegulation SetShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3855706714 - Field 1741939173 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>Saturday Delivery Requested</source>
@@ -1153,6 +1203,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNText Noti. Phone No.Ship - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3855706714 - Field 2222083641 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Transportation Mode</source>
+          <note from="Developer" annotates="general" priority="2">Beförderungsverfahren</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNTransportation ModeShip - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3855706714 - Field 3325697072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>Undeliverable Email</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1162,6 +1217,16 @@
           <source>Voice Noti. Phone No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageShip - Field ESNVoice Noti. Phone No.Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2019341503 - Field 368730612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2247850105">
+          <source>Shipper ADR Emergency Phone No.</source>
+          <note from="Developer" annotates="general" priority="2">Versender Gefahrgut Notfall Tel. Nr.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNResponsibility CenterShip - Field ESNADR Emerg. Phone No.Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3660040177 - Field 2222083641 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4577671">
+          <source>Transportation Mode</source>
+          <note from="Developer" annotates="general" priority="2">Beförderungsverfahren</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNShipping Agent ServicesShip - Field ESNTransportation ModeShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2909517731 - Field 2762486918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271291437">
           <source>Default Ship-from Contact</source>
@@ -1383,10 +1448,55 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNRegulated LevelShip - EnumValue LQ - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Enum 2832533440 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Regulation Set</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNRegulation SetShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2832533440 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNRegulation SetShip - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2832533440 - EnumValue 3817888385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ADR = Europe to Europe Ground Movement</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNRegulation SetShip - EnumValue ADR - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2832533440 - EnumValue 1143122695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IATA = Worldwide Air movement</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNRegulation SetShip - EnumValue IATA - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 2909517731 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNShipping AgentShip - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2222083641 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transportation Mode</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNTransportation ModeShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2222083641 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNTransportation ModeShip - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2222083641 - EnumValue 1910860351 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CAO = Cargo Aircraft Only</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNTransportation ModeShip - EnumValue CAO - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2222083641 - EnumValue 1316483015 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ground</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNTransportation ModeShip - EnumValue Ground - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2222083641 - EnumValue 1520414339 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PAX = Passenger Aircraft</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNTransportation ModeShip - EnumValue PAX - Property Caption</note>
         </trans-unit>
       </group>
     </body>
