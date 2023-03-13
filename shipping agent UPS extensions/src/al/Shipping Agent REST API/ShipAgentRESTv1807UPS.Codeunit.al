@@ -983,9 +983,22 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
     begin
 
         GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat(Package, PackageServiceOptions);
+        GetShipmentRequest_Shipment_Package_PackageServiceOptions_PackageIdentifier(Package, PackageServiceOptions);
 
         if PackageServiceOptions.Keys.Count > 0 then
             PackageJsonObject.Add('PackageServiceOptions', PackageServiceOptions);
+    end;
+
+    local procedure GetShipmentRequest_Shipment_Package_PackageServiceOptions_PackageIdentifier(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
+    var
+        CopyFromPosition: Integer;
+    begin
+        CopyFromPosition := 1;
+        if StrLen(Package."No.") > 5 then begin
+            CopyFromPosition := StrLen(Package."No.") - 5;
+        end;
+
+        PackageJsonObject.Add('PackageIdentifier', CopyStr(Package."No.", CopyFromPosition));
     end;
 
     local procedure GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
@@ -993,6 +1006,7 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
 
         PackageADRLines: Record "ESNPackage ADR ContentShip";
         ADRPackageMgt: Codeunit "ESNADR Package ManagementShip";
+        ChemicalRecordIdentifier: Integer;
         HazMatJsonArray: JsonArray;
         NotMoreThe2DangerousGoodsPositionsLbl: Label 'Maximum of three dangerous goods materials allowed per package.', Comment = 'Maximal drei Gefahrgutstoffe pro Paket erlaubt.';
     begin
@@ -1000,7 +1014,7 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
             if PackageADRLines.Count > 3 then
                 Error(NotMoreThe2DangerousGoodsPositionsLbl);
             repeat
-                HazMatJsonArray.Add(GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat_Entry(Package, PackageADRLines));
+                HazMatJsonArray.Add(GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat_Entry(Package, PackageADRLines, ChemicalRecordIdentifier));
             until PackageADRLines.Next() = 0;
 
             if HazMatJsonArray.Count > 0 then
@@ -1008,7 +1022,7 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
         end;
     end;
 
-    local procedure GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat_Entry(Package: Record "ETI-Package-NC"; PackageADRLines: Record "ESNPackage ADR ContentShip") HazMat: JsonObject
+    local procedure GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat_Entry(Package: Record "ETI-Package-NC"; PackageADRLines: Record "ESNPackage ADR ContentShip"; var ChemicalRecordIdentifier: Integer) HazMat: JsonObject
     var
         ADR: Record ESNADRShip;
         ADRInstruction: Record "ESNADR InstructionShip";
@@ -1016,7 +1030,7 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
         ShippingAgentFnc: Codeunit "ESNShipping Agent FncUPS";
         HazardLabelRequired, PackagingInstructionCode : Text;
     begin
-        // Gefahrgut todo !!
+        // Gefahrgut 
         // API Version Check.        
         ShippingAgent := Package.GetShippingAgent();
         case PackageADRLines."Regulated Level" of
@@ -1085,13 +1099,15 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
                         HazMat.Add('UOM', CopyStr(ShippingAgentFnc.GetEnumValueName(PackageADRLines."ADR Content Unit of Measure"), 1, 110));
                     end;
             end;
-            // PackagingType, PackagingTypeQuantity Todo
+            // PackagingType, PackagingTypeQuantity 
             case PackageADRLines."Regulated Level" of
                 PackageADRLines."Regulated Level"::fr,
                 PackageADRLines."Regulated Level"::lq:
                     begin
-                        // HazMat.Add('PackagingType', CopyStr('', 1, 255));
-                        // HazMat.Add('PackagingTypeQuantity', CopyStr('', 1, 255));                        
+                        HazMat.Add('PackagingType', CopyStr(ShippingAgentFnc.GetEnumValueName(PackageADRLines."Packaging Type"), 1, 255));
+                        PackageADRLines.CalcFields("Total Packaging Type Count");
+                        if PackageADRLines."Total Packaging Type Count" > 0 then
+                            HazMat.Add('PackagingTypeQuantity', CopyStr(Format(round(PackageADRLines."Total Packaging Type Count", 1), 0, 9), 1, 255));
                     end;
             end;
             // IDNumber
@@ -1182,8 +1198,9 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
                 end;
 
             // ChemicalRecordIdentifier
-            // if ADR."Hazard identification No." <> '' then
-            HazMat.Add('ChemicalRecordIdentifier', CopyStr(ADR."Hazard identification No.", 1, 3));
+            ChemicalRecordIdentifier += 1;
+            HazMat.Add('ChemicalRecordIdentifier', CopyStr(Format(ChemicalRecordIdentifier, 0, 9), 1, 3));
+
 
             // LocalTechnicalName
             HazMat.Add('LocalTechnicalName', CopyStr(ADR.Description, 1, 200));

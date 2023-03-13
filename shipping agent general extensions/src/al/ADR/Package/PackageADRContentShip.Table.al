@@ -240,6 +240,7 @@ table 70869755 "ESNPackage ADR ContentShip"
         field(62; "Total Packaging Type Count"; Decimal)
         {
             Caption = 'Total Packaging Type Count', Comment = 'Ges. Anzahl Verpackunggen';
+            DecimalPlaces = 0 : 0;
             Editable = false;
             FieldClass = FlowField;
             CalcFormula = sum("ESNPackage ADR ContentShip"."Packaging Type Count" where("Package No." = field("Package No."), "Line Type" = const(Content), "ADR No." = field("ADR No."), "Packaging Type" = field("Packaging Type")));

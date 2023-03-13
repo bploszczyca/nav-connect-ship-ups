@@ -74,6 +74,7 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                                             InitPackageADRContent(rec, PackageADRContent);
                                             PackageADRContent.Validate("ADR No.", ItemADRQuantityShip."ADR No.");
                                             PackageADRContent.Validate("Packaging Type", ItemADRQuantityShip."Packaging Type");
+                                            PackageADRContent.Validate("Pack. Count per Item Base UoM", ItemADRQuantityShip."Pack. Count per Item Base UoM");
 
                                             PackageADRContent."Quantity per Item Base UoM" := ItemADRQuantityShip."Quantity per Item Base UoM";
                                             PackageADRContent.Validate("ADR Unit of Measure", ItemADRQuantityShip."ADR Unit of Measure");
@@ -94,6 +95,8 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                                 InitPackageADRContent(rec, PackageADRContent);
                                 PackageADRContent.Validate("ADR No.", PackageADRContent2."ADR No.");
                                 PackageADRContent.Validate("Packaging Type", PackageADRContent2."Packaging Type");
+                                PackageADRContent.Validate("Pack. Count per Item Base UoM", PackageADRContent2."Pack. Count per Item Base UoM");
+
                                 PackageADRContent."Quantity per Item Base UoM" := PackageADRContent2."Total ADR Package Quantity";
                                 PackageADRContent.Validate("ADR Unit of Measure", PackageADRContent2."ADR Content Unit of Measure");
                                 PackageADRContent.Validate("Quantity (Base)", Rec."Pack Quantity (Base)");
@@ -110,6 +113,8 @@ codeunit 70869753 "ESNADR Package ManagementShip"
                                 InitPackageADRContent(rec, PackageADRContent);
                                 PackageADRContent.Validate("ADR No.", RegPackageADRContent."ADR No.");
                                 PackageADRContent.Validate("Packaging Type", RegPackageADRContent."Packaging Type");
+                                PackageADRContent.Validate("Pack. Count per Item Base UoM", RegPackageADRContent."Pack. Count per Item Base UoM");
+
                                 PackageADRContent."Quantity per Item Base UoM" := RegPackageADRContent."Total ADR Package Quantity";
                                 PackageADRContent.Validate("ADR Unit of Measure", RegPackageADRContent."ADR Content Unit of Measure");
                                 PackageADRContent.Validate("Quantity (Base)", Rec."Pack Quantity (Base)");
@@ -281,7 +286,23 @@ codeunit 70869753 "ESNADR Package ManagementShip"
 
     [EventSubscriber(ObjectType::Table, database::"ESNPackage ADR ContentShip", 'OnAfterModifyEvent', '', true, false)]
     local procedure PackageADRContent_OnAfterModifyEvent(var Rec: Record "ESNPackage ADR ContentShip"; RunTrigger: Boolean)
+    var
+        PackageADRLine: Record "ESNPackage ADR ContentShip";
     begin
+        case rec."Line Type" of
+            rec."Line Type"::Content:
+                begin
+                    PackageADRLine.SetRange("ADR No.", rec."ADR No.");
+                    if GetPackageADRLines(Rec, PackageADRLine) then
+                        repeat
+                            PackageADRLine.Validate("Manually entered Quantity");
+                            PackageADRLine.Modify(true);
+                        until PackageADRLine.Next() = 0;
+                end;
+            rec."Line Type"::ADR:
+                begin
+                end;
+        end;
         ProcessRegulatedLevelUpdate(Rec);
     end;
     #endregion
