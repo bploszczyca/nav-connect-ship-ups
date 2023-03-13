@@ -1,4 +1,4 @@
-enum 70869807 "ESNPackaging TypeUPS"
+enum 70869807 "ESNPackaging CodeUPS"
 {
     Extensible = true;
     value(0; " ") { Caption = ''; }

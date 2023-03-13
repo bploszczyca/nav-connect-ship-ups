@@ -183,6 +183,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Item No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3639504277 - Field 3594037392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packaging Type Count per Item Base UoM</source>
+          <note from="Developer" annotates="general" priority="2">Anzahl Verpackunggen per Artikel Basiseinheit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Pack. Count per Item Base UoM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3639504277 - Field 2592143753 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packaging Type</source>
+          <note from="Developer" annotates="general" priority="2">Verpackungsart</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNItem ADR QuantityShip - Field Packaging Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3639504277 - Field 3073529941 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity per Item Base UoM</source>
           <note from="Developer" annotates="general" priority="2">Menge per Artikel Basiseinheit</note>
@@ -273,10 +283,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Max. ADR Qty. (gr|ml) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 3594037392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packaging Type Count per Item Base UoM</source>
+          <note from="Developer" annotates="general" priority="2">Anzahl Verpackunggen per Artikel Basiseinheit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Pack. Count per Item Base UoM - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3185163570 - Field 4240543679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Package No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Package No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 2592143753 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packaging Type</source>
+          <note from="Developer" annotates="general" priority="2">Verpackungsart</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Packaging Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 2050571048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packaging Type Count</source>
+          <note from="Developer" annotates="general" priority="2">Anzahl Verpackunggen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Packaging Type Count - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3185163570 - Field 3179217921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity (Base)</source>
@@ -327,6 +352,16 @@
           <source>Total ADR Package Quantity</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Total ADR Package Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 4218507786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Packaging Type Count</source>
+          <note from="Developer" annotates="general" priority="2">Ges. Anzahl Verpackunggen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Total Packaging Type Count - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3185163570 - Field 3972052838 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update Regulated Level</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNPackage ADR ContentShip - Field Update Regulated Level - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 643081513 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reg. Package Dangerous Goods</source>
@@ -408,10 +443,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Max. ADR Qty. (gr|ml) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 643081513 - Field 3594037392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packaging Type Count per Item Base UoM</source>
+          <note from="Developer" annotates="general" priority="2">Anzahl Verpackunggen per Artikel Basiseinheit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Pack. Count per Item Base UoM - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 643081513 - Field 4240543679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Package No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Package No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 2592143753 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packaging Type</source>
+          <note from="Developer" annotates="general" priority="2">Verpackungsart</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Packaging Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 2050571048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packaging Type Count</source>
+          <note from="Developer" annotates="general" priority="2">Anzahl Verpackunggen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Packaging Type Count - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 643081513 - Field 3179217921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity (Base)</source>
@@ -462,6 +512,11 @@
           <source>Total ADR Package Quantity</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Total ADR Package Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 643081513 - Field 4218507786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Packaging Type Count</source>
+          <note from="Developer" annotates="general" priority="2">Ges. Anzahl Verpackunggen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNReg. Package ADR ContShip - Field Total Packaging Type Count - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 1792076683 - Method 578278027 - NamedType 262304187" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not yet implemented.</source>
@@ -1422,6 +1477,121 @@
           <source>Responsibility Center</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackageShipFromTypeShip - EnumValue Responsibility Center - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Packaging Type</source>
+          <note from="Developer" annotates="general" priority="2">Verpackungsart</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 3000483481 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ALUMINUM BOX</source>
+          <note from="Developer" annotates="general" priority="2">Aluminium Box</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue ALUMINUM BOX - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 442529957 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ALUMINUM CYLINDERS</source>
+          <note from="Developer" annotates="general" priority="2">Aluminium Zylinder</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue ALUMINUM CYLINDERS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 2436353552 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ALUMINUM DRUM</source>
+          <note from="Developer" annotates="general" priority="2">Aluminium Trommel</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue ALUMINUM DRUM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 1690671932 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ALUMINUM JERRICAN</source>
+          <note from="Developer" annotates="general" priority="2">Aluminium Kanister</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue ALUMINUM JERRICAN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 3078916743 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CARTON</source>
+          <note from="Developer" annotates="general" priority="2">Karton</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue CARTON - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 2208595955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CYLINDERS</source>
+          <note from="Developer" annotates="general" priority="2">Zylinder</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue CYLINDERS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 3899617104 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ENVIROTAINER</source>
+          <note from="Developer" annotates="general" priority="2">Frachtcontainer</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue ENVIROTAINER - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 535008776 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FIBER DRUM</source>
+          <note from="Developer" annotates="general" priority="2">Faser Trommel</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue FIBER DRUM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 1043167559 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FIBERBOARD BOX</source>
+          <note from="Developer" annotates="general" priority="2">Faser Box</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue FIBERBOARD BOX - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 1881905312 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>METAL BOX</source>
+          <note from="Developer" annotates="general" priority="2">Metall Box</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue METAL BOX - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 1201231216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OTHER</source>
+          <note from="Developer" annotates="general" priority="2">sonstige</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue OTHER - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 203614695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PLASTIC BOX</source>
+          <note from="Developer" annotates="general" priority="2">Kunststoff</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue PLASTIC BOX - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 3512241010 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PLASTIC DRUM</source>
+          <note from="Developer" annotates="general" priority="2">Kunststoff Trommel</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue PLASTIC DRUM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 3181206686 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PLASTIC JERRICAN</source>
+          <note from="Developer" annotates="general" priority="2">Kunststoff Kanister</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue PLASTIC JERRICAN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 3157571448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PLASTIC PAIL</source>
+          <note from="Developer" annotates="general" priority="2">Kunststoff Eimer</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue PLASTIC PAIL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 3024269453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PLYWOOD BOX</source>
+          <note from="Developer" annotates="general" priority="2">Sperrholz Kisten</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue PLYWOOD BOX - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 1693965764 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PLYWOOD DRUM</source>
+          <note from="Developer" annotates="general" priority="2">Sperrholz Trommel</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue PLYWOOD DRUM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 2277739250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>STEEL BOX</source>
+          <note from="Developer" annotates="general" priority="2">Stahl Box</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue STEEL BOX - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 1593831375 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>STEEL DRUM</source>
+          <note from="Developer" annotates="general" priority="2">Stahl Trommel</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue STEEL DRUM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 152116043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>STEEL JERRICAN</source>
+          <note from="Developer" annotates="general" priority="2">Stahl Kanister</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue STEEL JERRICAN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 3214394005 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>STYROFOAM BOX</source>
+          <note from="Developer" annotates="general" priority="2">Styropor Box</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue STYROFOAM BOX - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1322712303 - EnumValue 4059385648 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WOOD(EN) BOX</source>
+          <note from="Developer" annotates="general" priority="2">Holz Box</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeShip - EnumValue WOOD(EN) BOX - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 313455715 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Regulated Level</source>

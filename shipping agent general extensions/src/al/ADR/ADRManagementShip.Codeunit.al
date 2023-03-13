@@ -17,6 +17,7 @@ codeunit 70869752 "ESNADR ManagementShip"
         ItemADRQuantityShip: Record "ESNItem ADR QuantityShip";
     begin
         ItemADRQuantityShip.SetRange("Item No.", Rec."Item No.");
+        ItemADRQuantityShip.SetRange("Variant Code", rec.Code);
         if not ItemADRQuantityShip.IsEmpty then
             ItemADRQuantityShip.DeleteAll(true);
     end;

@@ -77,7 +77,37 @@ table 70869755 "ESNPackage ADR ContentShip"
             FieldClass = FlowField;
             CalcFormula = lookup("ESNADRShip"."Description 2" where("No." = field("ADR No.")));
         }
-
+        field(35; "Packaging Type"; Enum "ESNPackaging TypeShip")
+        {
+            Caption = 'Packaging Type', Comment = 'Verpackungsart';
+            DataClassification = CustomerContent;
+            NotBlank = true;
+        }
+        field(36; "Pack. Count per Item Base UoM"; Decimal)
+        {
+            Caption = 'Packaging Type Count per Item Base UoM', Comment = 'Anzahl Verpackunggen per Artikel Basiseinheit';
+            DataClassification = CustomerContent;
+            DecimalPlaces = 0 : 5;
+            Editable = false;
+            MinValue = 0;
+            InitValue = 1;
+            trigger OnValidate()
+            begin
+                Validate("Quantity (Base)");
+            end;
+        }
+        field(37; "Packaging Type Count"; Decimal)
+        {
+            Caption = 'Packaging Type Count', Comment = 'Anzahl Verpackunggen';
+            DataClassification = CustomerContent;
+            DecimalPlaces = 0 : 0;
+            Editable = false;
+            MinValue = 0;
+            trigger OnValidate()
+            begin
+                "Packaging Type Count" := Round("Packaging Type Count", 1, '>');
+            end;
+        }
         field(40; "Quantity per Item Base UoM"; Decimal)
         {
             Caption = 'Quantity per Item Base UoM', Comment = 'Menge per Artikel Basiseinheit';
@@ -98,6 +128,7 @@ table 70869755 "ESNPackage ADR ContentShip"
 
             trigger OnValidate()
             begin
+                Validate("Packaging Type Count", "Pack. Count per Item Base UoM" * "Quantity (Base)");
                 Validate("ADR Quantity", "Quantity per Item Base UoM" * "Quantity (Base)");
             end;
         }
@@ -147,7 +178,7 @@ table 70869755 "ESNPackage ADR ContentShip"
             DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = sum("ESNPackage ADR ContentShip"."ADR Quantity (gr|ml)" where("Package No." = field("Package No."), "Line Type" = const(Content), "ADR No." = field("ADR No.")));
+            CalcFormula = sum("ESNPackage ADR ContentShip"."ADR Quantity (gr|ml)" where("Package No." = field("Package No."), "Line Type" = const(Content), "ADR No." = field("ADR No."), "Packaging Type" = field("Packaging Type")));
         }
         field(51; "ADR Content Unit of Measure"; Enum "ESNADR Quantities UoMShip")
         {
@@ -203,8 +234,15 @@ table 70869755 "ESNPackage ADR ContentShip"
             var
                 ADRPackageMgt: Codeunit "ESNADR Package ManagementShip";
             begin
-                ADRPackageMgt.CalcRegulatedLevel(Rec);
+                ADRPackageMgt.CalcRegulatedLevel(Rec, true);
             end;
+        }
+        field(62; "Total Packaging Type Count"; Decimal)
+        {
+            Caption = 'Total Packaging Type Count', Comment = 'Ges. Anzahl Verpackunggen';
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = sum("ESNPackage ADR ContentShip"."Packaging Type Count" where("Package No." = field("Package No."), "Line Type" = const(Content), "ADR No." = field("ADR No."), "Packaging Type" = field("Packaging Type")));
         }
 
         field(70; "Max. ADR Qty. (gr|ml)"; Decimal)
@@ -213,7 +251,7 @@ table 70869755 "ESNPackage ADR ContentShip"
             DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = max("ESNPackage ADR ContentShip"."ADR Quantity (gr|ml)" where("Package No." = field("Package No."), "Line Type" = const(Content), "ADR No." = field("ADR No.")));
+            CalcFormula = max("ESNPackage ADR ContentShip"."ADR Quantity (gr|ml)" where("Package No." = field("Package No."), "Line Type" = const(Content), "ADR No." = field("ADR No."), "Packaging Type" = field("Packaging Type")));
         }
 
         field(80; "Regulated Level"; Enum "ESNRegulated LevelShip")
@@ -221,12 +259,17 @@ table 70869755 "ESNPackage ADR ContentShip"
             Caption = 'Regulated Level';
             DataClassification = CustomerContent;
         }
+        field(81; "Update Regulated Level"; Boolean)
+        {
+            Caption = 'Update Regulated Level';
+            DataClassification = CustomerContent;
+        }
     }
 
     keys
     {
-        key(Key1; "Package No.", "Line Type", "Template Type", "Template Subtype", "Template No.", "Template Line No.", "Template Sub Line No.", "Line No.", "ADR No.") { Clustered = true; }
-        key(PackageQuantity; "Package No.", "Line Type", "ADR No.") { IncludedFields = "ADR Quantity (gr|ml)"; }
+        key(Key1; "Package No.", "Line Type", "Template Type", "Template Subtype", "Template No.", "Template Line No.", "Template Sub Line No.", "Line No.", "ADR No.", "Packaging Type") { Clustered = true; }
+        key(PackageQuantity; "Package No.", "Line Type", "ADR No.") { IncludedFields = "ADR Quantity (gr|ml)", "Packaging Type Count"; }
     }
 
     var

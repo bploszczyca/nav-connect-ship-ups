@@ -69,10 +69,23 @@ table 70869754 "ESNItem ADR QuantityShip"
             FieldClass = FlowField;
             CalcFormula = lookup(Item."Description 2" where("No." = field("Item No.")));
         }
+        field(40; "Packaging Type"; Enum "ESNPackaging TypeShip")
+        {
+            Caption = 'Packaging Type', Comment = 'Verpackungsart';
+            DataClassification = CustomerContent;
+        }
+        field(41; "Pack. Count per Item Base UoM"; Decimal)
+        {
+            Caption = 'Packaging Type Count per Item Base UoM', Comment = 'Anzahl Verpackunggen per Artikel Basiseinheit';
+            DataClassification = CustomerContent;
+            DecimalPlaces = 0 : 5;
+            MinValue = 0;
+            InitValue = 1;
+        }
     }
 
     keys
     {
-        key(PK; "Item No.", "Variant Code", "ADR No.") { Clustered = true; }
+        key(PK; "Item No.", "Variant Code", "ADR No.", "Packaging Type") { Clustered = true; }
     }
 }

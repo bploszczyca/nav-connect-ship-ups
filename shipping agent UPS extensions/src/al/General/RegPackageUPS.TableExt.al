@@ -14,7 +14,7 @@ tableextension 70869803 "ESNReg. PackageUPS" extends "ETI-Reg. Package-NC"
             DataClassification = CustomerContent;
             Editable = false;
         }
-        field(70869802; "ESNUPS Packaging CodeUPS"; Enum "ESNPackaging TypeUPS")
+        field(70869802; "ESNUPS Packaging CodeUPS"; Enum "ESNPackaging CodeUPS")
         {
             Caption = 'UPS Packaging Code', Comment = 'UPS Verpackuntsart';
             DataClassification = CustomerContent;

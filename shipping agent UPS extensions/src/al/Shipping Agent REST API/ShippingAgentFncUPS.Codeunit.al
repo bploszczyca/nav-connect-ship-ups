@@ -75,7 +75,7 @@ codeunit 70869804 "ESNShipping Agent FncUPS"
         exit(EnumValueName);
     end;
 
-    procedure GetEnumValueName(e: enum "ESNPackaging TypeUPS") EnumValueName: Text;
+    procedure GetEnumValueName(e: enum "ESNPackaging CodeUPS") EnumValueName: Text;
     begin
         e.Names.Get(e.Ordinals.IndexOf(e.AsInteger()), EnumValueName);
         exit(EnumValueName);
