@@ -1,7 +1,7 @@
 table 70869754 "ESNItem ADR QuantityShip"
 {
     Caption = 'Item ADR Quantity', Comment = 'Artikel ADR Menge';
-    DataClassification = ToBeClassified;
+    DataClassification = CustomerContent;
 
     fields
     {

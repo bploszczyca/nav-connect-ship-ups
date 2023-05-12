@@ -1,7 +1,7 @@
 table 70869756 "ESNReg. Package ADR ContShip"
 {
     Caption = 'Reg. Package Dangerous Goods';
-    DataClassification = ToBeClassified;
+    DataClassification = CustomerContent;
 
     fields
     {

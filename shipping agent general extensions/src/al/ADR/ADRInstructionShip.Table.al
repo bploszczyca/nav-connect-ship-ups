@@ -1,7 +1,7 @@
 table 70869753 "ESNADR InstructionShip"
 {
     Caption = 'ADR Instruction', Comment = 'ADR Anweisung';
-    DataClassification = ToBeClassified;
+    DataClassification = CustomerContent;
     LookupPageId = "ESNADR InstructionsShip";
 
     fields
@@ -15,12 +15,12 @@ table 70869753 "ESNADR InstructionShip"
         field(2; Groupe; Enum "ESNADR Instruction GroupShip")
         {
             Caption = 'Groupe';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(3; "Code"; Code[20])
         {
             Caption = 'Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             NotBlank = true;
             TableRelation = if ("ADR No." = filter('<>''''')) "ESNADR InstructionShip".Code where(Groupe = field(Groupe));
             ValidateTableRelation = false;
