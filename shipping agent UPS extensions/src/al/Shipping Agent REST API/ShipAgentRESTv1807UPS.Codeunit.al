@@ -795,6 +795,7 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
     local procedure GetShipmentRequest_Shipment_Packages(Package: Record "ETI-Package-NC"; ShipmentContent: JsonObject)
     var
         Package2: Record "ETI-Package-NC";
+        PackageIdentifierCounter: Integer;
         PackagesJsonArray: JsonArray;
         PackageJsonObject: JsonObject;
     begin
@@ -802,9 +803,21 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
         Package.TestField("ESNShipment No.Ship");
         Package2.SetRange("ESNShipment No.Ship", Package."ESNShipment No.Ship");
 
+        // if not Package2.IsEmpty then
+        //     if Package2.Find('-') then
+        //         repeat
+        //             PackageIdentifierCounter += 1;
+        //             Package2."ESNPackage IdentifierUPS" := PackageIdentifierCounter;
+        //             Package2.Modify(true);
+        //         until Package2.Next() = 0;
+
+        Package2.SetCurrentKey("ESNPackage IdentifierUPS");
         if not Package2.IsEmpty then
             if Package2.Find('-') then
                 repeat
+                    PackageIdentifierCounter += 1;
+                    Package2."ESNPackage IdentifierUPS" := PackageIdentifierCounter;
+
                     Clear(PackageJsonObject);
                     GetShipmentRequest_Shipment_Package(Package2, PackageJsonObject);
                     PackagesJsonArray.Add(PackageJsonObject);
@@ -997,13 +1010,11 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
         if StrLen(Package."No.") > 5 then begin
             CopyFromPosition := StrLen(Package."No.") - 5;
         end;
-
-        PackageJsonObject.Add('PackageIdentifier', CopyStr(Package."No.", CopyFromPosition));
+        PackageJsonObject.Add('PackageIdentifier', Format(Package."ESNPackage IdentifierUPS", 0, 9));
     end;
 
     local procedure GetShipmentRequest_Shipment_Package_PackageServiceOptions_HazMat(Package: Record "ETI-Package-NC"; PackageJsonObject: JsonObject)
     var
-
         PackageADRLines: Record "ESNPackage ADR ContentShip";
         ADRPackageMgt: Codeunit "ESNADR Package ManagementShip";
         ChemicalRecordIdentifier: Integer;

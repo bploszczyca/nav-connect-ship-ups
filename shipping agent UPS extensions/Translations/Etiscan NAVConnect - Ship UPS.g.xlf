@@ -138,10 +138,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNLabel Image FormatUPS - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 2150486725 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Package Identifier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNMax Package IdentifierUPS - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3825586520 - Field 2472938154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>UPS Notification Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNNotification CodeUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3825586520 - Field 2467823577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
+          <source>Package Identifier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNPackageUPS - Field ESNPackage IdentifierUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3825586520 - Field 1266810243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3332639977">
           <source>Return Service</source>
@@ -208,10 +218,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNLabel Image FormatUPS - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 2150486725 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Package Identifier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNMax Package IdentifierUPS - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3268471766 - Field 2472938154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>UPS Notification Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNNotification CodeUPS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3268471766 - Field 2467823577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
+          <source>Package Identifier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNReg. PackageUPS - Field ESNPackage IdentifierUPS - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3268471766 - Field 1266810243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3509220811">
           <source>Return Service</source>
@@ -533,125 +553,125 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNNotification CodeUPS - EnumValue Shipper Notification - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue   - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue   - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 2372426283 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 2372426283 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>01 UPS Letter</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 01 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 01 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 4285516134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 4285516134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>02 Customer Supplied Package</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 02 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 02 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 3647819517 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 3647819517 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>03 Tube</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 03 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 03 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 459336432 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 459336432 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>04 PAK</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 04 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 04 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 1856946093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 1856946093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>21 UPS Express Box</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 21 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 21 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 4238823538 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 4238823538 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>24 UPS 25KG Box</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 24 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 24 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 3601126921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 3601126921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>25 UPS 10KG Box</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 25 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 25 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 2380824285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 2380824285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>2a Small Express Box</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 2a - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 2a - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 1743127668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 1743127668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>2b Medium Express Box</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 2b - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 2b - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 1105431051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 1105431051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>2c Large Express Box</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 2c - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 2c - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 3286655173 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 3286655173 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>30 Pallet</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 30 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 30 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 110917557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 110917557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>56 Flats</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 56 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 56 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 748614174 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 748614174 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>57 Parcels</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 57 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 57 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 1386310791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 1386310791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>58 BPM</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 58 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 58 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 2024007408 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 2024007408 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>59 First Class</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 59 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 59 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 3546391442 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 3546391442 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>60 Priority</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 60 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 60 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 2908694825 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 2908694825 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>61 Machineables</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 61 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 61 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 2270998208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 2270998208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>62 Irregulars</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 62 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 62 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 1633301591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 1633301591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>63 Parcel Post</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 63 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 63 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 1802210614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 1802210614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>64 BPM Parcel</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 64 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 64 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 1164513997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 1164513997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>65 Media Mail</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 65 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 65 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 526817380 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 526817380 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>66 BPM Flat</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 66 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 66 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 2522797843 - EnumValue 4184088059 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Enum 268582232 - EnumValue 4184088059 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>67 Standard Flat</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging TypeUPS - EnumValue 67 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackaging CodeUPS - EnumValue 67 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 1266810243 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>

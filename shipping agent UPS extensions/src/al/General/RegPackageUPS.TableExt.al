@@ -78,5 +78,16 @@ tableextension 70869803 "ESNReg. PackageUPS" extends "ETI-Reg. Package-NC"
             Caption = 'Handling Instruction 7';
             DataClassification = CustomerContent;
         }
+        field(70869814; "ESNPackage IdentifierUPS"; Integer)
+        {
+            Caption = 'Package Identifier';
+            DataClassification = CustomerContent;
+        }
+        field(70869815; "ESNMax Package IdentifierUPS"; Integer)
+        {
+            Caption = 'Package Identifier';
+            FieldClass = FlowField;
+            CalcFormula = max("ETI-Reg. Package-NC"."ESNPackage IdentifierUPS" where("ESNShipment No.Ship" = field("ESNShipment No.Ship")));
+        }
     }
 }
