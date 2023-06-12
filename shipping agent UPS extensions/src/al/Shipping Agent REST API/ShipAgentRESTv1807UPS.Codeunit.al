@@ -85,11 +85,22 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
     procedure RegisterShipping(Package: Record "ETI-Package-NC");
     var
         RequestHttpClient: HttpClient;
-        RequestHttpContent: HttpContent;
+        RequestHttpContent, RequestHttpContent2 : HttpContent;
         ResponseHttpMessage: HttpResponseMessage;
         TransId: Guid;
 
         ShipmentRequestContent: Text;
+
+        ShipAgentComLogMgt: Codeunit "ESNShip. Ag. Com. Log Mgt.Ship";
+        LogShippingAgentCommunicationEntryNo: BigInteger;
+        ShipAgentComStatus: Enum "ESNShip. Agent Com. StatusShip";
+        ShipAgentComStatusText: text;
+
+        HttpStatusCode: Integer;
+        ErrorTextLbl: Label '%1: %2', Locked = true;
+        ErrorText: Text;
+        ErrorDescription: Text;
+
     begin
         AddAccessDataTottpHeader(Package, RequestHttpClient.DefaultRequestHeaders());
         RequestHttpClient.DefaultRequestHeaders().Add(GetTransactionSrcHttpHeaderTag, GetTransactionSrcHttpHeaderTagContent);
@@ -97,14 +108,31 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
 
         GetShipmentRequestContent(Package).WriteTo(ShipmentRequestContent);
 
+        // TODO
         Message('ShipmentRequestContent: %1', ShipmentRequestContent);
 
         RequestHttpContent.WriteFrom(ShipmentRequestContent);
+        RequestHttpContent2.WriteFrom(ShipmentRequestContent);
 
         RequestHttpClient.Post(Package.GetShippingAgent().GetShippingURL(), RequestHttpContent, ResponseHttpMessage);
+        LogShippingAgentCommunicationEntryNo := ShipAgentComLogMgt.LogShippingAgentCommunication(Package.RecordId,
+            Package."Shipping Agent Code", Package."Shipping Agent Service Code", Package.GetShippingAgent()."ESNShipping Agent APIShip", Enum::"ESNShip. Agent Com. StatusShip"::"Processing (Send)", 0, '',
+            RequestHttpClient.DefaultRequestHeaders(), RequestHttpContent2, ResponseHttpMessage);
 
-        CheckResponseMessage(ResponseHttpMessage, true);
+        if GetResponseStatus(ResponseHttpMessage, HttpStatusCode, ErrorText, ErrorDescription) then begin
+            ShipAgentComStatus := ShipAgentComStatus::Finished;
+            ShipAgentComStatusText := '';
+        end else begin
+            ShipAgentComStatus := ShipAgentComStatus::Error;
+            ShipAgentComStatusText := StrSubstNo(ErrorTextLbl, ErrorText, ErrorDescription);
+        end;
+        ShipAgentComLogMgt.LogShippingAgentCommunicationSetStatus(LogShippingAgentCommunicationEntryNo, ShipAgentComStatus, HttpStatusCode, ShipAgentComStatusText);
 
+        Commit();   // he has to stand here!
+
+        if ShipAgentComStatus <> ShipAgentComStatus::Finished then begin
+            Error(StrSubstNo(ErrorTextLbl, ErrorText, ErrorDescription));
+        end;
     end;
 
     procedure CancelRegisteredShipping(RegPackage: Record "ETI-Reg. Package-NC");
@@ -162,6 +190,13 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
         exit('AccessLicenseNumber');
     end;
 
+    [EventSubscriber(ObjectType::Codeunit, codeunit::"ESNShip. Ag. Com. Log Mgt.Ship", 'JsonKeysToMask', '', false, false)]
+    local procedure AddJsonKeysToMask_AccessLicenseNumber(var JsonKeysToMask: List of [Text])
+    begin
+        if not JsonKeysToMask.Contains(GetAccessLicenseNumberHttpHeaderTag) then
+            JsonKeysToMask.Add(GetAccessLicenseNumberHttpHeaderTag);
+    end;
+
     local procedure GetAccessLicenseNumberHttpHeaderTagContent(ShippingAgent: Record "Shipping Agent"): Text
     begin
         exit(ShippingAgent."ESNAccess KeyUPS");
@@ -182,6 +217,13 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
         exit('Password');
     end;
 
+    [EventSubscriber(ObjectType::Codeunit, codeunit::"ESNShip. Ag. Com. Log Mgt.Ship", 'JsonKeysToMask', '', false, false)]
+    local procedure AddJsonKeysToMask_Password(var JsonKeysToMask: List of [Text])
+    begin
+        if not JsonKeysToMask.Contains(GetPasswordHttpHeaderTag) then
+            JsonKeysToMask.Add(GetPasswordHttpHeaderTag);
+    end;
+
     local procedure GetPasswordHttpHeaderTagContent(ShippingAgent: Record "Shipping Agent"): Text
     begin
         exit(ShippingAgent."ESNUser PasswordUPS");
@@ -200,50 +242,31 @@ codeunit 70869802 "ESNShip. Agent REST v1807UPS" implements "ESNShipping Agent R
     #endregion
 
     #region ResponseHttpMessage
-    local procedure CheckResponseMessage(ResponseHttpMessage: HttpResponseMessage; ShowInfo: Boolean)
+    local procedure GetResponseStatus(ResponseHttpMessage: HttpResponseMessage; var HttpStatusCode: Integer; var ErrorText: Text; var ErrorDescription: Text) SuccessStatusCode: Boolean
     var
-        Errorcode: List of [Text];
-        ErrorcodeTxt: Text;
-        Errordescription: List of [Text];
-        ErrordescriptionTxt: Text;
-
-    // HeadersKey: Text;
-    // HeadersKeyJson: JsonObject;
-    // HeadersKeyValues: list of [Text];
-    // HeadersKeyValuesTxt: Text;
-    // ResponseHttpMessageHeaders: Text;
+        ErrorcodeList: List of [Text];
+        ErrordescriptionList: List of [Text];
+        BlockedByEnvironmentErrorText: Label 'BlockedByEnvironment';
+        BlockedByEnvironmentErrorDescription: Label 'The HTTP response is the result of the environment blocking an outgoing HTTP request.';
     begin
-        if not ResponseHttpMessage.IsBlockedByEnvironment and ResponseHttpMessage.IsSuccessStatusCode and ShowInfo then begin
-            Message('StatusCode: %1, %2', ResponseHttpMessage.HttpStatusCode, ResponseHttpMessage.ReasonPhrase);
+        if ResponseHttpMessage.IsBlockedByEnvironment then begin
+            HttpStatusCode := 403;
+            ErrorText := BlockedByEnvironmentErrorText;
+            ErrorDescription := BlockedByEnvironmentErrorDescription;
         end else begin
-            // foreach HeadersKey in ResponseHttpMessage.Headers().Keys() do begin
-            //     if ResponseHttpMessage.Headers().Contains(HeadersKey) then begin
-            //         Clear(Errorcode);
-            //         if ResponseHttpMessage.Headers().GetValues(HeadersKey, Errorcode) then begin
-            //             Errorcode.get(1, ErrorcodeTxt);
-            //             HeadersKeyJson.Add(HeadersKey, ErrorcodeTxt);
-            //         end;
-            //     end;
-            // end;
-            // HeadersKeyJson.WriteTo(ResponseHttpMessageHeaders);
-            // Message('ResponseHttpMessageHeaders: %1', ResponseHttpMessageHeaders);
-            // Clear(Errorcode);
+            HttpStatusCode := ResponseHttpMessage.HttpStatusCode;
 
             if ResponseHttpMessage.Headers().Contains('errorcode') then begin
-                if ResponseHttpMessage.Headers().GetValues('errorcode', Errorcode) then begin
-                    Errorcode.get(1, ErrorcodeTxt);
+                if ResponseHttpMessage.Headers().GetValues('errorcode', ErrorcodeList) then begin
+                    ErrorcodeList.get(1, ErrorText);
                 end;
             end;
             if ResponseHttpMessage.Headers().Contains('errordescription') then begin
-                if ResponseHttpMessage.Headers().GetValues('errordescription', errordescription) then begin
-                    errordescription.get(1, ErrordescriptionTxt);
+                if ResponseHttpMessage.Headers().GetValues('errordescription', ErrordescriptionList) then begin
+                    ErrordescriptionList.get(1, ErrorDescription);
                 end;
             end;
-            if ErrorcodeTxt <> '' then begin
-                Error('Errorcode: %1, %2', ErrorcodeTxt, ErrordescriptionTxt);
-            end else begin
-                Error('StatusCode: %1, %2', ResponseHttpMessage.HttpStatusCode, ResponseHttpMessage.ReasonPhrase);
-            end;
+            SuccessStatusCode := ErrorText = '';
         end;
     end;
     #endregion

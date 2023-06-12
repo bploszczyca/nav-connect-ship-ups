@@ -13,6 +13,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v0XXXUPS - Method GetShippingURLQueryParameters - NamedType ShippingURLQueryParametersLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 906359629 - Method 156446395 - NamedType 545785245" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BlockedByEnvironment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v1807UPS - Method GetResponseStatus - NamedType BlockedByEnvironmentErrorText</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 906359629 - Method 156446395 - NamedType 906645396" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The HTTP response is the result of the environment blocking an outgoing HTTP request.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESNShip. Agent REST v1807UPS - Method GetResponseStatus - NamedType BlockedByEnvironmentErrorDescription</note>
+        </trans-unit>
         <trans-unit id="Codeunit 906359629 - Method 450432488 - NamedType 2882541497" size-unit="char" translate="yes" xml:space="preserve">
           <source>3th and 4th character of %1 must be "%2".</source>
           <note from="Developer" annotates="general" priority="2"></note>

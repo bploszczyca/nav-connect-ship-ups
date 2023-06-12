@@ -538,6 +538,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNShip. Agent Com. LogShip - Field ESNShipping Agent APIShip - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1006851640 - Field 2750077739 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>HTTP Status Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNShip. Agent Com. LogShip - Field HTTP Status Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1006851640 - Field 2490931433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Received Data</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -907,6 +912,31 @@
           <source>Packages on Ship</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ESNRegPack. FactBoxShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3194130290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipping Agent Communication Log Card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShip. A. Com. Log CardShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3194130290 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShip. A. Com. Log CardShip - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3194130290 - Control 2491730758 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the date and time when this change log entry was created.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShip. A. Com. Log CardShip - Control Date and Time - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3194130290 - Control 883711285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the entry, as assigned from the specified number series when the entry was created.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShip. A. Com. Log CardShip - Control Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3194130290 - Control 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ID of the user who posted the entry, to be used, for example, in the change log.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESNShip. A. Com. Log CardShip - Control User ID - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1006851640 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shipping Agent Communication Log</source>
