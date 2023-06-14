@@ -150,7 +150,7 @@ table 70869757 "ESNShip. Agent Com. LogShip"
             Editable = false;
         }
 
-        field(35; "ESNShipping Agent APIShip"; Enum "ESNShipping AgentShip")
+        field(35; "Shipping Agent API"; Enum "ESNShipping AgentShip")
         {
             Caption = 'Shipping Agent API';
             DataClassification = CustomerContent;

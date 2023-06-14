@@ -43,7 +43,7 @@ page 70869766 "ESNShip. A. Com. Log CardShip"
             {
                 field("Shipping Agent Code"; Rec."Shipping Agent Code") { ApplicationArea = all; }
                 field("Shipping Agent Service Code"; Rec."Shipping Agent Service Code") { ApplicationArea = all; }
-                field("ESNShipping Agent APIShip"; Rec."ESNShipping Agent APIShip") { ApplicationArea = all; Importance = Additional; }
+                field("ESNShipping Agent APIShip"; Rec."Shipping Agent API") { ApplicationArea = all; Importance = Additional; }
             }
             group(Send)
             {

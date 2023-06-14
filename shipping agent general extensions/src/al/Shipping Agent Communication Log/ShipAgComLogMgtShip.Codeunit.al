@@ -21,7 +21,7 @@ codeunit 70869754 "ESNShip. Ag. Com. Log Mgt.Ship"
 
         ShipAgentComLog.Validate("Shipping Agent Code", ShipAgentCode);
         ShipAgentComLog.Validate("Shipping Agent Service Code", ShipAgentServiceCode);
-        ShipAgentComLog.Validate("ESNShipping Agent APIShip", ShipAgentAPI);
+        ShipAgentComLog.Validate("Shipping Agent API", ShipAgentAPI);
 
         ShipAgentComLog.Validate(Status, Status);
         ShipAgentComLog.Validate("Status Text", CopyStr(StatusText, 1, MaxStrLen(ShipAgentComLog."Status Text")));

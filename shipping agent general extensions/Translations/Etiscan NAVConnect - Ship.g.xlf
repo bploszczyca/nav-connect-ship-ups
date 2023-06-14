@@ -533,11 +533,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNShip. Agent Com. LogShip - Field Entry No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1006851640 - Field 1792076683 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shipping Agent API</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ESNShip. Agent Com. LogShip - Field ESNShipping Agent APIShip - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 1006851640 - Field 2750077739 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>HTTP Status Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -552,6 +547,11 @@
           <source>Send Data</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table ESNShip. Agent Com. LogShip - Field Send Data - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1006851640 - Field 156856773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipping Agent API</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESNShip. Agent Com. LogShip - Field Shipping Agent API - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1006851640 - Field 4045368290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shipping Agent Code</source>
@@ -1028,10 +1028,30 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control Notification - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 545993712 - Control 1658766258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3809633461">
+          <source>Attachments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage CardShip - Control Attached Documents - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 694588155 - Action 2761132976 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2678658698">
           <source>Dangerous Good Lines</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackage ContentShip - Action Dangerous Good Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3354181045 - Action 1062429549 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1727147032">
+          <source>Add a file as an attachment. You can attach images as well as documents.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackagesShip - Action DocAttach - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3354181045 - Action 1062429549 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1727147032">
+          <source>Attachments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackagesShip - Action DocAttach - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3354181045 - Control 1658766258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1727147032">
+          <source>Attachments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNPackagesShip - Control Attached Documents - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2465037929 - Action 504535098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2829944332">
           <source>Dangerous Good Lines</source>
@@ -1078,6 +1098,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control Notification - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2399484334 - Control 1658766258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1939898271">
+          <source>Attachments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNReg. Package CardShip - Control Attached Documents - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2393074613 - Action 1673306232 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1019918254">
           <source>F&amp;unctions</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1093,6 +1118,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNRegPackagesShip - Action Print Shipping Lable - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2393074613 - Action 1062429549 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1019918254">
+          <source>Add a file as an attachment. You can attach images as well as documents.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNRegPackagesShip - Action DocAttach - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2393074613 - Action 1062429549 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1019918254">
+          <source>Attachments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNRegPackagesShip - Action DocAttach - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2393074613 - Control 1658766258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1019918254">
+          <source>Attachments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ESNRegPackagesShip - Control Attached Documents - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1460210339 - Field 368730612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
           <source>Shipper ADR Emergency Phone No.</source>
           <note from="Developer" annotates="general" priority="2">Versender Gefahrgut Notfall Tel. Nr.</note>
@@ -1102,6 +1142,11 @@
           <source>Shipper ADR Emergency Phone No.</source>
           <note from="Developer" annotates="general" priority="2">Versender Gefahrgut Notfall Tel. Nr.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNContactShip - Field ESNADR Emerg. Phone No.Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1124278656 - Field 2300086411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 282138634">
+          <source>Package Attachment Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ESNDocument AttachmentShip - Field ESNPackage Attachment TypeShip - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 421595513 - Field 368730612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
           <source>Shipper ADR Emergency Phone No.</source>
@@ -1622,6 +1667,16 @@
           <source>2 - Delivery Confirmation Adult Signature Required</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ESNDCIS TypeShip - EnumValue 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2300086411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Package Attachment Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackage Attachment TypeShip - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2300086411 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ESNPackage Attachment TypeShip - EnumValue   - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 1290712000 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
